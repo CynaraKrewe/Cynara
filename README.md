@@ -1,4 +1,5 @@
-# Cynara
+![Cynara Logo](https://m.spiessens.eu/wp-content/uploads/2016/05/CynaraIconTextRight.png)
+
 A microcontroller and FPGA based, modular prototyping solution covering both hardware and software.
 
 This project was started by Sioux Embedded Systems BV employees in their private time.
