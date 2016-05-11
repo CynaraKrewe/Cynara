@@ -9,3 +9,7 @@ The aim of this project is to broaden experience and not only in your own discip
 Some trivia: 
 * [Cynara](https://en.wikipedia.org/wiki/Cynara) is a genus in the sunflower family.
 * Addon modules for the Carrier are called Petals.
+
+Cynara Krewe:
+* Sander van Schaick
+* Mathias Spiessens
