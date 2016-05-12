@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="CynaraPinDescription.svg"
+   sodipodi:docname="CynaraOriginal.svg"
    inkscape:export-filename="D:\Development\Cynara\Pictures\CynaraPinDescription.png"
    inkscape:export-xdpi="1000"
    inkscape:export-ydpi="1000">
@@ -3331,7 +3331,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Petal"
-     style="display:none;opacity:1"
+     style="display:inline;opacity:1"
      transform="translate(-0.35435638,-0.35430759)">
     <g
        inkscape:label="Layer 1"
