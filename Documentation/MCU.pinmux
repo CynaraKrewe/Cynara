@@ -1,0 +1,4950 @@
+{
+	"deviceId": "TM4C129x",
+	"partId": "ID_517",
+	"packageId": "ID_17",
+	"deviceRequirements": {
+		"used": true,
+		"solution": {
+			"nameDecoratorText": "",
+			"assignedToName": "",
+			"errorText": "",
+			"warningText": "",
+			"errorDetailsText": [],
+			"warningDetailsText": [],
+			"gpioPinsUsed": 89,
+			"gpioPinsTotal": 90
+		},
+		"devicePinMap": {
+			"1": {
+				"nameDecoratorText": "1",
+				"assignedToName": "SSI2XDAT1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "XDAT1"
+			},
+			"2": {
+				"nameDecoratorText": "2",
+				"assignedToName": "SSI2XDAT0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "XDAT0"
+			},
+			"3": {
+				"nameDecoratorText": "3",
+				"assignedToName": "SSI2FSS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "FSS"
+			},
+			"4": {
+				"nameDecoratorText": "4",
+				"assignedToName": "SSI2CLK",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "CLK"
+			},
+			"5": {
+				"nameDecoratorText": "5",
+				"assignedToName": "EPI0S20",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S20"
+			},
+			"6": {
+				"nameDecoratorText": "6",
+				"assignedToName": "EPI0S21",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S21"
+			},
+			"11": {
+				"nameDecoratorText": "11",
+				"assignedToName": "EPI0S22",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S22"
+			},
+			"12": {
+				"nameDecoratorText": "12",
+				"assignedToName": "AIN0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ADC",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN0"
+			},
+			"13": {
+				"nameDecoratorText": "13",
+				"assignedToName": "AIN1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ADC",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN1"
+			},
+			"14": {
+				"nameDecoratorText": "14",
+				"assignedToName": "AIN2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ADC",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN2"
+			},
+			"15": {
+				"nameDecoratorText": "15",
+				"assignedToName": "AIN3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ADC",
+				"requirementId": "MyADC1",
+				"interfacePin": "AIN3"
+			},
+			"18": {
+				"nameDecoratorText": "18",
+				"assignedToName": "EPI0S0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S0"
+			},
+			"19": {
+				"nameDecoratorText": "19",
+				"assignedToName": "EPI0S1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S1"
+			},
+			"20": {
+				"nameDecoratorText": "20",
+				"assignedToName": "EPI0S2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S2"
+			},
+			"21": {
+				"nameDecoratorText": "21",
+				"assignedToName": "EPI0S3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S3"
+			},
+			"22": {
+				"nameDecoratorText": "22",
+				"assignedToName": "EPI0S4",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S4"
+			},
+			"23": {
+				"nameDecoratorText": "23",
+				"assignedToName": "EPI0S5",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S5"
+			},
+			"24": {
+				"nameDecoratorText": "24",
+				"assignedToName": "EPI0S6",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S6"
+			},
+			"25": {
+				"nameDecoratorText": "25",
+				"assignedToName": "EPI0S7",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S7"
+			},
+			"27": {
+				"nameDecoratorText": "27",
+				"assignedToName": "EPI0S23",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S23"
+			},
+			"29": {
+				"nameDecoratorText": "29",
+				"assignedToName": "U0RTS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART0/CAN0/I2C9",
+				"requirementId": "MyUART3",
+				"interfacePin": "RTS"
+			},
+			"30": {
+				"nameDecoratorText": "30",
+				"assignedToName": "U0CTS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART0/CAN0/I2C9",
+				"requirementId": "MyUART3",
+				"interfacePin": "CTS"
+			},
+			"31": {
+				"nameDecoratorText": "31",
+				"assignedToName": "GPIO_PH2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PH2",
+				"requirementId": "MyGPIO1",
+				"interfacePin": "GPIO#"
+			},
+			"32": {
+				"nameDecoratorText": "32",
+				"assignedToName": "GPIO_PH3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PH3",
+				"requirementId": "MyGPIO2",
+				"interfacePin": "GPIO#"
+			},
+			"33": {
+				"nameDecoratorText": "33",
+				"assignedToName": "U0RX",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART0/CAN0/I2C9",
+				"requirementId": "MyUART3",
+				"interfacePin": "RX"
+			},
+			"34": {
+				"nameDecoratorText": "34",
+				"assignedToName": "U0TX",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART0/CAN0/I2C9",
+				"requirementId": "MyUART3",
+				"interfacePin": "TX"
+			},
+			"35": {
+				"nameDecoratorText": "35",
+				"assignedToName": "SSI0CLK",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI0",
+				"requirementId": "MySSI2",
+				"interfacePin": "CLK"
+			},
+			"36": {
+				"nameDecoratorText": "36",
+				"assignedToName": "SSI0FSS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI0",
+				"requirementId": "MySSI2",
+				"interfacePin": "FSS"
+			},
+			"37": {
+				"nameDecoratorText": "37",
+				"assignedToName": "SSI0XDAT0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI0",
+				"requirementId": "MySSI2",
+				"interfacePin": "XDAT0"
+			},
+			"38": {
+				"nameDecoratorText": "38",
+				"assignedToName": "SSI0XDAT1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI0",
+				"requirementId": "MySSI2",
+				"interfacePin": "XDAT1"
+			},
+			"40": {
+				"nameDecoratorText": "40",
+				"assignedToName": "EPI0S8",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S8"
+			},
+			"41": {
+				"nameDecoratorText": "41",
+				"assignedToName": "EPI0S9",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S9"
+			},
+			"42": {
+				"nameDecoratorText": "42",
+				"assignedToName": "EN0LED0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "Ethernet",
+				"requirementId": "MyETHERNET1",
+				"interfacePin": "EN0LED0"
+			},
+			"43": {
+				"nameDecoratorText": "43",
+				"assignedToName": "M0PWM1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PWM",
+				"requirementId": "MyPWM2",
+				"interfacePin": "PWM1"
+			},
+			"44": {
+				"nameDecoratorText": "44",
+				"assignedToName": "M0PWM2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PWM",
+				"requirementId": "MyPWM2",
+				"interfacePin": "PWM2"
+			},
+			"45": {
+				"nameDecoratorText": "45",
+				"assignedToName": "M0PWM3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PWM",
+				"requirementId": "MyPWM2",
+				"interfacePin": "PWM3"
+			},
+			"46": {
+				"nameDecoratorText": "46",
+				"assignedToName": "EN0LED1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "Ethernet",
+				"requirementId": "MyETHERNET1",
+				"interfacePin": "EN0LED1"
+			},
+			"49": {
+				"nameDecoratorText": "49",
+				"assignedToName": "EPI0S11",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S11"
+			},
+			"50": {
+				"nameDecoratorText": "50",
+				"assignedToName": "EPI0S10",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S10"
+			},
+			"60": {
+				"nameDecoratorText": "60",
+				"assignedToName": "EPI0S24",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S24"
+			},
+			"61": {
+				"nameDecoratorText": "61",
+				"assignedToName": "EPI0S25",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S25"
+			},
+			"62": {
+				"nameDecoratorText": "62",
+				"assignedToName": "EPI0S31",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S31"
+			},
+			"63": {
+				"nameDecoratorText": "63",
+				"assignedToName": "GPIO_PK4",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PK4",
+				"requirementId": "MyGPIO3",
+				"interfacePin": "GPIO#"
+			},
+			"71": {
+				"nameDecoratorText": "71",
+				"assignedToName": "T5CCP1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "T5",
+				"requirementId": "MyTimer4",
+				"interfacePin": "CCP1"
+			},
+			"72": {
+				"nameDecoratorText": "72",
+				"assignedToName": "T5CCP0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "T5",
+				"requirementId": "MyTimer4",
+				"interfacePin": "CCP0"
+			},
+			"73": {
+				"nameDecoratorText": "73",
+				"assignedToName": "T4CCP1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "T4",
+				"requirementId": "MyTimer3",
+				"interfacePin": "CCP1"
+			},
+			"74": {
+				"nameDecoratorText": "74",
+				"assignedToName": "T4CCP0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "T4",
+				"requirementId": "MyTimer3",
+				"interfacePin": "CCP0"
+			},
+			"75": {
+				"nameDecoratorText": "75",
+				"assignedToName": "EPI0S12",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S12"
+			},
+			"76": {
+				"nameDecoratorText": "76",
+				"assignedToName": "EPI0S13",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S13"
+			},
+			"77": {
+				"nameDecoratorText": "77",
+				"assignedToName": "EPI0S14",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S14"
+			},
+			"78": {
+				"nameDecoratorText": "78",
+				"assignedToName": "EPI0S15",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S15"
+			},
+			"81": {
+				"nameDecoratorText": "81",
+				"assignedToName": "EPI0S16",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S16"
+			},
+			"82": {
+				"nameDecoratorText": "82",
+				"assignedToName": "EPI0S17",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S17"
+			},
+			"83": {
+				"nameDecoratorText": "83",
+				"assignedToName": "EPI0S18",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S18"
+			},
+			"84": {
+				"nameDecoratorText": "84",
+				"assignedToName": "EPI0S19",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S19"
+			},
+			"85": {
+				"nameDecoratorText": "85",
+				"assignedToName": "EPI0S26",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S26"
+			},
+			"86": {
+				"nameDecoratorText": "86",
+				"assignedToName": "GPIO_PL5",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PL5",
+				"requirementId": "MyGPIO6",
+				"interfacePin": "GPIO#"
+			},
+			"91": {
+				"nameDecoratorText": "91",
+				"assignedToName": "EPI0S27",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S27"
+			},
+			"92": {
+				"nameDecoratorText": "92",
+				"assignedToName": "EPI0S28",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S28"
+			},
+			"93": {
+				"nameDecoratorText": "93",
+				"assignedToName": "USB0DM",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "USB",
+				"requirementId": "MyUSB1",
+				"interfacePin": "DM"
+			},
+			"94": {
+				"nameDecoratorText": "94",
+				"assignedToName": "USB0DP",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "USB",
+				"requirementId": "MyUSB1",
+				"interfacePin": "DP"
+			},
+			"95": {
+				"nameDecoratorText": "95",
+				"assignedToName": "U1RX",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "RX"
+			},
+			"96": {
+				"nameDecoratorText": "96",
+				"assignedToName": "U1TX",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "TX"
+			},
+			"97": {
+				"nameDecoratorText": "97",
+				"assignedToName": "GPIO_PC3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PC",
+				"requirementId": "MyGPIO4",
+				"interfacePin": "GPIO#"
+			},
+			"98": {
+				"nameDecoratorText": "98",
+				"assignedToName": "GPIO_PC2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PC",
+				"requirementId": "MyGPIO4",
+				"interfacePin": "GPIO#"
+			},
+			"99": {
+				"nameDecoratorText": "99",
+				"assignedToName": "GPIO_PC1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PC",
+				"requirementId": "MyGPIO4",
+				"interfacePin": "GPIO#"
+			},
+			"100": {
+				"nameDecoratorText": "100",
+				"assignedToName": "GPIO_PC0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PC",
+				"requirementId": "MyGPIO4",
+				"interfacePin": "GPIO#"
+			},
+			"102": {
+				"nameDecoratorText": "102",
+				"assignedToName": "GPIO_PQ4",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PQ4",
+				"requirementId": "MyGPIO7",
+				"interfacePin": "GPIO#"
+			},
+			"103": {
+				"nameDecoratorText": "103",
+				"assignedToName": "EPI0S29",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S29"
+			},
+			"104": {
+				"nameDecoratorText": "104",
+				"assignedToName": "EPI0S30",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "EPI/FPGA",
+				"requirementId": "MyEPI1",
+				"interfacePin": "S30"
+			},
+			"105": {
+				"nameDecoratorText": "105",
+				"assignedToName": "GPIO_PP4",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ExternalInterrupts",
+				"requirementId": "MyGPIO5",
+				"interfacePin": "GPIO#"
+			},
+			"106": {
+				"nameDecoratorText": "106",
+				"assignedToName": "GPIO_PP5",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ExternalInterrupts",
+				"requirementId": "MyGPIO5",
+				"interfacePin": "GPIO#"
+			},
+			"107": {
+				"nameDecoratorText": "107",
+				"assignedToName": "U1RTS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "RTS"
+			},
+			"108": {
+				"nameDecoratorText": "108",
+				"assignedToName": "U1CTS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "CTS"
+			},
+			"109": {
+				"nameDecoratorText": "109",
+				"assignedToName": "U1DCD",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "DCD"
+			},
+			"110": {
+				"nameDecoratorText": "110",
+				"assignedToName": "U1DSR",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "DSR"
+			},
+			"111": {
+				"nameDecoratorText": "111",
+				"assignedToName": "U1DTR",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "DTR"
+			},
+			"112": {
+				"nameDecoratorText": "112",
+				"assignedToName": "U1RI",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "UART1/CAN1/I2C5",
+				"requirementId": "MyUART4",
+				"interfacePin": "RI"
+			},
+			"117": {
+				"nameDecoratorText": "117",
+				"assignedToName": "GPIO_PJ1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "PJ1",
+				"requirementId": "MyGPIO8",
+				"interfacePin": "GPIO#"
+			},
+			"118": {
+				"nameDecoratorText": "118",
+				"assignedToName": "GPIO_PP0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ExternalInterrupts",
+				"requirementId": "MyGPIO5",
+				"interfacePin": "GPIO#"
+			},
+			"119": {
+				"nameDecoratorText": "119",
+				"assignedToName": "GPIO_PP1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "ExternalInterrupts",
+				"requirementId": "MyGPIO5",
+				"interfacePin": "GPIO#"
+			},
+			"120": {
+				"nameDecoratorText": "120",
+				"assignedToName": "SSI1CLK",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "CLK"
+			},
+			"121": {
+				"nameDecoratorText": "121",
+				"assignedToName": "SSI1FSS",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "FSS"
+			},
+			"123": {
+				"nameDecoratorText": "123",
+				"assignedToName": "SSI1XDAT0",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "XDAT0"
+			},
+			"124": {
+				"nameDecoratorText": "124",
+				"assignedToName": "SSI1XDAT1",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "XDAT1"
+			},
+			"125": {
+				"nameDecoratorText": "125",
+				"assignedToName": "SSI1XDAT2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "XDAT2"
+			},
+			"126": {
+				"nameDecoratorText": "126",
+				"assignedToName": "SSI1XDAT3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI1",
+				"requirementId": "MySSI5",
+				"interfacePin": "XDAT3"
+			},
+			"127": {
+				"nameDecoratorText": "127",
+				"assignedToName": "SSI2XDAT3",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "XDAT3"
+			},
+			"128": {
+				"nameDecoratorText": "128",
+				"assignedToName": "SSI2XDAT2",
+				"errorText": "",
+				"warningText": "",
+				"warningDetailsText": [],
+				"errorDetailsText": [],
+				"requirementName": "SSI2",
+				"requirementId": "MySSI6",
+				"interfacePin": "XDAT2"
+			}
+		},
+		"powerDomainSettings": {},
+		"powerDomainSettingsEnabled": false,
+		"groupRequirements": {
+			"PWM": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 3
+				},
+				"name": "PWM",
+				"id": "PWM",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 3
+						},
+						"id": "MyPWM2",
+						"name": "PWM",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "PWM",
+						"pinRequirements": [
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM6",
+								"interfacePinName": "PWM6"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM0",
+								"interfacePinName": "PWM0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT1",
+								"interfacePinName": "FAULT1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT3",
+								"interfacePinName": "FAULT3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM4",
+								"interfacePinName": "PWM4"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM5",
+								"interfacePinName": "PWM5"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "M0PWM2",
+									"assignedToName": "44",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "44",
+								"type": "Single",
+								"name": "PWM2",
+								"interfacePinName": "PWM2"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM7",
+								"interfacePinName": "PWM7"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "M0PWM1",
+									"assignedToName": "43",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "43",
+								"type": "Single",
+								"name": "PWM1",
+								"interfacePinName": "PWM1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT0",
+								"interfacePinName": "FAULT0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "M0PWM3",
+									"assignedToName": "45",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "45",
+								"type": "Single",
+								"name": "PWM3",
+								"interfacePinName": "PWM3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT2",
+								"interfacePinName": "FAULT2"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "PWM0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "PWM"
+					}
+				],
+				"requirementsNameIndex": 3
+			},
+			"LCD": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "LCD",
+				"id": "LCD",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"NMI": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "NMI",
+				"id": "NMI",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"ADC": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 4
+				},
+				"name": "ADC",
+				"id": "ADC",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 4
+						},
+						"id": "MyADC1",
+						"name": "ADC",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "ADC",
+						"pinRequirements": [
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN14",
+								"interfacePinName": "AIN14"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN23",
+								"interfacePinName": "AIN23"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "AIN0",
+									"assignedToName": "12",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "12",
+								"type": "Single",
+								"name": "AIN0",
+								"interfacePinName": "AIN0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN17",
+								"interfacePinName": "AIN17"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN20",
+								"interfacePinName": "AIN20"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN4",
+								"interfacePinName": "AIN4"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN6",
+								"interfacePinName": "AIN6"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN15",
+								"interfacePinName": "AIN15"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN12",
+								"interfacePinName": "AIN12"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "AIN2",
+									"assignedToName": "14",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "14",
+								"type": "Single",
+								"name": "AIN2",
+								"interfacePinName": "AIN2"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN11",
+								"interfacePinName": "AIN11"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN19",
+								"interfacePinName": "AIN19"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN16",
+								"interfacePinName": "AIN16"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN13",
+								"interfacePinName": "AIN13"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN9",
+								"interfacePinName": "AIN9"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN21",
+								"interfacePinName": "AIN21"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN8",
+								"interfacePinName": "AIN8"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "AIN1",
+									"assignedToName": "13",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "13",
+								"type": "Single",
+								"name": "AIN1",
+								"interfacePinName": "AIN1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN22",
+								"interfacePinName": "AIN22"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "AIN3",
+									"assignedToName": "15",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "15",
+								"type": "Single",
+								"name": "AIN3",
+								"interfacePinName": "AIN3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN18",
+								"interfacePinName": "AIN18"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN10",
+								"interfacePinName": "AIN10"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN7",
+								"interfacePinName": "AIN7"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "AIN5",
+								"interfacePinName": "AIN5"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "ADC0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "ADC"
+					}
+				],
+				"requirementsNameIndex": 2
+			},
+			"CAN": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "CAN",
+				"id": "CAN",
+				"requirements": [],
+				"requirementsNameIndex": 4
+			},
+			"GPIO": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 14
+				},
+				"name": "GPIO",
+				"id": "GPIO",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PH2",
+						"id": "MyGPIO1",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO1_intenal_1",
+								"name": "MyGPIO1_intenal_1",
+								"parentReqName": "PH2",
+								"parentReqID": "MyGPIO1",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PH2",
+											"assignedToName": "31",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "31",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PH2",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PH3",
+						"id": "MyGPIO2",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO2_intenal_1",
+								"name": "MyGPIO2_intenal_1",
+								"parentReqName": "PH3",
+								"parentReqID": "MyGPIO2",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PH3",
+											"assignedToName": "32",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "32",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PH3",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PK4",
+						"id": "MyGPIO3",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO3_intenal_1",
+								"name": "MyGPIO3_intenal_1",
+								"parentReqName": "PK4",
+								"parentReqID": "MyGPIO3",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PK4",
+											"assignedToName": "63",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "63",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PK4",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PC",
+						"id": "MyGPIO4",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO4_intenal_1",
+								"name": "MyGPIO4_intenal_1",
+								"parentReqName": "PC",
+								"parentReqID": "MyGPIO4",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PC3",
+											"assignedToName": "97",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "97",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PC3",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO4_intenal_2",
+								"name": "MyGPIO4_intenal_2",
+								"parentReqName": "PC",
+								"parentReqID": "MyGPIO4",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PC2",
+											"assignedToName": "98",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "98",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PC2",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO4_intenal_3",
+								"name": "MyGPIO4_intenal_3",
+								"parentReqName": "PC",
+								"parentReqID": "MyGPIO4",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PC1",
+											"assignedToName": "99",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "99",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PC1",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO4_intenal_4",
+								"name": "MyGPIO4_intenal_4",
+								"parentReqName": "PC",
+								"parentReqID": "MyGPIO4",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PC0",
+											"assignedToName": "100",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "100",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PC0",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 5,
+						"numOfGPIOPins": 4
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "ExternalInterrupts",
+						"id": "MyGPIO5",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO5_intenal_1",
+								"name": "MyGPIO5_intenal_1",
+								"parentReqName": "ExternalInterrupts",
+								"parentReqID": "MyGPIO5",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PP4",
+											"assignedToName": "105",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "105",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PP4",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO5_intenal_2",
+								"name": "MyGPIO5_intenal_2",
+								"parentReqName": "ExternalInterrupts",
+								"parentReqID": "MyGPIO5",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PP5",
+											"assignedToName": "106",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "106",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PP5",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO5_intenal_3",
+								"name": "MyGPIO5_intenal_3",
+								"parentReqName": "ExternalInterrupts",
+								"parentReqID": "MyGPIO5",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PP0",
+											"assignedToName": "118",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "118",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PP0",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO5_intenal_4",
+								"name": "MyGPIO5_intenal_4",
+								"parentReqName": "ExternalInterrupts",
+								"parentReqID": "MyGPIO5",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PP1",
+											"assignedToName": "119",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "119",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PP1",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 5,
+						"numOfGPIOPins": 4
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PL5",
+						"id": "MyGPIO6",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO6_intenal_1",
+								"name": "MyGPIO6_intenal_1",
+								"parentReqName": "PL5",
+								"parentReqID": "MyGPIO6",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PL5",
+											"assignedToName": "86",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "86",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PL5",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PQ4",
+						"id": "MyGPIO7",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO7_intenal_1",
+								"name": "MyGPIO7_intenal_1",
+								"parentReqName": "PQ4",
+								"parentReqID": "MyGPIO7",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PQ4",
+											"assignedToName": "102",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "102",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PQ4",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"name": "PJ1",
+						"id": "MyGPIO8",
+						"requirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": [],
+									"gpioPinsUsed": 1
+								},
+								"id": "MyGPIO8_intenal_1",
+								"name": "MyGPIO8_intenal_1",
+								"parentReqName": "PJ1",
+								"parentReqID": "MyGPIO8",
+								"selectedInstance": "Any",
+								"selectedVoltage": "Any",
+								"selectedUseCase": "GPIO",
+								"pinRequirements": [
+									{
+										"used": true,
+										"solution": {
+											"nameDecoratorText": "GPIO_PJ1",
+											"assignedToName": "117",
+											"errorText": "",
+											"warningText": "",
+											"errorDetailsText": [],
+											"warningDetailsText": []
+										},
+										"assignedToName": "117",
+										"type": "Single",
+										"name": "GPIO#",
+										"interfacePinName": "GPIO#",
+										"input": true,
+										"output": false,
+										"outputOpenDrain": false
+									}
+								],
+								"peripheralSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "GPIO_PJ1",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"voltageSolution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"interfaceName": "GPIO"
+							}
+						],
+						"requirementsNameIndex": 2,
+						"numOfGPIOPins": 1
+					}
+				],
+				"requirementsNameIndex": 9
+			},
+			"Comparator": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "Comparator",
+				"id": "Comparator",
+				"requirements": [],
+				"requirementsNameIndex": 3
+			},
+			"TRACE": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "TRACE",
+				"id": "TRACE",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"USB": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 2
+				},
+				"name": "USB",
+				"id": "USB",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 2
+						},
+						"id": "MyUSB1",
+						"name": "USB",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "USB",
+						"pinRequirements": [
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D4",
+								"interfacePinName": "D4"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D0",
+								"interfacePinName": "D0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EPEN",
+								"interfacePinName": "EPEN"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "DIR",
+								"interfacePinName": "DIR"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "STP",
+								"interfacePinName": "STP"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "USB0DP",
+									"assignedToName": "94",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "94",
+								"type": "Single",
+								"name": "DP",
+								"interfacePinName": "DP"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PFLT",
+								"interfacePinName": "PFLT"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "USB0DM",
+									"assignedToName": "93",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "93",
+								"type": "Single",
+								"name": "DM",
+								"interfacePinName": "DM"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D3",
+								"interfacePinName": "D3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D7",
+								"interfacePinName": "D7"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "CLK",
+								"interfacePinName": "CLK"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "ID",
+								"interfacePinName": "ID"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "NXT",
+								"interfacePinName": "NXT"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "VBUS",
+								"interfacePinName": "VBUS"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D1",
+								"interfacePinName": "D1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D6",
+								"interfacePinName": "D6"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D5",
+								"interfacePinName": "D5"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "D2",
+								"interfacePinName": "D2"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "USB0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "USB"
+					}
+				],
+				"requirementsNameIndex": 2
+			},
+			"HIBERNATE": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "HIBERNATE",
+				"id": "HIBERNATE",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"Timer": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 4
+				},
+				"name": "Timer",
+				"id": "Timer",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 2
+						},
+						"id": "MyTimer3",
+						"name": "T4",
+						"selectedInstance": "Timer4",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "Timer",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "T4CCP0",
+									"assignedToName": "74",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "74",
+								"type": "Single",
+								"name": "CCP0",
+								"interfacePinName": "CCP0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "T4CCP1",
+									"assignedToName": "73",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "73",
+								"type": "Single",
+								"name": "CCP1",
+								"interfacePinName": "CCP1"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "Timer4",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "Timer"
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 2
+						},
+						"id": "MyTimer4",
+						"name": "T5",
+						"selectedInstance": "Timer5",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "Timer",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "T5CCP0",
+									"assignedToName": "72",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "72",
+								"type": "Single",
+								"name": "CCP0",
+								"interfacePinName": "CCP0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "T5CCP1",
+									"assignedToName": "71",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "71",
+								"type": "Single",
+								"name": "CCP1",
+								"interfacePinName": "CCP1"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "Timer5",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "Timer"
+					}
+				],
+				"requirementsNameIndex": 5
+			},
+			"DIVSCLK": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "DIVSCLK",
+				"id": "DIVSCLK",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"UART": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 12
+				},
+				"name": "UART",
+				"id": "UART",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 4
+						},
+						"id": "MyUART3",
+						"name": "UART0/CAN0/I2C9",
+						"selectedInstance": "UART0",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "UART",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U0RX",
+									"assignedToName": "33",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "33",
+								"type": "Single",
+								"name": "RX",
+								"interfacePinName": "RX"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U0TX",
+									"assignedToName": "34",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "34",
+								"type": "Single",
+								"name": "TX",
+								"interfacePinName": "TX"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "DCD",
+								"interfacePinName": "DCD"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "DTR",
+								"interfacePinName": "DTR"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U0CTS",
+									"assignedToName": "30",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "30",
+								"type": "Single",
+								"name": "CTS",
+								"interfacePinName": "CTS"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "DSR",
+								"interfacePinName": "DSR"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U0RTS",
+									"assignedToName": "29",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "29",
+								"type": "Single",
+								"name": "RTS",
+								"interfacePinName": "RTS"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "RI",
+								"interfacePinName": "RI"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "UART0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "UART"
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 8
+						},
+						"id": "MyUART4",
+						"name": "UART1/CAN1/I2C5",
+						"selectedInstance": "UART1",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "UART",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1RX",
+									"assignedToName": "95",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "95",
+								"type": "Single",
+								"name": "RX",
+								"interfacePinName": "RX"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1TX",
+									"assignedToName": "96",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "96",
+								"type": "Single",
+								"name": "TX",
+								"interfacePinName": "TX"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1DCD",
+									"assignedToName": "109",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "109",
+								"type": "Single",
+								"name": "DCD",
+								"interfacePinName": "DCD"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1DTR",
+									"assignedToName": "111",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "111",
+								"type": "Single",
+								"name": "DTR",
+								"interfacePinName": "DTR"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1CTS",
+									"assignedToName": "108",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "108",
+								"type": "Single",
+								"name": "CTS",
+								"interfacePinName": "CTS"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1DSR",
+									"assignedToName": "110",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "110",
+								"type": "Single",
+								"name": "DSR",
+								"interfacePinName": "DSR"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1RTS",
+									"assignedToName": "107",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "107",
+								"type": "Single",
+								"name": "RTS",
+								"interfacePinName": "RTS"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "U1RI",
+									"assignedToName": "112",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "112",
+								"type": "Single",
+								"name": "RI",
+								"interfacePinName": "RI"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "UART1",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "UART"
+					}
+				],
+				"requirementsNameIndex": 5
+			},
+			"SSI": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 16
+				},
+				"name": "SSI",
+				"id": "SSI",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 4
+						},
+						"id": "MySSI2",
+						"name": "SSI0",
+						"selectedInstance": "SSI0",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "SSI",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI0XDAT0",
+									"assignedToName": "37",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "37",
+								"type": "Single",
+								"name": "XDAT0",
+								"interfacePinName": "XDAT0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "XDAT3",
+								"interfacePinName": "XDAT3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI0XDAT1",
+									"assignedToName": "38",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "38",
+								"type": "Single",
+								"name": "XDAT1",
+								"interfacePinName": "XDAT1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI0FSS",
+									"assignedToName": "36",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "36",
+								"type": "Single",
+								"name": "FSS",
+								"interfacePinName": "FSS"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "XDAT2",
+								"interfacePinName": "XDAT2"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI0CLK",
+									"assignedToName": "35",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "35",
+								"type": "Single",
+								"name": "CLK",
+								"interfacePinName": "CLK"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "SSI0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "SSI"
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 6
+						},
+						"id": "MySSI5",
+						"name": "SSI1",
+						"selectedInstance": "SSI1",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "SSI",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1XDAT0",
+									"assignedToName": "123",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "123",
+								"type": "Single",
+								"name": "XDAT0",
+								"interfacePinName": "XDAT0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1XDAT3",
+									"assignedToName": "126",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "126",
+								"type": "Single",
+								"name": "XDAT3",
+								"interfacePinName": "XDAT3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1XDAT1",
+									"assignedToName": "124",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "124",
+								"type": "Single",
+								"name": "XDAT1",
+								"interfacePinName": "XDAT1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1FSS",
+									"assignedToName": "121",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "121",
+								"type": "Single",
+								"name": "FSS",
+								"interfacePinName": "FSS"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1XDAT2",
+									"assignedToName": "125",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "125",
+								"type": "Single",
+								"name": "XDAT2",
+								"interfacePinName": "XDAT2"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI1CLK",
+									"assignedToName": "120",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "120",
+								"type": "Single",
+								"name": "CLK",
+								"interfacePinName": "CLK"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "SSI1",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "SSI"
+					},
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 6
+						},
+						"id": "MySSI6",
+						"name": "SSI2",
+						"selectedInstance": "SSI2",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "SSI",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2XDAT0",
+									"assignedToName": "2",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "2",
+								"type": "Single",
+								"name": "XDAT0",
+								"interfacePinName": "XDAT0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2XDAT3",
+									"assignedToName": "127",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "127",
+								"type": "Single",
+								"name": "XDAT3",
+								"interfacePinName": "XDAT3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2XDAT1",
+									"assignedToName": "1",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "1",
+								"type": "Single",
+								"name": "XDAT1",
+								"interfacePinName": "XDAT1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2FSS",
+									"assignedToName": "3",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "3",
+								"type": "Single",
+								"name": "FSS",
+								"interfacePinName": "FSS"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2XDAT2",
+									"assignedToName": "128",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "128",
+								"type": "Single",
+								"name": "XDAT2",
+								"interfacePinName": "XDAT2"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "SSI2CLK",
+									"assignedToName": "4",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "4",
+								"type": "Single",
+								"name": "CLK",
+								"interfacePinName": "CLK"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "SSI2",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "SSI"
+					}
+				],
+				"requirementsNameIndex": 8
+			},
+			"ETHERNET": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 2
+				},
+				"name": "ETHERNET",
+				"id": "ETHERNET",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 2
+						},
+						"id": "MyETHERNET1",
+						"name": "Ethernet",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "ETHERNET",
+						"pinRequirements": [
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EN0LED0",
+									"assignedToName": "42",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "42",
+								"type": "Single",
+								"name": "EN0LED0",
+								"interfacePinName": "EN0LED0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0INTRN",
+								"interfacePinName": "EN0INTRN"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXD3",
+								"interfacePinName": "EN0RXD3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EN0LED1",
+									"assignedToName": "46",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "46",
+								"type": "Single",
+								"name": "EN0LED1",
+								"interfacePinName": "EN0LED1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXD2",
+								"interfacePinName": "EN0TXD2"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "116",
+								"type": "Single",
+								"name": "EN0PPS",
+								"interfacePinName": "EN0PPS"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXD1",
+								"interfacePinName": "EN0TXD1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXCK",
+								"interfacePinName": "EN0RXCK"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXDV",
+								"interfacePinName": "EN0RXDV"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXER",
+								"interfacePinName": "EN0RXER"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0MDC",
+								"interfacePinName": "EN0MDC"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXEN",
+								"interfacePinName": "EN0TXEN"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXER",
+								"interfacePinName": "EN0TXER"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0MDIO",
+								"interfacePinName": "EN0MDIO"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXD0",
+								"interfacePinName": "EN0RXD0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0CRS",
+								"interfacePinName": "EN0CRS"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "43",
+								"type": "Single",
+								"name": "EN0LED2",
+								"interfacePinName": "EN0LED2"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXD2",
+								"interfacePinName": "EN0RXD2"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXD0",
+								"interfacePinName": "EN0TXD0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RREF_CLK",
+								"interfacePinName": "EN0RREF_CLK"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXCK",
+								"interfacePinName": "EN0TXCK"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0RXD1",
+								"interfacePinName": "EN0RXD1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0TXD3",
+								"interfacePinName": "EN0TXD3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "EN0COL",
+								"interfacePinName": "EN0COL"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "ETHERNET0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "ETHERNET"
+					}
+				],
+				"requirementsNameIndex": 2
+			},
+			"I2C": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "I2C",
+				"id": "I2C",
+				"requirements": [],
+				"requirementsNameIndex": 7
+			},
+			"1-Wire": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "1-Wire",
+				"id": "1-Wire",
+				"requirements": [],
+				"requirementsNameIndex": 1
+			},
+			"EPI": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 32
+				},
+				"name": "EPI",
+				"id": "EPI",
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 32
+						},
+						"id": "MyEPI1",
+						"name": "EPI/FPGA",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "EPI",
+						"pinRequirements": [
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "S32",
+								"interfacePinName": "S32"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S26",
+									"assignedToName": "85",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "85",
+								"type": "Single",
+								"name": "S26",
+								"interfacePinName": "S26"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S25",
+									"assignedToName": "61",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "61",
+								"type": "Single",
+								"name": "S25",
+								"interfacePinName": "S25"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S16",
+									"assignedToName": "81",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "81",
+								"type": "Single",
+								"name": "S16",
+								"interfacePinName": "S16"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S11",
+									"assignedToName": "49",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "49",
+								"type": "Single",
+								"name": "S11",
+								"interfacePinName": "S11"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S8",
+									"assignedToName": "40",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "40",
+								"type": "Single",
+								"name": "S8",
+								"interfacePinName": "S8"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S1",
+									"assignedToName": "19",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "19",
+								"type": "Single",
+								"name": "S1",
+								"interfacePinName": "S1"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S30",
+									"assignedToName": "104",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "104",
+								"type": "Single",
+								"name": "S30",
+								"interfacePinName": "S30"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S27",
+									"assignedToName": "91",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "91",
+								"type": "Single",
+								"name": "S27",
+								"interfacePinName": "S27"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "S34",
+								"interfacePinName": "S34"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S21",
+									"assignedToName": "6",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "6",
+								"type": "Single",
+								"name": "S21",
+								"interfacePinName": "S21"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S19",
+									"assignedToName": "84",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "84",
+								"type": "Single",
+								"name": "S19",
+								"interfacePinName": "S19"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S15",
+									"assignedToName": "78",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "78",
+								"type": "Single",
+								"name": "S15",
+								"interfacePinName": "S15"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S13",
+									"assignedToName": "76",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "76",
+								"type": "Single",
+								"name": "S13",
+								"interfacePinName": "S13"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S28",
+									"assignedToName": "92",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "92",
+								"type": "Single",
+								"name": "S28",
+								"interfacePinName": "S28"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S23",
+									"assignedToName": "27",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "27",
+								"type": "Single",
+								"name": "S23",
+								"interfacePinName": "S23"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S10",
+									"assignedToName": "50",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "50",
+								"type": "Single",
+								"name": "S10",
+								"interfacePinName": "S10"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S31",
+									"assignedToName": "62",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "62",
+								"type": "Single",
+								"name": "S31",
+								"interfacePinName": "S31"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S29",
+									"assignedToName": "103",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "103",
+								"type": "Single",
+								"name": "S29",
+								"interfacePinName": "S29"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S3",
+									"assignedToName": "21",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "21",
+								"type": "Single",
+								"name": "S3",
+								"interfacePinName": "S3"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S6",
+									"assignedToName": "24",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "24",
+								"type": "Single",
+								"name": "S6",
+								"interfacePinName": "S6"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S9",
+									"assignedToName": "41",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "41",
+								"type": "Single",
+								"name": "S9",
+								"interfacePinName": "S9"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S0",
+									"assignedToName": "18",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "18",
+								"type": "Single",
+								"name": "S0",
+								"interfacePinName": "S0"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S7",
+									"assignedToName": "25",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "25",
+								"type": "Single",
+								"name": "S7",
+								"interfacePinName": "S7"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S17",
+									"assignedToName": "82",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "82",
+								"type": "Single",
+								"name": "S17",
+								"interfacePinName": "S17"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "S33",
+								"interfacePinName": "S33"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "S35",
+								"interfacePinName": "S35"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S14",
+									"assignedToName": "77",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "77",
+								"type": "Single",
+								"name": "S14",
+								"interfacePinName": "S14"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S24",
+									"assignedToName": "60",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "60",
+								"type": "Single",
+								"name": "S24",
+								"interfacePinName": "S24"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S4",
+									"assignedToName": "22",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "22",
+								"type": "Single",
+								"name": "S4",
+								"interfacePinName": "S4"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S18",
+									"assignedToName": "83",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "83",
+								"type": "Single",
+								"name": "S18",
+								"interfacePinName": "S18"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S12",
+									"assignedToName": "75",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "75",
+								"type": "Single",
+								"name": "S12",
+								"interfacePinName": "S12"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S20",
+									"assignedToName": "5",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "5",
+								"type": "Single",
+								"name": "S20",
+								"interfacePinName": "S20"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S22",
+									"assignedToName": "11",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "11",
+								"type": "Single",
+								"name": "S22",
+								"interfacePinName": "S22"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S5",
+									"assignedToName": "23",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "23",
+								"type": "Single",
+								"name": "S5",
+								"interfacePinName": "S5"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "EPI0S2",
+									"assignedToName": "20",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "20",
+								"type": "Single",
+								"name": "S2",
+								"interfacePinName": "S2"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "EPI0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "EPI"
+					}
+				],
+				"requirementsNameIndex": 2
+			},
+			"QEI": {
+				"used": true,
+				"solution": {
+					"nameDecoratorText": "",
+					"assignedToName": "",
+					"errorText": "",
+					"warningText": "",
+					"errorDetailsText": [],
+					"warningDetailsText": [],
+					"gpioPinsUsed": 0
+				},
+				"name": "QEI",
+				"id": "QEI",
+				"requirements": [],
+				"requirementsNameIndex": 2
+			}
+		},
+		"version": "2.0.0"
+	},
+	"codeGenOptionsValues": {}
+}
