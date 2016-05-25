@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2573,10 +2573,10 @@ W = angled&lt;p&gt;
 </package>
 <package name="C0603">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
-<wire x1="-1.473" y1="0.583" x2="1.473" y2="0.583" width="0.2" layer="39"/>
-<wire x1="1.473" y1="0.583" x2="1.473" y2="-0.583" width="0.2" layer="39"/>
-<wire x1="1.473" y1="-0.583" x2="-1.473" y2="-0.583" width="0.2" layer="39"/>
-<wire x1="-1.473" y1="-0.583" x2="-1.473" y2="0.583" width="0.2" layer="39"/>
+<wire x1="-1.373" y1="0.483" x2="1.373" y2="0.483" width="0.2" layer="39"/>
+<wire x1="1.373" y1="0.483" x2="1.373" y2="-0.483" width="0.2" layer="39"/>
+<wire x1="1.373" y1="-0.483" x2="-1.373" y2="-0.483" width="0.2" layer="39"/>
+<wire x1="-1.373" y1="-0.483" x2="-1.373" y2="0.483" width="0.2" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
@@ -4117,10 +4117,10 @@ Source: AVX .. aphvc.pdf</description>
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
 <wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.2" layer="51"/>
 <wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.2" layer="51"/>
-<wire x1="-1.473" y1="0.683" x2="1.473" y2="0.683" width="0.2" layer="39"/>
-<wire x1="1.473" y1="0.683" x2="1.473" y2="-0.683" width="0.2" layer="39"/>
-<wire x1="1.473" y1="-0.683" x2="-1.473" y2="-0.683" width="0.2" layer="39"/>
-<wire x1="-1.473" y1="-0.683" x2="-1.473" y2="0.683" width="0.2" layer="39"/>
+<wire x1="-1.373" y1="0.583" x2="1.373" y2="0.583" width="0.2" layer="39"/>
+<wire x1="1.373" y1="0.583" x2="1.373" y2="-0.583" width="0.2" layer="39"/>
+<wire x1="1.373" y1="-0.583" x2="-1.373" y2="-0.583" width="0.2" layer="39"/>
+<wire x1="-1.373" y1="-0.583" x2="-1.373" y2="0.583" width="0.2" layer="39"/>
 <smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
 <text x="-0.635" y="0.635" size="1" layer="25" font="vector" ratio="14">&gt;Name</text>
@@ -7655,9 +7655,6 @@ LED    --YES</description>
 <vertex x="-7.86" y="5.39"/>
 <vertex x="-7.86" y="11.43"/>
 </polygon>
-<wire x1="-8" y1="6" x2="8" y2="6" width="0.2" layer="40"/>
-<wire x1="8" y1="6" x2="8" y2="-1" width="0.2" layer="40"/>
-<wire x1="8" y1="-1" x2="9.2" y2="-1" width="0.2" layer="40"/>
 <wire x1="9.2" y1="-1" x2="9.2" y2="-5" width="0.2" layer="40"/>
 <wire x1="9.2" y1="-5" x2="6" y2="-5" width="0.2" layer="40"/>
 <wire x1="6" y1="-5" x2="6" y2="-10" width="0.2" layer="40"/>
@@ -7665,8 +7662,19 @@ LED    --YES</description>
 <wire x1="-6" y1="-10" x2="-6" y2="-5" width="0.2" layer="40"/>
 <wire x1="-6" y1="-5" x2="-9.2" y2="-5" width="0.2" layer="40"/>
 <wire x1="-9.2" y1="-5" x2="-9.2" y2="-1" width="0.2" layer="40"/>
-<wire x1="-9.2" y1="-1" x2="-8" y2="-1" width="0.2" layer="40"/>
-<wire x1="-8" y1="-1" x2="-8" y2="6" width="0.2" layer="40"/>
+<wire x1="-9.2" y1="-1" x2="-6" y2="-1" width="0.2" layer="40"/>
+<wire x1="-6" y1="-1" x2="-6" y2="-5" width="0.2" layer="40"/>
+<wire x1="-6" y1="-5" x2="6" y2="-5" width="0.2" layer="40"/>
+<wire x1="6" y1="-5" x2="6" y2="-1" width="0.2" layer="40"/>
+<wire x1="6" y1="-1" x2="9.2" y2="-1" width="0.2" layer="40"/>
+<wire x1="-8" y1="3" x2="-8" y2="11.5" width="0.2" layer="40"/>
+<wire x1="-8" y1="11.5" x2="8" y2="11.5" width="0.2" layer="40"/>
+<wire x1="8" y1="11.5" x2="8" y2="3" width="0.2" layer="40"/>
+<wire x1="8" y1="3" x2="3" y2="3" width="0.2" layer="40"/>
+<wire x1="3" y1="3" x2="3" y2="5" width="0.2" layer="40"/>
+<wire x1="3" y1="5" x2="-3" y2="5" width="0.2" layer="40"/>
+<wire x1="-3" y1="5" x2="-3" y2="3" width="0.2" layer="40"/>
+<wire x1="-3" y1="3" x2="-8" y2="3" width="0.2" layer="40"/>
 </package>
 <package name="61400416121">
 <description>WR-COM Horizontal USB Type B</description>
@@ -34089,8 +34097,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="U$28" gate=" " x="254" y="233.68"/>
 <instance part="U$29" gate=" " x="307.34" y="233.68"/>
 <instance part="X8" gate="-RJ45-LAN" x="167.64" y="200.66"/>
-<instance part="X8" gate="-LED-YELLOW" x="254" y="210.82" rot="R90"/>
-<instance part="X8" gate="-LED-GREEN" x="307.34" y="210.82" rot="R90"/>
+<instance part="X8" gate="-LED-YELLOW" x="307.34" y="210.82" rot="R90"/>
+<instance part="X8" gate="-LED-GREEN" x="254" y="210.82" rot="R90"/>
 <instance part="X8" gate="-SHIELD" x="208.28" y="170.18"/>
 <instance part="R27" gate="G$1" x="254" y="223.52" rot="R90"/>
 <instance part="R28" gate="G$1" x="307.34" y="223.52" rot="R90"/>
@@ -34179,6 +34187,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <wire x1="203.2" y1="78.74" x2="198.12" y2="78.74" width="0.1524" layer="91"/>
 <label x="198.12" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="X6" gate="X1" pin="VCC"/>
 </segment>
 </net>
 <net name="D_N" class="0">
@@ -34197,6 +34206,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <wire x1="203.2" y1="76.2" x2="198.12" y2="76.2" width="0.1524" layer="91"/>
 <label x="198.12" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="X6" gate="X1" pin="D_N"/>
 </segment>
 </net>
 <net name="D_P" class="0">
@@ -34215,6 +34225,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <wire x1="203.2" y1="73.66" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
 <label x="198.12" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="X6" gate="X1" pin="D_P"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -34371,39 +34382,39 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <label x="284.48" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="T4" gate="G$1" pin="C"/>
-<wire x1="254" y1="208.28" x2="254" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="X8" gate="-LED-YELLOW" pin="K"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="T5" gate="G$1" pin="C"/>
-<wire x1="307.34" y1="208.28" x2="307.34" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="X8" gate="-LED-GREEN" pin="K"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="R27" gate="G$1" pin="1"/>
-<pinref part="X8" gate="-LED-YELLOW" pin="A"/>
-<wire x1="254" y1="218.44" x2="254" y2="215.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="R28" gate="G$1" pin="1"/>
-<pinref part="X8" gate="-LED-GREEN" pin="A"/>
-<wire x1="307.34" y1="218.44" x2="307.34" y2="215.9" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V_USB" class="0">
 <segment>
 <pinref part="L4" gate="G$1" pin="E"/>
 <wire x1="101.6" y1="96.52" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
 <label x="86.36" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R27" gate="G$1" pin="1"/>
+<pinref part="X8" gate="-LED-GREEN" pin="A"/>
+<wire x1="254" y1="218.44" x2="254" y2="215.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="X8" gate="-LED-GREEN" pin="K"/>
+<pinref part="T4" gate="G$1" pin="C"/>
+<wire x1="254" y1="208.28" x2="254" y2="203.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="R28" gate="G$1" pin="1"/>
+<pinref part="X8" gate="-LED-YELLOW" pin="A"/>
+<wire x1="307.34" y1="218.44" x2="307.34" y2="215.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="X8" gate="-LED-YELLOW" pin="K"/>
+<pinref part="T5" gate="G$1" pin="C"/>
+<wire x1="307.34" y1="208.28" x2="307.34" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
