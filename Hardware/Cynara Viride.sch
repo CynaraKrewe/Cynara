@@ -31147,25 +31147,25 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="RA11" gate="RA1" x="45.72" y="187.96" rot="MR0"/>
 <instance part="RA12" gate="RA1" x="35.56" y="177.8" rot="MR0"/>
 <instance part="RA13" gate="RA1" x="45.72" y="167.64" rot="MR0"/>
-<instance part="=16" gate="G$1" x="185.42" y="195.58"/>
-<instance part="=70" gate=" " x="185.42" y="162.56"/>
-<instance part="=86" gate=" " x="180.34" y="162.56"/>
-<instance part="=118" gate=" " x="104.14" y="162.56"/>
-<instance part="=119" gate=" " x="109.22" y="162.56"/>
-<instance part="=136" gate=" " x="104.14" y="195.58"/>
-<instance part="=137" gate=" " x="109.22" y="193.04"/>
-<instance part="VEXT_A1" gate="G$1" x="180.34" y="193.04"/>
+<instance part="=16" gate="G$1" x="185.42" y="160.02" rot="R180"/>
+<instance part="=70" gate=" " x="185.42" y="193.04" rot="R180"/>
+<instance part="=86" gate=" " x="180.34" y="193.04" rot="R180"/>
+<instance part="=118" gate=" " x="104.14" y="193.04" rot="R180"/>
+<instance part="=119" gate=" " x="109.22" y="193.04" rot="R180"/>
+<instance part="=136" gate=" " x="104.14" y="160.02" rot="R180"/>
+<instance part="=137" gate=" " x="109.22" y="162.56" rot="R180"/>
+<instance part="VEXT_A1" gate="G$1" x="180.34" y="162.56" rot="R180"/>
 <instance part="RA14" gate="RA1" x="35.56" y="157.48" rot="MR0"/>
 <instance part="RA15" gate="RA1" x="45.72" y="147.32" rot="MR0"/>
 <instance part="RA16" gate="RA1" x="35.56" y="137.16" rot="MR0"/>
-<instance part="=40" gate=" " x="104.14" y="68.58"/>
-<instance part="=45" gate=" " x="109.22" y="66.04"/>
-<instance part="=58" gate=" " x="104.14" y="35.56"/>
-<instance part="=88" gate=" " x="109.22" y="35.56"/>
-<instance part="=90" gate=" " x="180.34" y="35.56"/>
-<instance part="=117" gate=" " x="185.42" y="35.56"/>
-<instance part="VEXT_A3" gate="G$1" x="180.34" y="66.04"/>
-<instance part="=120" gate="G$1" x="185.42" y="68.58"/>
+<instance part="=40" gate=" " x="104.14" y="33.02" rot="R180"/>
+<instance part="=45" gate=" " x="109.22" y="35.56" rot="R180"/>
+<instance part="=58" gate=" " x="104.14" y="66.04" rot="R180"/>
+<instance part="=88" gate=" " x="109.22" y="66.04" rot="R180"/>
+<instance part="=90" gate=" " x="180.34" y="66.04" rot="R180"/>
+<instance part="=117" gate=" " x="185.42" y="66.04" rot="R180"/>
+<instance part="VEXT_A3" gate="G$1" x="180.34" y="35.56" rot="R180"/>
+<instance part="=120" gate="G$1" x="185.42" y="33.02" rot="R180"/>
 <instance part="RA17" gate="RA1" x="35.56" y="71.12" rot="MR0"/>
 <instance part="RA18" gate="RA1" x="45.72" y="60.96" rot="MR0"/>
 <instance part="RA19" gate="RA1" x="35.56" y="50.8" rot="MR0"/>
@@ -31178,14 +31178,14 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="RA28" gate="RA1" x="226.06" y="157.48" rot="MR0"/>
 <instance part="RA29" gate="RA1" x="236.22" y="147.32" rot="MR0"/>
 <instance part="RA30" gate="RA1" x="226.06" y="137.16" rot="MR0"/>
-<instance part="=91" gate=" " x="294.64" y="195.58"/>
-<instance part="=96" gate=" " x="299.72" y="193.04"/>
-<instance part="=124" gate="G$1" x="375.92" y="195.58"/>
-<instance part="=126" gate="G$1" x="370.84" y="193.04"/>
-<instance part="=135" gate=" " x="294.64" y="162.56"/>
-<instance part="=138" gate=" " x="299.72" y="162.56"/>
-<instance part="=139" gate=" " x="370.84" y="162.56"/>
-<instance part="=140" gate=" " x="375.92" y="162.56"/>
+<instance part="=91" gate=" " x="294.64" y="160.02" rot="R180"/>
+<instance part="=96" gate=" " x="299.72" y="162.56" rot="R180"/>
+<instance part="=124" gate="G$1" x="375.92" y="160.02" rot="R180"/>
+<instance part="=126" gate="G$1" x="370.84" y="162.56" rot="R180"/>
+<instance part="=135" gate=" " x="294.64" y="193.04" rot="R180"/>
+<instance part="=138" gate=" " x="299.72" y="193.04" rot="R180"/>
+<instance part="=139" gate=" " x="370.84" y="193.04" rot="R180"/>
+<instance part="=140" gate=" " x="375.92" y="193.04" rot="R180"/>
 <instance part="RA31" gate="RA1" x="226.06" y="71.12" rot="MR0"/>
 <instance part="RA32" gate="RA1" x="236.22" y="60.96" rot="MR0"/>
 <instance part="RA33" gate="RA1" x="226.06" y="50.8" rot="MR0"/>
@@ -31194,14 +31194,14 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="RA36" gate="RA1" x="236.22" y="20.32" rot="MR0"/>
 <instance part="RA37" gate="RA1" x="226.06" y="10.16" rot="MR0"/>
 <instance part="X7" gate="X1" x="337.82" y="50.8" rot="R90"/>
-<instance part="=107" gate=" " x="294.64" y="68.58"/>
-<instance part="=108" gate=" " x="299.72" y="66.04"/>
-<instance part="=141" gate="G$1" x="375.92" y="68.58"/>
-<instance part="=142" gate="G$1" x="370.84" y="66.04"/>
-<instance part="=143" gate=" " x="294.64" y="35.56"/>
-<instance part="=144" gate=" " x="299.72" y="35.56"/>
-<instance part="=145" gate=" " x="370.84" y="35.56"/>
-<instance part="=146" gate=" " x="375.92" y="35.56"/>
+<instance part="=107" gate=" " x="294.64" y="33.02" rot="R180"/>
+<instance part="=108" gate=" " x="299.72" y="35.56" rot="R180"/>
+<instance part="=141" gate="G$1" x="375.92" y="33.02" rot="R180"/>
+<instance part="=142" gate="G$1" x="370.84" y="35.56" rot="R180"/>
+<instance part="=143" gate=" " x="294.64" y="66.04" rot="R180"/>
+<instance part="=144" gate=" " x="299.72" y="66.04" rot="R180"/>
+<instance part="=145" gate=" " x="370.84" y="66.04" rot="R180"/>
+<instance part="=146" gate=" " x="375.92" y="66.04" rot="R180"/>
 <instance part="RA20" gate="RA1" x="45.72" y="40.64"/>
 <instance part="RA21" gate="RA1" x="35.56" y="30.48"/>
 </instances>
@@ -31434,84 +31434,84 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="281.94" y1="106.68" x2="281.94" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X11" gate="X1" pin="32"/>
-<pinref part="=86" gate=" " pin="GND"/>
-<wire x1="180.34" y1="167.64" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X11" gate="X1" pin="34"/>
-<pinref part="=70" gate=" " pin="GND"/>
-<wire x1="185.42" y1="167.64" x2="185.42" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X11" gate="X1" pin="2"/>
+<pinref part="X11" gate="X1" pin="1"/>
 <pinref part="=118" gate=" " pin="GND"/>
-<wire x1="104.14" y1="167.64" x2="104.14" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="187.96" x2="104.14" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X11" gate="X1" pin="4"/>
+<pinref part="X11" gate="X1" pin="3"/>
 <pinref part="=119" gate=" " pin="GND"/>
-<wire x1="109.22" y1="167.64" x2="109.22" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="187.96" x2="109.22" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X12" gate="X1" pin="2"/>
+<pinref part="X11" gate="X1" pin="33"/>
+<pinref part="=70" gate=" " pin="GND"/>
+<wire x1="185.42" y1="187.96" x2="185.42" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X11" gate="X1" pin="31"/>
+<pinref part="=86" gate=" " pin="GND"/>
+<wire x1="180.34" y1="187.96" x2="180.34" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="=58" gate=" " pin="GND"/>
-<wire x1="104.14" y1="40.64" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X12" gate="X1" pin="1"/>
+<wire x1="104.14" y1="63.5" x2="104.14" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X12" gate="X1" pin="4"/>
 <pinref part="=88" gate=" " pin="GND"/>
-<wire x1="109.22" y1="40.64" x2="109.22" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X12" gate="X1" pin="3"/>
+<wire x1="109.22" y1="63.5" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X12" gate="X1" pin="32"/>
 <pinref part="=90" gate=" " pin="GND"/>
-<wire x1="180.34" y1="40.64" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X12" gate="X1" pin="31"/>
+<wire x1="180.34" y1="63.5" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X12" gate="X1" pin="34"/>
 <pinref part="=117" gate=" " pin="GND"/>
-<wire x1="185.42" y1="40.64" x2="185.42" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X12" gate="X1" pin="33"/>
+<wire x1="185.42" y1="63.5" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X13" gate="X1" pin="2"/>
-<pinref part="=135" gate=" " pin="GND"/>
-<wire x1="294.64" y1="167.64" x2="294.64" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X13" gate="X1" pin="4"/>
-<pinref part="=138" gate=" " pin="GND"/>
-<wire x1="299.72" y1="167.64" x2="299.72" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X13" gate="X1" pin="32"/>
-<pinref part="=139" gate=" " pin="GND"/>
-<wire x1="370.84" y1="167.64" x2="370.84" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X13" gate="X1" pin="34"/>
-<pinref part="=140" gate=" " pin="GND"/>
-<wire x1="375.92" y1="167.64" x2="375.92" y2="165.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X7" gate="X1" pin="2"/>
 <pinref part="=143" gate=" " pin="GND"/>
-<wire x1="294.64" y1="40.64" x2="294.64" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X7" gate="X1" pin="1"/>
+<wire x1="294.64" y1="63.5" x2="294.64" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X7" gate="X1" pin="4"/>
 <pinref part="=144" gate=" " pin="GND"/>
-<wire x1="299.72" y1="40.64" x2="299.72" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X7" gate="X1" pin="3"/>
+<wire x1="299.72" y1="63.5" x2="299.72" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X7" gate="X1" pin="32"/>
 <pinref part="=145" gate=" " pin="GND"/>
-<wire x1="370.84" y1="40.64" x2="370.84" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X7" gate="X1" pin="31"/>
+<wire x1="370.84" y1="63.5" x2="370.84" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X7" gate="X1" pin="34"/>
 <pinref part="=146" gate=" " pin="GND"/>
-<wire x1="375.92" y1="40.64" x2="375.92" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X7" gate="X1" pin="33"/>
+<wire x1="375.92" y1="63.5" x2="375.92" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="=135" gate=" " pin="GND"/>
+<pinref part="X13" gate="X1" pin="1"/>
+<wire x1="294.64" y1="190.5" x2="294.64" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="=138" gate=" " pin="GND"/>
+<pinref part="X13" gate="X1" pin="3"/>
+<wire x1="299.72" y1="190.5" x2="299.72" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="=139" gate=" " pin="GND"/>
+<pinref part="X13" gate="X1" pin="31"/>
+<wire x1="370.84" y1="190.5" x2="370.84" y2="187.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="=140" gate=" " pin="GND"/>
+<pinref part="X13" gate="X1" pin="33"/>
+<wire x1="375.92" y1="190.5" x2="375.92" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -31531,11 +31531,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="20.32" y="104.14"/>
 </segment>
 <segment>
-<pinref part="=136" gate=" " pin="+5V"/>
-<pinref part="X11" gate="X1" pin="1"/>
-<wire x1="104.14" y1="193.04" x2="104.14" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="=15" gate=" " pin="+5V"/>
 <wire x1="10.16" y1="233.68" x2="10.16" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="231.14" x2="20.32" y2="231.14" width="0.1524" layer="91"/>
@@ -31549,11 +31544,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="X1" gate="X1" pin="1"/>
 <wire x1="20.32" y1="233.68" x2="20.32" y2="231.14" width="0.1524" layer="91"/>
 <junction x="20.32" y="231.14"/>
-</segment>
-<segment>
-<pinref part="=40" gate=" " pin="+5V"/>
-<pinref part="X12" gate="X1" pin="1"/>
-<wire x1="104.14" y1="66.04" x2="104.14" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="=99" gate=" " pin="+5V"/>
@@ -31571,11 +31561,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="213.36" y="231.14"/>
 </segment>
 <segment>
-<pinref part="=91" gate=" " pin="+5V"/>
-<pinref part="X13" gate="X1" pin="1"/>
-<wire x1="294.64" y1="193.04" x2="294.64" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="=111" gate=" " pin="+5V"/>
 <wire x1="200.66" y1="106.68" x2="200.66" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="104.14" x2="210.82" y2="104.14" width="0.1524" layer="91"/>
@@ -31591,9 +31576,24 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="210.82" y="104.14"/>
 </segment>
 <segment>
+<pinref part="=136" gate=" " pin="+5V"/>
+<pinref part="X11" gate="X1" pin="2"/>
+<wire x1="104.14" y1="162.56" x2="104.14" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X12" gate="X1" pin="2"/>
+<pinref part="=40" gate=" " pin="+5V"/>
+<wire x1="104.14" y1="40.64" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X7" gate="X1" pin="2"/>
 <pinref part="=107" gate=" " pin="+5V"/>
-<pinref part="X7" gate="X1" pin="1"/>
-<wire x1="294.64" y1="66.04" x2="294.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="40.64" x2="294.64" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X13" gate="X1" pin="2"/>
+<pinref part="=91" gate=" " pin="+5V"/>
+<wire x1="294.64" y1="167.64" x2="294.64" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PETAL_II_B" class="0">
@@ -31632,11 +31632,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 </net>
 <net name="X3V3" class="0">
 <segment>
-<pinref part="=137" gate=" " pin="X3V3"/>
-<pinref part="X11" gate="X1" pin="3"/>
-<wire x1="109.22" y1="190.5" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="=14" gate=" " pin="X3V3"/>
 <wire x1="10.16" y1="223.52" x2="10.16" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="220.98" x2="27.94" y2="220.98" width="0.1524" layer="91"/>
@@ -31667,11 +31662,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="27.94" y="93.98"/>
 </segment>
 <segment>
-<pinref part="=45" gate=" " pin="X3V3"/>
-<pinref part="X12" gate="X1" pin="3"/>
-<wire x1="109.22" y1="63.5" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="X3" gate="X1" pin="6"/>
 <wire x1="223.52" y1="233.68" x2="223.52" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="220.98" x2="220.98" y2="220.98" width="0.1524" layer="91"/>
@@ -31685,11 +31675,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="X3" gate="X1" pin="4"/>
 <wire x1="218.44" y1="233.68" x2="218.44" y2="220.98" width="0.1524" layer="91"/>
 <junction x="218.44" y="220.98"/>
-</segment>
-<segment>
-<pinref part="=96" gate=" " pin="X3V3"/>
-<pinref part="X13" gate="X1" pin="3"/>
-<wire x1="299.72" y1="190.5" x2="299.72" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="=113" gate=" " pin="X3V3"/>
@@ -31707,9 +31692,24 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="218.44" y="93.98"/>
 </segment>
 <segment>
+<pinref part="=137" gate=" " pin="X3V3"/>
+<pinref part="X11" gate="X1" pin="4"/>
+<wire x1="109.22" y1="165.1" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X12" gate="X1" pin="4"/>
+<pinref part="=45" gate=" " pin="X3V3"/>
+<wire x1="109.22" y1="40.64" x2="109.22" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X7" gate="X1" pin="4"/>
 <pinref part="=108" gate=" " pin="X3V3"/>
-<pinref part="X7" gate="X1" pin="3"/>
-<wire x1="299.72" y1="63.5" x2="299.72" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="40.64" x2="299.72" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X13" gate="X1" pin="4"/>
+<pinref part="=96" gate=" " pin="X3V3"/>
+<wire x1="299.72" y1="167.64" x2="299.72" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PETAL_IV_H" class="0">
@@ -33369,11 +33369,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 </net>
 <net name="VEXT_A" class="0">
 <segment>
-<pinref part="VEXT_A1" gate="G$1" pin="VEXT_A"/>
-<pinref part="X11" gate="X1" pin="31"/>
-<wire x1="180.34" y1="187.96" x2="180.34" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="X1" gate="X1" pin="45"/>
 <wire x1="132.08" y1="233.68" x2="132.08" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="220.98" x2="134.62" y2="220.98" width="0.1524" layer="91"/>
@@ -33404,11 +33399,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="137.16" y="93.98"/>
 </segment>
 <segment>
-<pinref part="VEXT_A3" gate="G$1" pin="VEXT_A"/>
-<pinref part="X12" gate="X1" pin="31"/>
-<wire x1="180.34" y1="63.5" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="X3" gate="X1" pin="47"/>
 <wire x1="327.66" y1="233.68" x2="327.66" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="220.98" x2="345.44" y2="220.98" width="0.1524" layer="91"/>
@@ -33422,11 +33412,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="X3" gate="X1" pin="46"/>
 <wire x1="325.12" y1="233.68" x2="325.12" y2="220.98" width="0.1524" layer="91"/>
 <junction x="325.12" y="220.98"/>
-</segment>
-<segment>
-<pinref part="=126" gate="G$1" pin="VEXT_A"/>
-<pinref part="X13" gate="X1" pin="31"/>
-<wire x1="370.84" y1="190.5" x2="370.84" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="=114" gate="G$1" pin="VEXT_A"/>
@@ -33444,17 +33429,27 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="327.66" y="93.98"/>
 </segment>
 <segment>
+<pinref part="VEXT_A1" gate="G$1" pin="VEXT_A"/>
+<pinref part="X11" gate="X1" pin="32"/>
+<wire x1="180.34" y1="165.1" x2="180.34" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X12" gate="X1" pin="32"/>
+<pinref part="VEXT_A3" gate="G$1" pin="VEXT_A"/>
+<wire x1="180.34" y1="40.64" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X7" gate="X1" pin="32"/>
 <pinref part="=142" gate="G$1" pin="VEXT_A"/>
-<pinref part="X7" gate="X1" pin="31"/>
-<wire x1="370.84" y1="63.5" x2="370.84" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="40.64" x2="370.84" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X13" gate="X1" pin="32"/>
+<pinref part="=126" gate="G$1" pin="VEXT_A"/>
+<wire x1="370.84" y1="167.64" x2="370.84" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VEXT_B" class="0">
-<segment>
-<pinref part="=16" gate="G$1" pin="VEXT_B"/>
-<pinref part="X11" gate="X1" pin="33"/>
-<wire x1="185.42" y1="193.04" x2="185.42" y2="187.96" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="X1" gate="X1" pin="50"/>
 <wire x1="144.78" y1="233.68" x2="144.78" y2="231.14" width="0.1524" layer="91"/>
@@ -33486,11 +33481,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="144.78" y="104.14"/>
 </segment>
 <segment>
-<pinref part="=120" gate="G$1" pin="VEXT_B"/>
-<pinref part="X12" gate="X1" pin="33"/>
-<wire x1="185.42" y1="66.04" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="X3" gate="X1" pin="50"/>
 <wire x1="335.28" y1="233.68" x2="335.28" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="335.28" y1="231.14" x2="345.44" y2="231.14" width="0.1524" layer="91"/>
@@ -33504,11 +33494,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="330.2" y1="233.68" x2="330.2" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="330.2" y1="231.14" x2="332.74" y2="231.14" width="0.1524" layer="91"/>
 <junction x="332.74" y="231.14"/>
-</segment>
-<segment>
-<pinref part="=124" gate="G$1" pin="VEXT_B"/>
-<pinref part="X13" gate="X1" pin="33"/>
-<wire x1="375.92" y1="193.04" x2="375.92" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="=110" gate="G$1" pin="VEXT_B"/>
@@ -33526,9 +33511,24 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="335.28" y="104.14"/>
 </segment>
 <segment>
+<pinref part="=16" gate="G$1" pin="VEXT_B"/>
+<pinref part="X11" gate="X1" pin="34"/>
+<wire x1="185.42" y1="162.56" x2="185.42" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X12" gate="X1" pin="34"/>
+<pinref part="=120" gate="G$1" pin="VEXT_B"/>
+<wire x1="185.42" y1="40.64" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X7" gate="X1" pin="34"/>
 <pinref part="=141" gate="G$1" pin="VEXT_B"/>
-<pinref part="X7" gate="X1" pin="33"/>
-<wire x1="375.92" y1="66.04" x2="375.92" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="40.64" x2="375.92" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X13" gate="X1" pin="34"/>
+<pinref part="=124" gate="G$1" pin="VEXT_B"/>
+<wire x1="375.92" y1="167.64" x2="375.92" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PETAL_II_J" class="0">
