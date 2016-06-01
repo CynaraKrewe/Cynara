@@ -70,11 +70,11 @@ The Carrier PCB uses a standard build-up with the following properties:
 | ---:| --- | --- | ---:|
 || Top Silkscreen |||
 | 1 | Top | Copper | 35 um / 1 oz | 
-|| Prepreg | PR7628 | 360 um / xx mil |
+|| Prepreg | PR7628 | 360 um / 14 mil |
 | 2 | Inner (GND) | Copper | 35 um / 1 oz |
-|| Core | FR4 | 710 um / xx mil |
+|| Core | FR4 | 710 um / 28 mil |
 | 3 | Inner (Power + signal) | Copper | 35 um / 1 oz |
-|| Prepreg | PR7628 | 360 um / xx mil |
+|| Prepreg | PR7628 | 360 um / 14 mil |
 | 4 | Bottom | Copper | 35 um / 1 oz |
 || Bottom Silkscreen |||
 
