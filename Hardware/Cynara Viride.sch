@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -28005,8 +28005,6 @@ Updated by  Dan Xu 2014-06-30&lt;br&gt;
 <part name="=148" library="Cynara-Symbols" deviceset="GND" device=""/>
 <part name="U$22" library="Cynara-Symbols" deviceset="+1.2V" device=""/>
 <part name="=149" library="Cynara-Symbols" deviceset="GND" device=""/>
-<part name="=150" library="Cynara-Symbols" deviceset="GND" device=""/>
-<part name="U$23" library="Cynara-Symbols" deviceset="+3.3V" device=""/>
 <part name="C61" library="Cynara-Passives" deviceset="C-EU" device="C0603" value="100uF"/>
 <part name="=151" library="Cynara-Symbols" deviceset="GND" device=""/>
 <part name="C62" library="Cynara-Passives" deviceset="C-EU" device="C0603" value="100uF"/>
@@ -28040,6 +28038,9 @@ Updated by  Dan Xu 2014-06-30&lt;br&gt;
 <part name="=159" library="Cynara-Symbols" deviceset="X5V" device=""/>
 <part name="=162" library="Cynara-Symbols" deviceset="GND" device=""/>
 <part name="X6" library="Cynara-Connectors" deviceset="USB2.0" device="-TYPE-B" value=" "/>
+<part name="R29" library="Cynara-Passives" deviceset="R-EU_" device="R0603" value="5.6K"/>
+<part name="R30" library="Cynara-Passives" deviceset="R-EU_" device="R0603" value="10K"/>
+<part name="=150" library="Cynara-Symbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -28568,11 +28569,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <label x="33.02" y="236.22" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="USB_DETECT1" class="0">
+<net name="USB_DETECT" class="0">
 <segment>
-<wire x1="81.28" y1="78.74" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="U1" gate="Q" pin="PQ4"/>
-<label x="81.28" y="78.74" size="1.27" layer="95" xref="yes"/>
+<pinref part="U1" gate="K" pin="PK4"/>
+<wire x1="27.94" y1="129.54" x2="33.02" y2="129.54" width="0.1524" layer="91"/>
+<label x="33.02" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RUPT3" class="0">
@@ -28748,13 +28749,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="177.8" y1="134.62" x2="172.72" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="U1" gate="N" pin="PN2"/>
 <label x="177.8" y="134.62" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="USB_DETECT2" class="0">
-<segment>
-<pinref part="U1" gate="K" pin="PK4"/>
-<wire x1="27.94" y1="129.54" x2="33.02" y2="129.54" width="0.1524" layer="91"/>
-<label x="33.02" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FREE" class="0">
@@ -34068,10 +34062,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>
 <instance part="L3" gate="G$1" x="96.52" y="81.28"/>
 <instance part="D1" gate="G$1" x="121.92" y="81.28"/>
-<instance part="L4" gate="G$1" x="106.68" y="96.52" rot="R90"/>
+<instance part="L4" gate="G$1" x="106.68" y="124.46" rot="R90"/>
 <instance part="=147" gate=" " x="116.84" y="66.04"/>
-<instance part="=150" gate=" " x="292.1" y="91.44"/>
-<instance part="U$23" gate=" " x="297.18" y="96.52"/>
 <instance part="C61" gate="G$1" x="119.38" y="177.8"/>
 <instance part="=151" gate=" " x="119.38" y="167.64"/>
 <instance part="C62" gate="G$1" x="106.68" y="177.8"/>
@@ -34104,6 +34096,9 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="R28" gate="G$1" x="307.34" y="223.52" rot="R90"/>
 <instance part="=162" gate=" " x="198.12" y="66.04"/>
 <instance part="X6" gate="X1" x="213.36" y="76.2"/>
+<instance part="R29" gate="G$1" x="93.98" y="116.84" rot="R90"/>
+<instance part="R30" gate="G$1" x="93.98" y="101.6" rot="R90"/>
+<instance part="=150" gate=" " x="93.98" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -34178,11 +34173,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <pinref part="D1" gate="G$1" pin="VDD"/>
 <pinref part="L4" gate="G$1" pin="F"/>
-<wire x1="116.84" y1="96.52" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="96.52" x2="116.84" y2="96.52" width="0.1524" layer="91"/>
-<junction x="116.84" y="96.52"/>
-<wire x1="116.84" y1="96.52" x2="139.7" y2="96.52" width="0.1524" layer="91"/>
-<label x="139.7" y="96.52" size="1.27" layer="95" xref="yes"/>
+<wire x1="116.84" y1="124.46" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="124.46" x2="116.84" y2="124.46" width="0.1524" layer="91"/>
+<junction x="116.84" y="124.46"/>
+<wire x1="116.84" y1="124.46" x2="139.7" y2="124.46" width="0.1524" layer="91"/>
+<label x="139.7" y="124.46" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="203.2" y1="78.74" x2="198.12" y2="78.74" width="0.1524" layer="91"/>
@@ -34235,10 +34230,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="=147" gate=" " pin="GND"/>
 </segment>
 <segment>
-<pinref part="=150" gate=" " pin="GND"/>
-<wire x1="292.1" y1="99.06" x2="292.1" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C61" gate="G$1" pin="2"/>
 <wire x1="119.38" y1="170.18" x2="119.38" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="=151" gate=" " pin="GND"/>
@@ -34279,6 +34270,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="X6" gate="X1" pin="GND"/>
 <wire x1="198.12" y1="71.12" x2="203.2" y2="71.12" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R30" gate="G$1" pin="1"/>
+<pinref part="=150" gate=" " pin="GND"/>
+<wire x1="93.98" y1="96.52" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="USB0D_N" class="0">
 <segment>
@@ -34295,12 +34291,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 </segment>
 </net>
 <net name="+3.3V" class="0">
-<segment>
-<pinref part="U$23" gate=" " pin="+3.3V"/>
-<wire x1="289.56" y1="86.36" x2="297.18" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="297.18" y1="86.36" x2="297.18" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="99.06" x2="289.56" y2="86.36" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <wire x1="119.38" y1="195.58" x2="119.38" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="C61" gate="G$1" pin="1"/>
@@ -34352,41 +34342,15 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="307.34" y1="231.14" x2="307.34" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="OLED_MOSI" class="0">
-<segment>
-<wire x1="274.32" y1="99.06" x2="274.32" y2="93.98" width="0.1524" layer="91"/>
-<label x="274.32" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="OLED_SCLK" class="0">
-<segment>
-<wire x1="276.86" y1="99.06" x2="276.86" y2="93.98" width="0.1524" layer="91"/>
-<label x="276.86" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="OLED_DC" class="0">
-<segment>
-<wire x1="279.4" y1="99.06" x2="279.4" y2="93.98" width="0.1524" layer="91"/>
-<label x="279.4" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="OLED_RST" class="0">
-<segment>
-<wire x1="281.94" y1="99.06" x2="281.94" y2="93.98" width="0.1524" layer="91"/>
-<label x="281.94" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="OLED_CS" class="0">
-<segment>
-<wire x1="284.48" y1="99.06" x2="284.48" y2="93.98" width="0.1524" layer="91"/>
-<label x="284.48" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
 <net name="5V_USB" class="0">
 <segment>
 <pinref part="L4" gate="G$1" pin="E"/>
-<wire x1="101.6" y1="96.52" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
-<label x="86.36" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="124.46" x2="93.98" y2="124.46" width="0.1524" layer="91"/>
+<label x="86.36" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="124.46" x2="86.36" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="121.92" x2="93.98" y2="124.46" width="0.1524" layer="91"/>
+<junction x="93.98" y="124.46"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -34415,6 +34379,17 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="X8" gate="-LED-YELLOW" pin="K"/>
 <pinref part="T5" gate="G$1" pin="C"/>
 <wire x1="307.34" y1="208.28" x2="307.34" y2="203.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="USB_DETECT" class="0">
+<segment>
+<pinref part="R29" gate="G$1" pin="1"/>
+<pinref part="R30" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="111.76" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="109.22" x2="93.98" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="109.22" x2="86.36" y2="109.22" width="0.1524" layer="91"/>
+<junction x="93.98" y="109.22"/>
+<label x="86.36" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
