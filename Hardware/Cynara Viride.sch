@@ -7568,6 +7568,24 @@ LED    --YES</description>
 <wire x1="8" y1="-2" x2="4" y2="-2" width="0.2" layer="40"/>
 <wire x1="4" y1="-2" x2="4" y2="2" width="0.2" layer="40"/>
 </package>
+<package name="1X2">
+<description>WR-PHD 2.54mm Pin Header, 2 Pin</description>
+<wire x1="-2.54" y1="-1.27" x2="2.54" y2="-1.27" width="0.2" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="2.54" y2="1.27" width="0.2" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="-2.54" y2="1.27" width="0.2" layer="21"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.2" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="1.1" shape="square" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.1"/>
+<text x="-2.3" y="1.5" size="1" layer="25" font="vector" ratio="14">&gt;Name</text>
+<wire x1="-2.6" y1="1.3" x2="2.6" y2="1.3" width="0.2" layer="39"/>
+<wire x1="2.6" y1="1.3" x2="2.6" y2="-1.3" width="0.2" layer="39"/>
+<wire x1="2.6" y1="-1.3" x2="-2.6" y2="-1.3" width="0.2" layer="39"/>
+<wire x1="-2.6" y1="-1.3" x2="-2.6" y2="1.3" width="0.2" layer="39"/>
+<wire x1="-2.6" y1="1.3" x2="2.6" y2="1.3" width="0.2" layer="40"/>
+<wire x1="2.6" y1="1.3" x2="2.6" y2="-1.3" width="0.2" layer="40"/>
+<wire x1="2.6" y1="-1.3" x2="-2.6" y2="-1.3" width="0.2" layer="40"/>
+<wire x1="-2.6" y1="-1.3" x2="-2.6" y2="1.3" width="0.2" layer="40"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BOX14">
@@ -8008,6 +8026,16 @@ Applications:
 <wire x1="7.62" y1="-10.16" x2="7.62" y2="7.62" width="0.254" layer="94"/>
 <wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 </symbol>
+<symbol name="2">
+<text x="2.54" y="0.762" size="1.778" layer="95">&gt;Name</text>
+<text x="2.54" y="-12.7" size="1.778" layer="96">&gt;Value</text>
+<pin name="1" x="-2.54" y="-2.54" visible="pin" length="middle" direction="pas"/>
+<pin name="2" x="-2.54" y="-7.62" visible="pin" length="middle" direction="pas"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-10.16" width="0.256" layer="94"/>
+<wire x1="2.54" y1="-10.16" x2="7.62" y2="-10.16" width="0.256" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="0" width="0.256" layer="94"/>
+<wire x1="7.62" y1="0" x2="2.54" y2="0" width="0.256" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DEBUG-XILINX" prefix="X">
@@ -8338,6 +8366,28 @@ Created 2014-07-09, Karrer Zheng&lt;br&gt;
 <attribute name="ORDERCODE" value="61400416121"/>
 <attribute name="SUPPLIER" value="Wurth"/>
 <attribute name="VALUE" value=" " constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HDR1X2-M" prefix="X">
+<gates>
+<gate name="X1" symbol="2" x="-5.08" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="1X2">
+<connects>
+<connect gate="X1" pin="1" pad="1"/>
+<connect gate="X1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER" value="Wurth"/>
+<attribute name="MANUFACTURERPARTNO" value="61300211121"/>
+<attribute name="ORDERCODE" value=""/>
+<attribute name="SUPPLIER" value=""/>
+<attribute name="VALUE" value="HDR1X2" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -27855,7 +27905,6 @@ Updated by  Dan Xu 2014-06-30&lt;br&gt;
 <part name="=28" library="Cynara-Symbols" deviceset="+5V" device=""/>
 <part name="=29" library="Cynara-Symbols" deviceset="GND" device=""/>
 <part name="=30" library="Cynara-Symbols" deviceset="GND" device=""/>
-<part name="U$7" library="Cynara-Symbols" deviceset="+3.3V" device=""/>
 <part name="=31" library="Cynara-Symbols" deviceset="+5V" device=""/>
 <part name="C17" library="Cynara-Passives" deviceset="C-EU" device="C0603" value="4u7"/>
 <part name="=35" library="Cynara-Symbols" deviceset="GND" device=""/>
@@ -28198,6 +28247,9 @@ Updated by  Dan Xu 2014-06-30&lt;br&gt;
 <part name="FRAME9" library="Cynara-Misc" deviceset="A3L-LOC" device=""/>
 <part name="U1" library="Cynara-IntegratedCircuits" deviceset="SPLIT-TM4C129ENCPDT" device="-TQFP128" value="TM4C129EN"/>
 <part name="=169" library="Cynara-Symbols" deviceset="GND" device=""/>
+<part name="J_3.3" library="Cynara-Connectors" deviceset="HDR1X2-M" device="" value="HDR1X2"/>
+<part name="J_1.2" library="Cynara-Connectors" deviceset="HDR1X2-M" device="" value="HDR1X2"/>
+<part name="U$23" library="Cynara-Symbols" deviceset="+3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -34564,7 +34616,6 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="VEXT_B1" gate="G$1" x="96.52" y="215.9"/>
 <instance part="U6" gate="U1" x="210.82" y="170.18"/>
 <instance part="=30" gate=" " x="210.82" y="198.12"/>
-<instance part="U$7" gate=" " x="241.3" y="220.98"/>
 <instance part="=31" gate=" " x="180.34" y="220.98"/>
 <instance part="C17" gate="G$1" x="180.34" y="210.82"/>
 <instance part="=35" gate=" " x="180.34" y="198.12"/>
@@ -34580,7 +34631,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="=60" gate=" " x="180.34" y="177.8"/>
 <instance part="=125" gate=" " x="187.96" y="154.94"/>
 <instance part="=148" gate=" " x="228.6" y="154.94"/>
-<instance part="U$22" gate="G$1" x="241.3" y="175.26"/>
+<instance part="U$22" gate="G$1" x="241.3" y="187.96"/>
 <instance part="=149" gate=" " x="210.82" y="154.94"/>
 <instance part="SW2" gate="SW1" x="78.74" y="129.54"/>
 <instance part="=158" gate=" " x="66.04" y="134.62"/>
@@ -34617,10 +34668,13 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="=168" gate=" " x="40.64" y="76.2"/>
 <instance part="L5" gate="G$1" x="48.26" y="81.28" rot="R90"/>
 <instance part="TP1" gate=" " x="180.34" y="215.9" rot="R180"/>
-<instance part="TP2" gate=" " x="241.3" y="215.9"/>
-<instance part="TP3" gate=" " x="241.3" y="172.72"/>
+<instance part="TP2" gate=" " x="241.3" y="220.98" rot="R180"/>
+<instance part="TP3" gate=" " x="241.3" y="177.8" rot="R180"/>
 <instance part="TP4" gate=" " x="180.34" y="203.2" rot="R180"/>
 <instance part="TP5" gate=" " x="187.96" y="160.02" rot="R180"/>
+<instance part="J_3.3" gate="X1" x="243.84" y="228.6"/>
+<instance part="J_1.2" gate="X1" x="243.84" y="185.42"/>
+<instance part="U$23" gate=" " x="241.3" y="233.68"/>
 </instances>
 <busses>
 </busses>
@@ -34870,34 +34924,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="91.44" y1="208.28" x2="96.52" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+3.3V" class="0">
-<segment>
-<pinref part="U$7" gate=" " pin="+3.3V"/>
-<wire x1="241.3" y1="213.36" x2="241.3" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="C57" gate="G$1" pin="1"/>
-<pinref part="U2" gate="U1" pin="V_OUT"/>
-<wire x1="241.3" y1="215.9" x2="241.3" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="215.9" x2="231.14" y2="215.9" width="0.1524" layer="91"/>
-<junction x="241.3" y="215.9"/>
-<pinref part="C18" gate="G$1" pin="1"/>
-<wire x1="231.14" y1="215.9" x2="241.3" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="213.36" x2="231.14" y2="215.9" width="0.1524" layer="91"/>
-<junction x="231.14" y="215.9"/>
-<pinref part="TP2" gate=" " pin="1"/>
-</segment>
-</net>
 <net name="+1.2V" class="0">
 <segment>
-<pinref part="U6" gate="U1" pin="V_OUT"/>
-<wire x1="226.06" y1="172.72" x2="228.6" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="U$22" gate="G$1" pin="+1.2V"/>
-<wire x1="228.6" y1="172.72" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="172.72" x2="241.3" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="C44" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="170.18" x2="228.6" y2="172.72" width="0.1524" layer="91"/>
-<junction x="228.6" y="172.72"/>
-<pinref part="TP3" gate=" " pin="1"/>
-<junction x="241.3" y="172.72"/>
+<wire x1="241.3" y1="182.88" x2="241.3" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="J_1.2" gate="X1" pin="1"/>
 </segment>
 </net>
 <net name="X5V" class="0">
@@ -35017,6 +35048,45 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <pinref part="L5" gate="G$1" pin="F"/>
 <wire x1="53.34" y1="81.28" x2="58.42" y2="81.28" width="0.1524" layer="91"/>
 <label x="58.42" y="81.28" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<wire x1="241.3" y1="213.36" x2="241.3" y2="215.9" width="0.1524" layer="91"/>
+<pinref part="C57" gate="G$1" pin="1"/>
+<pinref part="U2" gate="U1" pin="V_OUT"/>
+<wire x1="241.3" y1="215.9" x2="241.3" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="215.9" x2="231.14" y2="215.9" width="0.1524" layer="91"/>
+<junction x="241.3" y="220.98"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="213.36" x2="231.14" y2="215.9" width="0.1524" layer="91"/>
+<junction x="231.14" y="215.9"/>
+<pinref part="TP2" gate=" " pin="1"/>
+<pinref part="J_3.3" gate="X1" pin="2"/>
+<wire x1="231.14" y1="215.9" x2="241.3" y2="215.9" width="0.1524" layer="91"/>
+<junction x="241.3" y="215.9"/>
+</segment>
+</net>
+<net name="+3.3V" class="0">
+<segment>
+<pinref part="U$23" gate=" " pin="+3.3V"/>
+<wire x1="241.3" y1="231.14" x2="241.3" y2="226.06" width="0.1524" layer="91"/>
+<pinref part="J_3.3" gate="X1" pin="1"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U6" gate="U1" pin="V_OUT"/>
+<wire x1="226.06" y1="172.72" x2="228.6" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="172.72" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="172.72" x2="241.3" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="C44" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="170.18" x2="228.6" y2="172.72" width="0.1524" layer="91"/>
+<junction x="228.6" y="172.72"/>
+<pinref part="TP3" gate=" " pin="1"/>
+<junction x="241.3" y="177.8"/>
+<pinref part="J_1.2" gate="X1" pin="2"/>
+<junction x="241.3" y="177.8"/>
 </segment>
 </net>
 </nets>
