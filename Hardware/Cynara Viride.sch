@@ -28250,6 +28250,24 @@ Updated by  Dan Xu 2014-06-30&lt;br&gt;
 <part name="J_3.3" library="Cynara-Connectors" deviceset="HDR1X2-M" device="" value="HDR1X2"/>
 <part name="J_1.2" library="Cynara-Connectors" deviceset="HDR1X2-M" device="" value="HDR1X2"/>
 <part name="U$23" library="Cynara-Symbols" deviceset="+3.3V" device=""/>
+<part name="TP6" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP7" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP8" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP9" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP10" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP12" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP13" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP14" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP15" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP16" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP17" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP18" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP19" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP20" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP21" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP22" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP23" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
+<part name="TP24" library="Cynara-Misc" deviceset="TESTPAD" device="-SMD" value=" "/>
 </parts>
 <sheets>
 <sheet>
@@ -28311,6 +28329,9 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="=71" gate=" " x="203.2" y="106.68" rot="R270"/>
 <instance part="SW1" gate="SW1" x="218.44" y="157.48"/>
 <instance part="=85" gate=" " x="228.6" y="147.32"/>
+<instance part="TP6" gate=" " x="185.42" y="162.56" rot="R90"/>
+<instance part="TP7" gate=" " x="190.5" y="114.3" rot="R90"/>
+<instance part="TP8" gate=" " x="190.5" y="99.06" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -29029,8 +29050,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="190.5" y1="162.56" x2="190.5" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="162.56" x2="190.5" y2="162.56" width="0.1524" layer="91"/>
 <junction x="190.5" y="162.56"/>
+<wire x1="180.34" y1="162.56" x2="185.42" y2="162.56" width="0.1524" layer="91"/>
+<label x="180.34" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP6" gate=" " pin="1"/>
 <wire x1="185.42" y1="162.56" x2="190.5" y2="162.56" width="0.1524" layer="91"/>
-<label x="185.42" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<junction x="185.42" y="162.56"/>
 </segment>
 <segment>
 <pinref part="U1" gate="-FUNCTIONAL" pin="!RST"/>
@@ -29056,9 +29080,12 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 </net>
 <net name="!HIB" class="0">
 <segment>
-<wire x1="195.58" y1="99.06" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="99.06" x2="190.5" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="2"/>
 <label x="185.42" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP8" gate=" " pin="1"/>
+<wire x1="190.5" y1="99.06" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
+<junction x="190.5" y="99.06"/>
 </segment>
 <segment>
 <pinref part="U1" gate="-FUNCTIONAL" pin="!HIB"/>
@@ -29068,9 +29095,12 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 </net>
 <net name="!WAKE" class="0">
 <segment>
-<wire x1="195.58" y1="114.3" x2="185.42" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="114.3" x2="190.5" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="2"/>
 <label x="185.42" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP7" gate=" " pin="1"/>
+<wire x1="190.5" y1="114.3" x2="185.42" y2="114.3" width="0.1524" layer="91"/>
+<junction x="190.5" y="114.3"/>
 </segment>
 <segment>
 <pinref part="U1" gate="-FUNCTIONAL" pin="!WAKE"/>
@@ -29146,6 +29176,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="RA8" gate="RA1" x="78.74" y="218.44"/>
 <instance part="RA1" gate="RA1" x="132.08" y="58.42"/>
 <instance part="RA9" gate="RA1" x="91.44" y="208.28" rot="MR0"/>
+<instance part="TP9" gate=" " x="149.86" y="68.58" rot="R90"/>
+<instance part="TP10" gate=" " x="149.86" y="50.8" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -29225,16 +29257,22 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <label x="106.68" y="50.8" size="1.778" layer="95"/>
 <pinref part="U4" gate="C" pin="IO_L1N_M0_CMPMISO"/>
-<wire x1="160.02" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="50.8" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="TP10" gate=" " pin="1"/>
+<wire x1="149.86" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<junction x="149.86" y="50.8"/>
 </segment>
 </net>
 <net name="M1" class="0">
 <segment>
 <label x="106.68" y="68.58" size="1.778" layer="95"/>
 <pinref part="U4" gate="C" pin="IO_L13P_M1"/>
-<wire x1="81.28" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="68.58" x2="149.86" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="TP9" gate=" " pin="1"/>
+<wire x1="149.86" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
+<junction x="149.86" y="68.58"/>
 </segment>
 </net>
 <net name="N$72" class="0">
@@ -30077,6 +30115,13 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="U$20" gate=" " x="170.18" y="142.24"/>
 <instance part="D2" gate="G$1" x="294.64" y="142.24" rot="R270"/>
 <instance part="U1" gate="-POWER" x="109.22" y="223.52"/>
+<instance part="TP12" gate=" " x="269.24" y="218.44" rot="R90"/>
+<instance part="TP13" gate=" " x="264.16" y="215.9" rot="R90"/>
+<instance part="TP14" gate=" " x="259.08" y="213.36" rot="R90"/>
+<instance part="TP15" gate=" " x="254" y="210.82" rot="R90"/>
+<instance part="TP16" gate=" " x="266.7" y="119.38" rot="R90"/>
+<instance part="TP17" gate=" " x="264.16" y="111.76" rot="R90"/>
+<instance part="TP18" gate=" " x="261.62" y="104.14" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -30446,33 +30491,41 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <net name="SSI0CLK" class="0">
 <segment>
 <pinref part="U5" gate="A" pin="CLK"/>
-<wire x1="259.08" y1="218.44" x2="271.78" y2="218.44" width="0.1524" layer="91"/>
-<label x="259.08" y="218.44" size="1.27" layer="95" rot="R180" xref="yes"/>
-<label x="261.62" y="218.44" size="1.778" layer="95"/>
+<wire x1="248.92" y1="218.44" x2="269.24" y2="218.44" width="0.1524" layer="91"/>
+<label x="248.92" y="218.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP12" gate=" " pin="1"/>
+<wire x1="269.24" y1="218.44" x2="271.78" y2="218.44" width="0.1524" layer="91"/>
+<junction x="269.24" y="218.44"/>
 </segment>
 </net>
 <net name="SSI0D0" class="0">
 <segment>
 <pinref part="U5" gate="A" pin="MOSI"/>
-<wire x1="259.08" y1="215.9" x2="271.78" y2="215.9" width="0.1524" layer="91"/>
-<label x="261.62" y="215.9" size="1.778" layer="95"/>
-<label x="259.08" y="215.9" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="248.92" y1="215.9" x2="264.16" y2="215.9" width="0.1524" layer="91"/>
+<label x="248.92" y="215.9" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP13" gate=" " pin="1"/>
+<wire x1="264.16" y1="215.9" x2="271.78" y2="215.9" width="0.1524" layer="91"/>
+<junction x="264.16" y="215.9"/>
 </segment>
 </net>
 <net name="SSI0D1" class="0">
 <segment>
 <pinref part="U5" gate="A" pin="MISO"/>
+<wire x1="248.92" y1="213.36" x2="259.08" y2="213.36" width="0.1524" layer="91"/>
+<label x="248.92" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP14" gate=" " pin="1"/>
 <wire x1="259.08" y1="213.36" x2="271.78" y2="213.36" width="0.1524" layer="91"/>
-<label x="261.62" y="213.36" size="1.778" layer="95"/>
-<label x="259.08" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
+<junction x="259.08" y="213.36"/>
 </segment>
 </net>
 <net name="SSI0FSS" class="0">
 <segment>
 <pinref part="U5" gate="A" pin="!CS"/>
-<wire x1="259.08" y1="210.82" x2="271.78" y2="210.82" width="0.1524" layer="91"/>
-<label x="261.62" y="210.82" size="1.778" layer="95"/>
-<label x="259.08" y="210.82" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="248.92" y="210.82" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="248.92" y1="210.82" x2="254" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="TP15" gate=" " pin="1"/>
+<wire x1="254" y1="210.82" x2="271.78" y2="210.82" width="0.1524" layer="91"/>
+<junction x="254" y="210.82"/>
 </segment>
 </net>
 <net name="PJ1X" class="0">
@@ -30505,21 +30558,30 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <label x="254" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="T1" gate="G$1" pin="B"/>
-<wire x1="271.78" y1="119.38" x2="254" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="119.38" x2="266.7" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="TP16" gate=" " pin="1"/>
+<wire x1="266.7" y1="119.38" x2="254" y2="119.38" width="0.1524" layer="91"/>
+<junction x="266.7" y="119.38"/>
 </segment>
 </net>
 <net name="PF3_LEDG" class="0">
 <segment>
 <label x="254" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="T2" gate="G$1" pin="B"/>
-<wire x1="287.02" y1="111.76" x2="254" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="111.76" x2="264.16" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="TP17" gate=" " pin="1"/>
+<wire x1="264.16" y1="111.76" x2="254" y2="111.76" width="0.1524" layer="91"/>
+<junction x="264.16" y="111.76"/>
 </segment>
 </net>
 <net name="PF2_LEDB" class="0">
 <segment>
 <label x="254" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="T3" gate="G$1" pin="B"/>
-<wire x1="254" y1="104.14" x2="302.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="254" y1="104.14" x2="261.62" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="TP18" gate=" " pin="1"/>
+<wire x1="261.62" y1="104.14" x2="302.26" y2="104.14" width="0.1524" layer="91"/>
+<junction x="261.62" y="104.14"/>
 </segment>
 </net>
 <net name="N$76" class="0">
@@ -30714,6 +30776,9 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <attribute name="VALUE" x="81.28" y="218.44" size="1.778" layer="96" ratio="12" rot="R270"/>
 </instance>
 <instance part="X23" gate="X1" x="35.56" y="104.14"/>
+<instance part="TP19" gate=" " x="68.58" y="198.12" rot="R90"/>
+<instance part="TP20" gate=" " x="63.5" y="200.66" rot="R90"/>
+<instance part="TP21" gate=" " x="73.66" y="195.58" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -31081,8 +31146,9 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <segment>
 <label x="45.72" y="195.58" size="1.778" layer="95"/>
 <pinref part="U4" gate="F" pin="DONE"/>
-<wire x1="43.18" y1="195.58" x2="106.68" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="195.58" x2="73.66" y2="195.58" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="195.58" x2="106.68" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="218.44" x2="116.84" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="195.58" x2="106.68" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="195.58" x2="116.84" y2="195.58" width="0.1524" layer="91"/>
@@ -31091,6 +31157,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <junction x="116.84" y="195.58"/>
 <label x="132.08" y="195.58" size="1.27" layer="95" xref="yes"/>
 <pinref part="LD1" gate="G$1" pin="K"/>
+<pinref part="TP21" gate=" " pin="1"/>
+<junction x="73.66" y="195.58"/>
 </segment>
 </net>
 <net name="PROGRAM" class="0">
@@ -31104,6 +31172,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="132.08" y1="198.12" x2="68.58" y2="198.12" width="0.1524" layer="91"/>
 <label x="132.08" y="198.12" size="1.27" layer="95" xref="yes"/>
 <junction x="68.58" y="198.12"/>
+<pinref part="TP19" gate=" " pin="1"/>
 </segment>
 </net>
 <net name="INIT" class="0">
@@ -31114,12 +31183,15 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="96.52" y1="218.44" x2="96.52" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="200.66" x2="86.36" y2="200.66" width="0.1524" layer="91"/>
 <junction x="86.36" y="200.66"/>
-<wire x1="43.18" y1="200.66" x2="86.36" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="200.66" x2="63.5" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="200.66" x2="86.36" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="200.66" x2="96.52" y2="200.66" width="0.1524" layer="91"/>
 <junction x="96.52" y="200.66"/>
 <label x="132.08" y="200.66" size="1.27" layer="95" xref="yes"/>
 <pinref part="LD2" gate="G$1" pin="K"/>
 <wire x1="86.36" y1="205.74" x2="86.36" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="TP20" gate=" " pin="1"/>
+<junction x="63.5" y="200.66"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -34285,6 +34357,9 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <instance part="R30" gate="G$1" x="93.98" y="101.6" rot="R90"/>
 <instance part="=150" gate=" " x="93.98" y="91.44"/>
 <instance part="=169" gate=" " x="139.7" y="167.64"/>
+<instance part="TP22" gate=" " x="93.98" y="109.22"/>
+<instance part="TP23" gate=" " x="241.3" y="200.66" rot="MR270"/>
+<instance part="TP24" gate=" " x="294.64" y="200.66" rot="MR270"/>
 </instances>
 <busses>
 </busses>
@@ -34292,15 +34367,21 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <net name="PF0_ETH" class="0">
 <segment>
 <wire x1="299.72" y1="200.66" x2="294.64" y2="200.66" width="0.1524" layer="91"/>
-<label x="294.64" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="289.56" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="T5" gate="G$1" pin="B"/>
+<pinref part="TP24" gate=" " pin="1"/>
+<wire x1="294.64" y1="200.66" x2="289.56" y2="200.66" width="0.1524" layer="91"/>
+<junction x="294.64" y="200.66"/>
 </segment>
 </net>
 <net name="PF4_ETH" class="0">
 <segment>
 <wire x1="246.38" y1="200.66" x2="241.3" y2="200.66" width="0.1524" layer="91"/>
-<label x="241.3" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="236.22" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="T4" gate="G$1" pin="B"/>
+<pinref part="TP23" gate=" " pin="1"/>
+<wire x1="241.3" y1="200.66" x2="236.22" y2="200.66" width="0.1524" layer="91"/>
+<junction x="241.3" y="200.66"/>
 </segment>
 </net>
 <net name="ETH_PAIR1_N" class="0">
@@ -34582,6 +34663,7 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE SO
 <wire x1="93.98" y1="109.22" x2="86.36" y2="109.22" width="0.1524" layer="91"/>
 <junction x="93.98" y="109.22"/>
 <label x="86.36" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP22" gate=" " pin="1"/>
 </segment>
 </net>
 <net name="SHIELD" class="0">

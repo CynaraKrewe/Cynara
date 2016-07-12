@@ -12,7 +12,7 @@
 <layer number="2" name="InnerSolder" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -7699,6 +7699,132 @@ Your Eurocircuits Team
 <attribute name="ORDERCODE" value="" x="32.6" y="55.9" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SUPPLIER" value="" x="32.6" y="55.9" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
+<element name="TP6" library="Cynara-Misc" package="TP-SMD" value=" " x="117" y="52.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="117" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="117" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="117" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="117" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="117" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP7" library="Cynara-Misc" package="TP-SMD" value=" " x="115.5" y="47.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="115.5" y="47.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="115.5" y="47.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="115.5" y="47.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="115.5" y="47.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="115.5" y="47.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP8" library="Cynara-Misc" package="TP-SMD" value=" " x="115.5" y="52.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="115.5" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="115.5" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="115.5" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="115.5" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="115.5" y="52.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP9" library="Cynara-Misc" package="TP-SMD" value=" " x="54.5" y="36.3" rot="MR0">
+<attribute name="ARTIKEL" value="" x="54.5" y="36.3" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="54.5" y="36.3" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="54.5" y="36.3" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="54.5" y="36.3" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="54.5" y="36.3" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP10" library="Cynara-Misc" package="TP-SMD" value=" " x="59.5" y="41" rot="MR0">
+<attribute name="ARTIKEL" value="" x="59.5" y="41" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="59.5" y="41" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="59.5" y="41" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="59.5" y="41" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="59.5" y="41" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP12" library="Cynara-Misc" package="TP-SMD" value=" " x="76" y="31.1" rot="MR0">
+<attribute name="ARTIKEL" value="" x="76" y="31.1" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="76" y="31.1" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="76" y="31.1" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="76" y="31.1" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="76" y="31.1" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP13" library="Cynara-Misc" package="TP-SMD" value=" " x="77.5" y="29.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="77.5" y="29.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="77.5" y="29.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="77.5" y="29.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="77.5" y="29.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="77.5" y="29.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP14" library="Cynara-Misc" package="TP-SMD" value=" " x="70.5" y="32" rot="MR0">
+<attribute name="ARTIKEL" value="" x="70.5" y="32" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="70.5" y="32" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="70.5" y="32" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="70.5" y="32" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="70.5" y="32" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP15" library="Cynara-Misc" package="TP-SMD" value=" " x="73.1" y="27" rot="MR0">
+<attribute name="ARTIKEL" value="" x="73.1" y="27" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="73.1" y="27" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="73.1" y="27" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="73.1" y="27" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="73.1" y="27" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP16" library="Cynara-Misc" package="TP-SMD" value=" " x="120" y="37" rot="MR0">
+<attribute name="ARTIKEL" value="" x="120" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="120" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="120" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="120" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="120" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP17" library="Cynara-Misc" package="TP-SMD" value=" " x="116" y="37" rot="MR0">
+<attribute name="ARTIKEL" value="" x="116" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="116" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="116" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="116" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="116" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP18" library="Cynara-Misc" package="TP-SMD" value=" " x="118" y="37" rot="MR0">
+<attribute name="ARTIKEL" value="" x="118" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="118" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="118" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="118" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="118" y="37" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP19" library="Cynara-Misc" package="TP-SMD" value=" " x="43" y="34" rot="MR180">
+<attribute name="ARTIKEL" value="" x="43" y="34" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="XTRA" value="" x="43" y="34" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="Z" value="" x="43" y="34" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="WAARDE" value="" x="43" y="34" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="43" y="34" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="TP20" library="Cynara-Misc" package="TP-SMD" value=" " x="44.5" y="37.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="44.5" y="37.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="44.5" y="37.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="44.5" y="37.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="44.5" y="37.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="44.5" y="37.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP21" library="Cynara-Misc" package="TP-SMD" value=" " x="61.5" y="34" rot="MR0">
+<attribute name="ARTIKEL" value="" x="61.5" y="34" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="61.5" y="34" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="61.5" y="34" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="61.5" y="34" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="61.5" y="34" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP22" library="Cynara-Misc" package="TP-SMD" value=" " x="136.5" y="51" rot="MR0">
+<attribute name="ARTIKEL" value="" x="136.5" y="51" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="136.5" y="51" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="136.5" y="51" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="136.5" y="51" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="136.5" y="51" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP23" library="Cynara-Misc" package="TP-SMD" value=" " x="109.5" y="40.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="109.5" y="40.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="109.5" y="40.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="109.5" y="40.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="109.5" y="40.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="109.5" y="40.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TP24" library="Cynara-Misc" package="TP-SMD" value=" " x="106.5" y="35.5" rot="MR0">
+<attribute name="ARTIKEL" value="" x="106.5" y="35.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="XTRA" value="" x="106.5" y="35.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="Z" value="" x="106.5" y="35.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="WAARDE" value="" x="106.5" y="35.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="BEHUIZING" value="TP-EZ" x="106.5" y="35.5" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="EPI0S0">
@@ -8188,6 +8314,9 @@ Your Eurocircuits Team
 <wire x1="64.45" y1="35" x2="64.2" y2="35.25" width="0.35" layer="1"/>
 <contactref element="U1" pad="32"/>
 <wire x1="97.5393375" y1="40.171215625" x2="97" y2="39.631878125" width="0.24" layer="1"/>
+<contactref element="TP21" pad="1"/>
+<wire x1="61.5" y1="34" x2="61.6" y2="34" width="0.5" layer="16"/>
+<wire x1="61.6" y1="34" x2="62.6" y2="35" width="0.5" layer="16"/>
 </signal>
 <signal name="PROGRAM">
 <contactref element="R1" pad="2"/>
@@ -8217,6 +8346,9 @@ Your Eurocircuits Team
 <wire x1="43.05" y1="35.4" x2="42.55" y2="35.9" width="0.24" layer="16"/>
 <contactref element="U1" pad="31"/>
 <wire x1="97.256496875" y1="40.45405625" x2="96.5" y2="39.697559375" width="0.24" layer="1"/>
+<contactref element="TP19" pad="1"/>
+<wire x1="43" y1="34" x2="42.55" y2="34.45" width="0.5" layer="16"/>
+<wire x1="42.55" y1="34.45" x2="42.55" y2="35.9" width="0.5" layer="16"/>
 </signal>
 <signal name="PF3_LEDG">
 <contactref element="T2" pad="1"/>
@@ -8232,6 +8364,9 @@ Your Eurocircuits Team
 <wire x1="115.6" y1="45" x2="115.6" y2="39.5" width="0.35" layer="16"/>
 <contactref element="U1" pad="45"/>
 <wire x1="103.054771875" y1="43.565328125" x2="107.6201" y2="39" width="0.24" layer="1"/>
+<contactref element="TP17" pad="1"/>
+<wire x1="116" y1="37" x2="115.6" y2="37.4" width="0.5" layer="16"/>
+<wire x1="115.6" y1="37.4" x2="115.6" y2="39.5" width="0.5" layer="16"/>
 </signal>
 <signal name="PF1_LEDR">
 <contactref element="T1" pad="1"/>
@@ -8249,6 +8384,9 @@ Your Eurocircuits Team
 <wire x1="117.6" y1="45" x2="117.6" y2="39.5" width="0.35" layer="16"/>
 <contactref element="U1" pad="43"/>
 <wire x1="102.489084375" y1="42.999640625" x2="107.488725" y2="38" width="0.24" layer="1"/>
+<contactref element="TP16" pad="1"/>
+<wire x1="120" y1="37" x2="117.6" y2="39.4" width="0.5" layer="16"/>
+<wire x1="117.6" y1="39.4" x2="117.6" y2="39.5" width="0.5" layer="16"/>
 </signal>
 <signal name="PF4_ETH">
 <contactref element="T4" pad="1"/>
@@ -8262,6 +8400,9 @@ Your Eurocircuits Team
 <wire x1="133.95" y1="32.05" x2="136.9" y2="32.05" width="0.24" layer="16"/>
 <contactref element="U1" pad="46"/>
 <wire x1="103.3376125" y1="43.84816875" x2="107.18578125" y2="40" width="0.24" layer="1"/>
+<contactref element="TP23" pad="1"/>
+<wire x1="109.5" y1="40.5" x2="108.5" y2="40.5" width="0.5" layer="16"/>
+<wire x1="108.5" y1="40.5" x2="108" y2="40" width="0.5" layer="16"/>
 </signal>
 <signal name="PF0_ETH">
 <contactref element="T5" pad="1"/>
@@ -8275,6 +8416,9 @@ Your Eurocircuits Team
 <wire x1="139.05" y1="32.05" x2="141.9" y2="32.05" width="0.24" layer="16"/>
 <contactref element="U1" pad="42"/>
 <wire x1="102.20624375" y1="42.7168" x2="107" y2="37.92304375" width="0.24" layer="1"/>
+<contactref element="TP24" pad="1"/>
+<wire x1="106.5" y1="35.5" x2="106.5" y2="36.5" width="0.5" layer="16"/>
+<wire x1="106.5" y1="36.5" x2="107" y2="37" width="0.5" layer="16"/>
 </signal>
 <signal name="MCU_TDO">
 <contactref element="X24" pad="6"/>
@@ -8358,6 +8502,9 @@ Your Eurocircuits Team
 <wire x1="74" y1="28.9" x2="74" y2="29" width="0.25" layer="16"/>
 <contactref element="U1" pad="38"/>
 <wire x1="101.074871875" y1="41.585428125" x2="102.8" y2="39.8603" width="0.24" layer="1"/>
+<contactref element="TP14" pad="1"/>
+<wire x1="70.5" y1="32" x2="70.5" y2="31.5" width="0.5" layer="16"/>
+<wire x1="70.5" y1="31.5" x2="71" y2="31" width="0.5" layer="16"/>
 </signal>
 <signal name="SSI0D0">
 <contactref element="U4" pad="64"/>
@@ -8378,6 +8525,9 @@ Your Eurocircuits Team
 <wire x1="76" y1="29.2" x2="76" y2="30" width="0.25" layer="16"/>
 <contactref element="U1" pad="37"/>
 <wire x1="100.792028125" y1="41.302584375" x2="102.3" y2="39.7946125" width="0.24" layer="1"/>
+<contactref element="TP13" pad="1"/>
+<wire x1="77.5" y1="29.5" x2="77" y2="30" width="0.5" layer="16"/>
+<wire x1="77" y1="30" x2="76" y2="30" width="0.5" layer="16"/>
 </signal>
 <signal name="SSI0FSS">
 <contactref element="U4" pad="38"/>
@@ -8401,6 +8551,9 @@ Your Eurocircuits Team
 <wire x1="73" y1="28.7" x2="73" y2="29" width="0.25" layer="16"/>
 <contactref element="U1" pad="36"/>
 <wire x1="100.5091875" y1="41.01974375" x2="101.8" y2="39.72893125" width="0.24" layer="1"/>
+<contactref element="TP15" pad="1"/>
+<wire x1="73.1" y1="27" x2="73" y2="27.1" width="0.5" layer="16"/>
+<wire x1="73" y1="27.1" x2="73" y2="29" width="0.5" layer="16"/>
 </signal>
 <signal name="SSI0CLK">
 <contactref element="U4" pad="70"/>
@@ -8433,6 +8586,9 @@ Your Eurocircuits Team
 <wire x1="75" y1="29" x2="75" y2="32" width="0.25" layer="16"/>
 <contactref element="U1" pad="35"/>
 <wire x1="100.22634375" y1="40.7369" x2="101.3" y2="39.66324375" width="0.24" layer="1"/>
+<contactref element="TP12" pad="1"/>
+<wire x1="76" y1="31.1" x2="75.9" y2="31.1" width="0.5" layer="16"/>
+<wire x1="75.9" y1="31.1" x2="75" y2="32" width="0.5" layer="16"/>
 </signal>
 <signal name="USB_DETECT">
 <contactref element="R29" pad="1"/>
@@ -8445,6 +8601,10 @@ Your Eurocircuits Team
 <wire x1="125.8" y1="47.8" x2="109.0024375" y2="47.8" width="0.25" layer="1"/>
 <contactref element="U1" pad="63"/>
 <wire x1="108.145940625" y1="48.656496875" x2="109.0024375" y2="47.8" width="0.24" layer="1"/>
+<contactref element="TP22" pad="1"/>
+<wire x1="136.5" y1="51" x2="137.7" y2="51" width="0.5" layer="16"/>
+<wire x1="137.7" y1="51" x2="137.85" y2="50.85" width="0.5" layer="16"/>
+<via x="137.85" y="50.85" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="RUPT3">
 <via x="90.6" y="66" extent="1-16" drill="0.35"/>
@@ -8579,6 +8739,9 @@ Your Eurocircuits Team
 <wire x1="116.6" y1="45" x2="116.6" y2="39.5" width="0.35" layer="16"/>
 <contactref element="U1" pad="44"/>
 <wire x1="102.771928125" y1="43.282484375" x2="107.5544125" y2="38.5" width="0.24" layer="1"/>
+<contactref element="TP18" pad="1"/>
+<wire x1="118" y1="37" x2="116.6" y2="38.4" width="0.5" layer="16"/>
+<wire x1="116.6" y1="38.4" x2="116.6" y2="39.5" width="0.5" layer="16"/>
 </signal>
 <signal name="INIT">
 <contactref element="U4" pad="39"/>
@@ -8615,6 +8778,9 @@ Your Eurocircuits Team
 <wire x1="49.85" y1="36" x2="49.5" y2="36.35" width="0.25" layer="16"/>
 <contactref element="U1" pad="86"/>
 <wire x1="102.489084375" y1="57.00035625" x2="101.9" y2="56.411271875" width="0.24" layer="1"/>
+<contactref element="TP20" pad="1"/>
+<wire x1="44.5" y1="37.5" x2="44.5" y2="36.9" width="0.5" layer="16"/>
+<wire x1="44.5" y1="36.9" x2="43.6" y2="36" width="0.5" layer="16"/>
 </signal>
 <signal name="ETH_PAIR1_N">
 <contactref element="R23" pad="1"/>
@@ -9741,6 +9907,9 @@ Your Eurocircuits Team
 <wire x1="58.85" y1="40.65" x2="58.3" y2="41.2" width="0.35" layer="1"/>
 <via x="58.3" y="41.2" extent="1-16" drill="0.35"/>
 <wire x1="58.3" y1="42.35" x2="58.3" y2="41.2" width="0.5" layer="16"/>
+<contactref element="TP10" pad="1"/>
+<wire x1="59.5" y1="41" x2="59.3" y2="41.2" width="0.5" layer="16"/>
+<wire x1="59.3" y1="41.2" x2="58.3" y2="41.2" width="0.5" layer="16"/>
 </signal>
 <signal name="M1">
 <contactref element="U4" pad="60"/>
@@ -9750,6 +9919,9 @@ Your Eurocircuits Team
 <via x="54.4" y="37.5" extent="1-16" drill="0.35"/>
 <wire x1="54.45" y1="39.2" x2="54.45" y2="37.55" width="0.5" layer="16"/>
 <wire x1="54.45" y1="37.55" x2="54.4" y2="37.5" width="0.5" layer="16"/>
+<contactref element="TP9" pad="1"/>
+<wire x1="54.5" y1="36.3" x2="54.4" y2="36.4" width="0.5" layer="16"/>
+<wire x1="54.4" y1="36.4" x2="54.4" y2="37.5" width="0.5" layer="16"/>
 </signal>
 <signal name="N$72">
 <contactref element="Q2" pad="1"/>
@@ -9905,6 +10077,9 @@ Your Eurocircuits Team
 <wire x1="149.85" y1="79.85" x2="149" y2="79" width="0.35" layer="16"/>
 <contactref element="U1" pad="70"/>
 <wire x1="107.01456875" y1="52.474871875" x2="107.639696875" y2="53.1" width="0.24" layer="1"/>
+<contactref element="TP6" pad="1"/>
+<wire x1="117" y1="52.5" x2="117" y2="53.4" width="0.5" layer="16"/>
+<wire x1="117" y1="53.4" x2="117.6" y2="54" width="0.5" layer="16"/>
 </signal>
 <signal name="N$8">
 <contactref element="R15" pad="1"/>
@@ -10244,6 +10419,9 @@ Your Eurocircuits Team
 <wire x1="110.6" y1="51" x2="115.4" y2="51" width="0.24" layer="1"/>
 <contactref element="U1" pad="65"/>
 <wire x1="108.42878125" y1="51.060659375" x2="109.068121875" y2="51.7" width="0.24" layer="1"/>
+<contactref element="TP8" pad="1"/>
+<wire x1="115.5" y1="52.5" x2="115.4" y2="52.4" width="0.5" layer="16"/>
+<wire x1="115.4" y1="52.4" x2="115.4" y2="51" width="0.5" layer="16"/>
 </signal>
 <signal name="!WAKE">
 <contactref element="R15" pad="2"/>
@@ -10254,6 +10432,9 @@ Your Eurocircuits Team
 <wire x1="110.6" y1="49" x2="115.4" y2="49" width="0.24" layer="1"/>
 <contactref element="U1" pad="64"/>
 <wire x1="108.42878125" y1="48.9393375" x2="109.065178125" y2="48.302940625" width="0.24" layer="1"/>
+<contactref element="TP7" pad="1"/>
+<wire x1="115.5" y1="47.5" x2="115.4" y2="47.6" width="0.5" layer="16"/>
+<wire x1="115.4" y1="47.6" x2="115.4" y2="49" width="0.5" layer="16"/>
 </signal>
 <signal name="VDDC">
 <contactref element="C45" pad="1"/>
