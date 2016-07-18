@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef FLOW_H_
-#define FLOW_H_
+#ifndef BLINKY_FLOW_H_
+#define BLINKY_FLOW_H_
 
 
 #include "queue.h"
@@ -223,4 +223,4 @@ public:
 } //namespace Flow
 
 
-#endif /* FLOW_H_ */
+#endif /* BLINKY_FLOW_H_ */
