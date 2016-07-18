@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef BLINKY_QUEUE_H_
-#define BLINKY_QUEUE_H_
+#ifndef QUEUE_H_
+#define QUEUE_H_
 
 namespace Utility
 {
@@ -116,4 +116,4 @@ public:
 
 } // namespace Utility
 
-#endif /* BLINKY_QUEUE_H_ */
+#endif /* QUEUE_H_ */
