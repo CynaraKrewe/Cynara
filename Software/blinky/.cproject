@@ -50,7 +50,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION.1302067146" name="Generate debug information in DWARF version (-gdwarf-)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.INCLUDE_PATH.1165568299" name="Include paths (-I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_INCLUDE_PATH}&quot;"/>
-									<listOptionValue builtIn="false" value="../../TivaWare"/>
+									<listOptionValue builtIn="false" value="../../tivaware"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL.2124232120" name="Optimization Level" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compiler.inputType__C_SRCS.1767361391" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compiler.inputType__C_SRCS"/>
@@ -131,7 +131,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION.1368782409" name="Generate debug information in DWARF version (-gdwarf-)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.INCLUDE_PATH.1766411823" name="Include paths (-I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_INCLUDE_PATH}&quot;"/>
-									<listOptionValue builtIn="false" value="../../TivaWare"/>
+									<listOptionValue builtIn="false" value="../../tivaware"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL.324422475" name="Optimization Level" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compilerID.OPT_LEVEL.2" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compiler.inputType__C_SRCS.1230895443" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_4.0.compiler.inputType__C_SRCS"/>
