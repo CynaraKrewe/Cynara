@@ -138,6 +138,9 @@ template<typename Type>
 class InPort
 {
 public:
+	InPort<Type>()
+	:	connection(NULL)
+	{}
 	bool receive(Type& element)
 	{
 		return this->isConnected() ? this->connection->receive(element) : false;
@@ -147,7 +150,7 @@ public:
 		return this->isConnected() ? this->connection->peek() : false;
 	}
 private:
-	WithReceiver<Type>* connection;
+	WithReceiver<Type>* connection = NULL;
 
 	void connect(WithReceiver<Type>* connection)
 	{
@@ -171,6 +174,9 @@ template<typename Type>
 class OutPort
 {
 public:
+	OutPort<Type>()
+	:	connection(NULL)
+	{}
 	bool send(const Type& element)
 	{
 		return this->isConnected() ? this->connection->send(element) : false;
