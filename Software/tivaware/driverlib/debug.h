@@ -46,7 +46,7 @@
 // to an API.  This is only used when doing a DEBUG build.
 //
 //*****************************************************************************
-extern void __error__(char *pcFilename, uint32_t ui32Line);
+extern void __error__(const char *pcFilename, uint32_t ui32Line);
 
 //*****************************************************************************
 //
