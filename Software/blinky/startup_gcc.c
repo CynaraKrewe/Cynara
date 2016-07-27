@@ -313,6 +313,7 @@ typedef char *caddr_t;
 caddr_t _sbrk(int increment)
 {
     extern char heap __asm("heap"); // See linker script.
+    __attribute__((unused))
     extern char eheap __asm("eheap"); // See linker script.
     static char* currentHeapTop = &heap;
     char* previousHeapTop = currentHeapTop;

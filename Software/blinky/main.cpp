@@ -32,9 +32,7 @@ SOLUTION.
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
 #include "inc/hw_ssi.h"
-extern "C" {
 #include "driverlib/debug.h"
-}
 #include "driverlib/fpu.h"
 #include "driverlib/gpio.h"
 #include "driverlib/interrupt.h"
