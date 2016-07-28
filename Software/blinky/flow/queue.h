@@ -22,10 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef QUEUE_H_
-#define QUEUE_H_
+#ifndef FLOW_QUEUE_H_
+#define FLOW_QUEUE_H_
 
-namespace Utility
+namespace Flow
 {
 
 template<typename DataType>
@@ -114,6 +114,6 @@ public:
 	}
 };
 
-} // namespace Utility
+} // namespace Flow
 
-#endif /* QUEUE_H_ */
+#endif /* FLOW_QUEUE_H_ */

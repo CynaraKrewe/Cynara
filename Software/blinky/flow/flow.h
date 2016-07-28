@@ -22,9 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef FLOW_H_
-#define FLOW_H_
-
+#ifndef FLOW_FLOW_H_
+#define FLOW_FLOW_H_
 
 #include "queue.h"
 
@@ -85,13 +84,13 @@ class ConnectionFIFO
 :	public Connection,
 	public WithSender<Type>,
 	public WithReceiver<Type>,
-	public Utility::Queue<Type>
+	public Queue<Type>
 {
 public:
 	ConnectionFIFO(OutPort<Type>& sender, InPort<Type>& receiver, unsigned int size)
 	:	WithSender<Type>(sender),
 		WithReceiver<Type>(receiver),
-		Utility::Queue<Type>(size)
+		Queue<Type>(size)
 	{
 	}
 	virtual ~ConnectionFIFO(){}
@@ -229,4 +228,4 @@ public:
 } //namespace Flow
 
 
-#endif /* FLOW_H_ */
+#endif /* FLOW_FLOW_H_ */
