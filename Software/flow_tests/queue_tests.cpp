@@ -22,7 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
+#include <stdint.h>
+
 #include "CppUTest/TestHarness.h"
+
+#include "driverlib/debug.h"
 
 #include "flow/queue.h"
 
@@ -30,103 +34,178 @@ SOLUTION.
 
 using Flow::Queue;
 
-const static unsigned int QUEUE_SIZE = 10;
+const static unsigned int UNITS = 3;
+const static unsigned int QUEUE_SIZE[UNITS] = {1, 10, 255};
 
 TEST_GROUP(Queue_TestBench)
 {
-	Queue<Data> unitUnderTest = Queue<Data>(QUEUE_SIZE);
+	Queue<Data>* unitUnderTest[UNITS];
 
 	void setup()
 	{
+		for(unsigned int i = 0; i < UNITS; i++)
+		{
+			unitUnderTest[i] = new Queue<Data>(QUEUE_SIZE[i]);
+		}
 	}
 
 	void teardown()
 	{
+		for(unsigned int i = 0; i < UNITS; i++)
+		{
+			delete unitUnderTest[i];
+		}
 	}
 };
 
 TEST(Queue_TestBench, IsEmptyAfterCreation)
 {
-	CHECK(unitUnderTest.isEmpty());
-	Data response;
-	CHECK(!unitUnderTest.dequeue(response));
+	for(unsigned int i = 0; i < UNITS; i++)
+	{
+		CHECK(unitUnderTest[i]->isEmpty());
+		Data response;
+		CHECK(!unitUnderTest[i]->dequeue(response));
+	}
 }
 
 TEST(Queue_TestBench, EnqueueDequeueItem)
 {
-	CHECK(unitUnderTest.isEmpty());
-	Data stimulus = Data(123, true);
-	CHECK(unitUnderTest.enqueue(stimulus));
-	CHECK(!unitUnderTest.isEmpty());
-	CHECK(!unitUnderTest.isFull());
-	Data response;
-	CHECK(unitUnderTest.dequeue(response));
-	CHECK(stimulus == response);
-	CHECK(unitUnderTest.isEmpty());
-	CHECK(!unitUnderTest.dequeue(response));
+	for(unsigned int i = 0; i < UNITS; i++)
+	{
+		CHECK(unitUnderTest[i]->isEmpty());
+		Data stimulus = Data(123, true);
+		CHECK(unitUnderTest[i]->enqueue(stimulus));
+		CHECK(!unitUnderTest[i]->isEmpty());
+		Data response;
+		CHECK(unitUnderTest[i]->dequeue(response));
+		CHECK(stimulus == response);
+		CHECK(unitUnderTest[i]->isEmpty());
+		CHECK(!unitUnderTest[i]->dequeue(response));
+	}
 }
 
 TEST(Queue_TestBench, FullQueue)
 {
-	// Queue should be empty.
-	CHECK(unitUnderTest.isEmpty());
-
-	for(unsigned int i = 0; i < (QUEUE_SIZE - 1); i++)
+	for(unsigned int i = 0; i < UNITS; i++)
 	{
-		Data stimulus = Data(i, true);
+		// Queue should be empty.
+		CHECK(unitUnderTest[i]->isEmpty());
+
+		for(unsigned int c = 0; c < (QUEUE_SIZE[i] - 1); c++)
+		{
+			Data stimulus = Data(c, true);
+			// Queue should accept another item.
+			CHECK(unitUnderTest[i]->enqueue(stimulus));
+
+			// Queue should not be empty.
+			CHECK(!unitUnderTest[i]->isEmpty());
+
+			// Queue shouldn't be full.
+			CHECK(!unitUnderTest[i]->isFull());
+		}
+
+		Data lastStimulus = Data(QUEUE_SIZE[i], false);
 		// Queue should accept another item.
-		CHECK(unitUnderTest.enqueue(stimulus));
+		CHECK(unitUnderTest[i]->enqueue(lastStimulus));
 
 		// Queue should not be empty.
-		CHECK(!unitUnderTest.isEmpty());
+		CHECK(!unitUnderTest[i]->isEmpty());
 
-		// Queue shouldn't be full.
-		CHECK(!unitUnderTest.isFull());
-	}
+		// Queue should be full.
+		CHECK(unitUnderTest[i]->isFull());
 
-	Data lastStimulus = Data(QUEUE_SIZE, false);
-	// Queue should accept another item.
-	CHECK(unitUnderTest.enqueue(lastStimulus));
+		// Queue shouldn't accept any more items.
+		CHECK(!unitUnderTest[i]->enqueue(lastStimulus));
 
-	// Queue should not be empty.
-	CHECK(!unitUnderTest.isEmpty());
+		Data response;
 
-	// Queue should be full.
-	CHECK(unitUnderTest.isFull());
+		for(unsigned int c = 0; c < (QUEUE_SIZE[i] - 1); c++)
+		{
+			// Should get another item from the Queue.
+			CHECK(unitUnderTest[i]->dequeue(response));
 
-	// Queue shouldn't accept any more items.
-	CHECK(!unitUnderTest.enqueue(lastStimulus));
+			// Item should be the expected.
+			Data expectedResponse = Data(c, true);
+			CHECK(response == expectedResponse);
 
-	Data response;
+			// Queue should not be empty.
+			CHECK(!unitUnderTest[i]->isEmpty());
 
-	for(unsigned int i = 0; i < (QUEUE_SIZE - 1); i++)
-	{
+			// Queue shouldn't be full.
+			CHECK(!unitUnderTest[i]->isFull());
+		}
+
 		// Should get another item from the Queue.
-		CHECK(unitUnderTest.dequeue(response));
+		CHECK(unitUnderTest[i]->dequeue(response));
 
 		// Item should be the expected.
-		Data expectedResponse = Data(i, true);
-		CHECK(response == expectedResponse);
-
-		// Queue should not be empty.
-		CHECK(!unitUnderTest.isEmpty());
+		CHECK(lastStimulus == response);
 
 		// Queue shouldn't be full.
-		CHECK(!unitUnderTest.isFull());
+		CHECK(!unitUnderTest[i]->isFull());
+
+		// Queue should be empty.
+		CHECK(unitUnderTest[i]->isEmpty());
+
+		// Shouldn't get another item from the Queue.
+		CHECK(!unitUnderTest[i]->dequeue(response));
 	}
+}
 
-	// Should get another item from the Queue.
-	CHECK(unitUnderTest.dequeue(response));
+static const unsigned long long _count = 1000;
+static unsigned long long _c = 0;
+static Queue<Data>* _unitUnderTest = NULL;
+extern void (*calledFromSysTickHandler)(void);
 
-	// Item should be the expected.
-	CHECK(lastStimulus == response);
+static void fromInterruptContext(void)
+{
+	ASSERT(_unitUnderTest != NULL);
 
-	// Queue shouldn't be full.
-	CHECK(!unitUnderTest.isFull());
+	if(_c < _count)
+	{
+		if(_unitUnderTest->enqueue(Data(_c, ((_c % 2) == 0))))
+		{
+			_c++;
+		}
+	}
+}
 
-	// Queue should be empty.
-	CHECK(unitUnderTest.isEmpty());
+TEST(Queue_TestBench, Threadsafe)
+{
+	for(unsigned int i = 0; i < UNITS; i++)
+	{
+		// Queue should be empty.
+		CHECK(unitUnderTest[i]->isEmpty());
 
-	// Shouldn't get another item from the Queue.
-	CHECK(!unitUnderTest.dequeue(response));
+		// Install unit under test.
+		_unitUnderTest = unitUnderTest[i];
+		_c = 0;
+
+		// Install interrupt context functionality.
+		calledFromSysTickHandler = &fromInterruptContext;
+
+		unsigned long long c = 0;
+		bool success = true;
+		while(c < _count)
+		{
+			Data response;
+			if(unitUnderTest[i]->dequeue(response))
+			{
+				Data expectedResponse = Data(c, ((c % 2) == 0));
+				success = success && (response == expectedResponse);
+				c++;
+			}
+		}
+
+		CHECK(success);
+
+		// Uninstall interrupt context functionality.
+		calledFromSysTickHandler = NULL;
+
+		// Uninstall unit under test.
+		_unitUnderTest = NULL;
+
+		// Queue should be empty.
+		CHECK(unitUnderTest[i]->isEmpty());
+	}
 }

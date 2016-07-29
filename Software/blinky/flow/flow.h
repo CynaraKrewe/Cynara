@@ -84,7 +84,7 @@ class ConnectionFIFO
 :	public Connection,
 	public WithSender<Type>,
 	public WithReceiver<Type>,
-	public Queue<Type>
+	protected Queue<Type>
 {
 public:
 	ConnectionFIFO(OutPort<Type>& sender, InPort<Type>& receiver, unsigned int size)

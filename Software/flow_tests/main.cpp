@@ -52,8 +52,9 @@ int main(void)
 	while(true);
 }
 
+#define BUFFER_SIZE 1000
 unsigned int iBuffer = 0;
-char buffer[500];
+char buffer[BUFFER_SIZE];
 
 #undef putchar
 
@@ -61,8 +62,12 @@ int putchar(int character)
 {
 	buffer[iBuffer++] = character;
 
+	ASSERT(iBuffer <= BUFFER_SIZE);
+
 	return character;
 }
+
+void (*calledFromSysTickHandler)(void) = NULL;
 
 // SysTick related stuff.
 extern "C" {
@@ -72,6 +77,11 @@ unsigned int sysTicks = 0;
 void SysTickIntHandler(void)
 {
     sysTicks++;
+
+    if(calledFromSysTickHandler != NULL)
+    {
+    	calledFromSysTickHandler();
+    }
 }
 
 } // extern "C"
@@ -82,7 +92,7 @@ long getMilliseconds()
 }
 
 // An assert will end up here.
-void __error__(const char *pcFilename, uint32_t ui32Line)
+extern "C" void __error__(const char *pcFilename, uint32_t ui32Line)
 {
 	printf("File: %s\r\nLine: %lu\r\n", pcFilename, ui32Line);
 	while(true);

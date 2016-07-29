@@ -25,6 +25,7 @@ SOLUTION.
 #ifndef TM4C_CONFIGURATION_H_
 #define TM4C_CONFIGURATION_H_
 
+#include "driverlib/debug.h"
 #include "driverlib/fpu.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/systick.h"

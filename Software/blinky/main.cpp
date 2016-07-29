@@ -291,7 +291,7 @@ void SysTickIntHandler(void)
 } // extern "C"
 
 // An assert will end up here.
-void __error__(const char *pcFilename, uint32_t ui32Line)
+extern "C" void __error__(const char *pcFilename, uint32_t ui32Line)
 {
 	printf("File: %s\r\nLine: %lu\r\n", pcFilename, ui32Line);
 	while(true);
