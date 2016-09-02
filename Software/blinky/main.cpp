@@ -144,6 +144,8 @@ private:
 	bool forwarding = false;
 };
 
+static Flow::Component** _sysTickComponents = NULL;
+
 int main(void)
 {
 	// Set up the clock circuit.
@@ -179,7 +181,7 @@ int main(void)
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
 	{
-		Flow::connect((unsigned int)500, timer->period),
+		Flow::connect((unsigned int)500, timer->inPeriod),
 
 		Flow::connect(Gpio::Name{Gpio::Port::N, 0}, led1->inName),
 		Flow::connect(Gpio::Direction::OUTPUT, led1->inDirection),
@@ -187,7 +189,7 @@ int main(void)
 		Flow::connect(Gpio::Name{Gpio::Port::N, 1}, led2->inName),
 		Flow::connect(Gpio::Direction::OUTPUT, led2->inDirection),
 
-		Flow::connect(timer->tick, tickSplit->in),
+		Flow::connect(timer->outTick, tickSplit->in),
 		Flow::connect(tickSplit->out[0], toggle->tick),
 		Flow::connect(toggle->out, split->in),
 		Flow::connect(split->out[0], invert->in),
@@ -232,9 +234,8 @@ int main(void)
 	};
 
 	// Define the deployment of the components.
-	Flow::Component* components[] =
+	Flow::Component* mainComponents[] =
 	{
-		timer,
 		tickSplit,
 		toggle,
 		split,
@@ -256,12 +257,19 @@ int main(void)
 		u0tx
 	};
 
+	Flow::Component* sysTickComponents[] =
+	{
+		timer
+	};
+
+	_sysTickComponents = sysTickComponents;
+
 	// Run the application.
 	while(true)
 	{
-		for(unsigned int c = 0; c < ArraySizeOf(components); c++)
+		for(unsigned int c = 0; c < ArraySizeOf(mainComponents); c++)
 		{
-			components[c]->run();
+			mainComponents[c]->run();
 		}
 	}
 
@@ -272,23 +280,30 @@ int main(void)
 	}
 
 	// Destruct the components of the application.
-	for(unsigned int i = 0; i < ArraySizeOf(components); i++)
+	for(unsigned int i = 0; i < ArraySizeOf(mainComponents); i++)
 	{
-		delete components[i];
+		delete mainComponents[i];
+	}
+
+	_sysTickComponents = NULL;
+
+	for(unsigned int i = 0; i < ArraySizeOf(sysTickComponents); i++)
+	{
+		delete sysTickComponents[i];
 	}
 }
 
 // SysTick related stuff.
-extern "C" {
-
-unsigned int sysTicks = 0;
-
-void SysTickIntHandler(void)
+extern "C" void SysTickIntHandler(void)
 {
-    sysTicks++;
+	if(_sysTickComponents != NULL)
+	{
+		for(unsigned int c = 0; c < ArraySizeOf(_sysTickComponents); c++)
+		{
+			_sysTickComponents[c]->run();
+		}
+	}
 }
-
-} // extern "C"
 
 // An assert will end up here.
 extern "C" void __error__(const char *pcFilename, uint32_t ui32Line)

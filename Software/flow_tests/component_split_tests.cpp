@@ -36,66 +36,92 @@ using Flow::InPort;
 using Flow::connect;
 using Flow::disconnect;
 
-TEST_GROUP(Component_Invert_TestBench)
+TEST_GROUP(Component_Split_TestBench)
 {
-	OutPort<bool> outStimulus;
+	constexpr static unsigned int SPLIT_COUNT = 5;
+
+	OutPort<char> outStimulus;
 	Connection* outStimulusConnection;
-	Invert<bool>* unitUnderTest;
-	Connection* inResponseConnection;
-	InPort<bool> inResponse;
+	Split<char, SPLIT_COUNT>* unitUnderTest;
+	Connection* inResponseConnection[SPLIT_COUNT];
+	InPort<char> inResponse[SPLIT_COUNT];
 
 	void setup()
 	{
-		unitUnderTest = new Invert<bool>();
+		unitUnderTest = new Split<char, SPLIT_COUNT>();
 
 		outStimulusConnection = connect(outStimulus, unitUnderTest->in);
-		inResponseConnection = connect(unitUnderTest->out, inResponse);
+
+		for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+		{
+			inResponseConnection[i] = connect(unitUnderTest->out[i], inResponse[i]);
+		}
 	}
 
 	void teardown()
 	{
 		disconnect(outStimulusConnection);
-		disconnect(inResponseConnection);
+
+		for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+		{
+			disconnect(inResponseConnection[i]);
+		}
 
 		delete unitUnderTest;
 	}
 };
 
-TEST(Component_Invert_TestBench, DormantWithoutStimulus)
+TEST(Component_Split_TestBench, DormantWithoutStimulus)
 {
-	CHECK(!inResponse.peek());
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(!inResponse[i].peek());
+	}
 
 	unitUnderTest->run();
 
-	CHECK(!inResponse.peek());
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(!inResponse[i].peek());
+	}
 }
 
-TEST(Component_Invert_TestBench, FalseIsTrue)
+TEST(Component_Split_TestBench, Split)
 {
-	CHECK(outStimulus.send(false));
+	CHECK(outStimulus.send(1));
 
-	CHECK(!inResponse.peek());
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(!inResponse[i].peek());
+	}
 
 	unitUnderTest->run();
 
-	bool response;
-	CHECK(inResponse.receive(response));
+	char response;
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(inResponse[i].receive(response));
 
-	bool expected = true;
-	CHECK(response == expected);
-}
-
-TEST(Component_Invert_TestBench, TrueIsFalse)
-{
-	CHECK(outStimulus.send(true));
-
-	CHECK(!inResponse.peek());
+		char expected = 1;
+		CHECK(response == expected);
+	}
 
 	unitUnderTest->run();
 
-	bool response;
-	CHECK(inResponse.receive(response));
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(!inResponse[i].receive(response));
+	}
 
-	bool expected = false;
-	CHECK(response == expected);
+	CHECK(outStimulus.send(123));
+
+	unitUnderTest->run();
+
+	for(unsigned int i = 0; i < SPLIT_COUNT; i++)
+	{
+		CHECK(inResponse[i].receive(response));
+
+		char expected = 123;
+		CHECK(response == expected);
+	}
 }

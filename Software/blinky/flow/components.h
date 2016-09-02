@@ -54,9 +54,14 @@ public:
 	void run() override
 	{
 		Type b;
-		if(in.receive(b))
+		bool more = false;
+		while(in.receive(b))
 		{
 			counter++;
+			more = true;
+		}
+		if(more)
+		{
 			out.send(counter);
 		}
 	}
@@ -104,8 +109,6 @@ public:
 	}
 };
 
-extern "C" unsigned int sysTicks;
-
 enum Tick
 {
 	TICK
@@ -115,19 +118,32 @@ class Timer
 :	public Flow::Component
 {
 public:
-	Flow::InPort<unsigned int> period;
-	Flow::OutPort<Tick> tick;
+	Flow::InPort<unsigned int> inPeriod;
+	Flow::OutPort<Tick> outTick;
 	void run()
 	{
-		static unsigned int previousSysTicks = 0;
+		sysTicks++;
 
-		unsigned int currentPeriod;
-		if(period.receive(currentPeriod) && (sysTicks > previousSysTicks + currentPeriod))
+		inPeriod.receive(nextPeriod);
+
+		if(period > 0)
 		{
-			previousSysTicks = sysTicks;
-			tick.send(TICK);
+			if(sysTicks >= period)
+			{
+				sysTicks = 0;
+				outTick.send(TICK);
+				period = nextPeriod;
+			}
+		}
+		else
+		{
+			period = nextPeriod;
 		}
 	}
+private:
+	unsigned int period = 0;
+	unsigned int nextPeriod = 0;
+	unsigned int sysTicks = 0;
 };
 
 class Toggle
@@ -147,35 +163,6 @@ public:
 	}
 private:
 	bool toggle = false;
-};
-
-template<typename Type, unsigned int inputs>
-class Add
-:	public Flow::Component
-{
-public:
-	Flow::InPort<Type> in[inputs];
-	Flow::OutPort<Type> out;
-	void run()
-	{
-		for(unsigned int i = 0; i < inputs; i++)
-		{
-			if(!in[i].peek())
-			{
-				return;
-			}
-		}
-
-		Type result = 0;
-		for(unsigned int i = 0; i < inputs; i++)
-		{
-			Type toAdd;
-			in[i].receive(toAdd);
-			result += toAdd;
-		}
-
-		out.send(result);
-	}
 };
 
 #endif /* FLOW_COMPONENTS_H_ */

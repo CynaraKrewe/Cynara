@@ -35,11 +35,11 @@ class Queue
 {
 private:
 	DataType* _data;
-	unsigned int _size;
-	unsigned int _first;
-	unsigned int _last;
-	volatile uint8_t _enqueued;
-	volatile uint8_t _dequeued;
+	uint16_t _size;
+	uint16_t _first;
+	uint16_t _last;
+	volatile uint16_t _enqueued;
+	volatile uint16_t _dequeued;
 
 public:
 	Queue(unsigned int size)
@@ -64,7 +64,7 @@ public:
 
 	bool isFull() const
 	{
-		return (_enqueued == (uint8_t)(_dequeued + _size));
+		return (_enqueued == _dequeued + _size);
 	}
 
 	bool enqueue(const DataType& element)

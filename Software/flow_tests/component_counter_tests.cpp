@@ -36,19 +36,19 @@ using Flow::InPort;
 using Flow::connect;
 using Flow::disconnect;
 
-TEST_GROUP(Component_Invert_TestBench)
+TEST_GROUP(Component_Counter_TestBench)
 {
-	OutPort<bool> outStimulus;
+	OutPort<char> outStimulus;
 	Connection* outStimulusConnection;
-	Invert<bool>* unitUnderTest;
+	Counter<char>* unitUnderTest;
 	Connection* inResponseConnection;
-	InPort<bool> inResponse;
+	InPort<unsigned int> inResponse;
 
 	void setup()
 	{
-		unitUnderTest = new Invert<bool>();
+		unitUnderTest = new Counter<char>();
 
-		outStimulusConnection = connect(outStimulus, unitUnderTest->in);
+		outStimulusConnection = connect(outStimulus, unitUnderTest->in, 5);
 		inResponseConnection = connect(unitUnderTest->out, inResponse);
 	}
 
@@ -61,7 +61,7 @@ TEST_GROUP(Component_Invert_TestBench)
 	}
 };
 
-TEST(Component_Invert_TestBench, DormantWithoutStimulus)
+TEST(Component_Counter_TestBench, DormantWithoutStimulus)
 {
 	CHECK(!inResponse.peek());
 
@@ -70,32 +70,43 @@ TEST(Component_Invert_TestBench, DormantWithoutStimulus)
 	CHECK(!inResponse.peek());
 }
 
-TEST(Component_Invert_TestBench, FalseIsTrue)
+TEST(Component_Counter_TestBench, Counting)
 {
-	CHECK(outStimulus.send(false));
+	CHECK(outStimulus.send(0));
 
 	CHECK(!inResponse.peek());
 
 	unitUnderTest->run();
 
-	bool response;
+	unsigned int response;
 	CHECK(inResponse.receive(response));
 
-	bool expected = true;
+	unsigned int expected = 1;
 	CHECK(response == expected);
-}
-
-TEST(Component_Invert_TestBench, TrueIsFalse)
-{
-	CHECK(outStimulus.send(true));
-
-	CHECK(!inResponse.peek());
 
 	unitUnderTest->run();
 
-	bool response;
+	CHECK(!inResponse.receive(response));
+
+	CHECK(outStimulus.send(123));
+
+	unitUnderTest->run();
+
 	CHECK(inResponse.receive(response));
 
-	bool expected = false;
+	expected = 2;
+	CHECK(response == expected);
+
+	CHECK(outStimulus.send(123));
+	CHECK(outStimulus.send(123));
+	CHECK(outStimulus.send(123));
+	CHECK(outStimulus.send(123));
+	CHECK(outStimulus.send(123));
+
+	unitUnderTest->run();
+
+	CHECK(inResponse.receive(response));
+
+	expected = 7;
 	CHECK(response == expected);
 }

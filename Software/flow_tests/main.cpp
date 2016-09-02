@@ -32,39 +32,90 @@ SOLUTION.
 #include "flow/utility.h"
 
 #include "tm4c/configuration.h"
+#include "tm4c/components.h"
 
 #include "CppUTest/CommandLineTestRunner.h"
+
+#undef putchar
+
+static Flow::OutPort<char> outTestReport;
+
+int putchar(int character)
+{
+	outTestReport.send((char)character);
+
+	if(character == '\n')
+	{
+		outTestReport.send('\r');
+	}
+
+	return character;
+}
+
+class TestRunner
+:	public Flow::Component
+{
+public:
+	void run()
+	{
+		if(once)
+		{
+			CHECK(true);
+			LONGS_EQUAL(1, 1);
+
+			#define ARGC 2
+			const char* argv[ARGC] = {"", "-v"};
+
+			CommandLineTestRunner::RunAllTests(ARGC, argv);
+
+			once = false;
+		}
+	}
+private:
+	bool once = true;
+};
 
 int main(void)
 {
 	// Set up the clock circuit.
 	Clock::configure(120 MHz);
 
-	CHECK(true);
-	LONGS_EQUAL(1, 1);
+	// Create the components of the application.
+	TestRunner* testRunner = new TestRunner();
+	Uart0Transmitter* u0tx = new Uart0Transmitter();
 
-#define ARGC 2
+	// Connect the components of the application.
+	Flow::Connection* connections[] =
+	{
+		Flow::connect(outTestReport, u0tx->in, 2000)
+	};
 
-	const char* argv[ARGC] = {"", "-v"};
+	// Define the deployment of the components.
+	Flow::Component* components[] =
+	{
+		testRunner, u0tx
+	};
 
-    CommandLineTestRunner::RunAllTests(ARGC, argv);
+	// Run the application.
+	while(true)
+	{
+		for(unsigned int c = 0; c < ArraySizeOf(components); c++)
+		{
+			components[c]->run();
+		}
+	}
 
-	while(true);
-}
+	// Disconnect the components of the application.
+	for(unsigned int i = 0; i < ArraySizeOf(connections); i++)
+	{
+		Flow::disconnect(connections[i]);
+	}
 
-#define BUFFER_SIZE 1000
-unsigned int iBuffer = 0;
-char buffer[BUFFER_SIZE];
-
-#undef putchar
-
-int putchar(int character)
-{
-	buffer[iBuffer++] = character;
-
-	ASSERT(iBuffer <= BUFFER_SIZE);
-
-	return character;
+	// Destruct the components of the application.
+	for(unsigned int i = 0; i < ArraySizeOf(components); i++)
+	{
+		delete components[i];
+	}
 }
 
 void (*calledFromSysTickHandler)(void) = NULL;
