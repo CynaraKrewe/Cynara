@@ -34,6 +34,7 @@ SOLUTION.
 #include "flow/utility.h"
 
 #include "tm4c/components.h"
+#include "tm4c/component_usbcdc.h"
 #include "tm4c/configuration.h"
 
 using Utility::Ascii;
@@ -144,6 +145,83 @@ private:
 	bool forwarding = false;
 };
 
+enum Cookie
+{
+	COOKIE
+};
+
+class CookieJar
+:	public Flow::Component
+{
+public:
+	Flow::InPort<Tick> in;
+	Flow::OutPort<Cookie> out;
+	void run()
+	{
+		Tick tick;
+		while(in.receive(tick))
+		{
+			out.send(COOKIE);
+		}
+	}
+};
+
+class CookieMonster
+:	public Flow::Component
+{
+public:
+	Flow::InPort<Cookie> in;
+	Flow::OutPort<char> out;
+	void run()
+	{
+		Cookie cookie;
+		while(in.receive(cookie))
+		{
+			const char* hello = "\r\nOm-Nom-Nom!";
+			for(unsigned int i = 0; i < strlen(hello); i++)
+			{
+				out.send(hello[i]);
+			}
+		}
+	}
+};
+
+template<unsigned int outputs>
+class Cylon
+:	public Flow::Component
+{
+public:
+	Flow::InPort<Tick> in;
+	Flow::OutPort<bool> out[outputs];
+	void run()
+	{
+		Tick tick;
+		if(in.receive(tick))
+		{
+			out[eye].send(false);
+
+			if(eye == 0 || eye == outputs - 1)
+			{
+				increment = !increment;
+			}
+
+			if(increment)
+			{
+				eye++;
+			}
+			else
+			{
+				eye--;
+			}
+
+			out[eye].send(true);
+		}
+	}
+private:
+	int eye = 1;
+	bool increment = false;
+};
+
 static Flow::Component** _sysTickComponents = NULL;
 
 int main(void)
@@ -152,109 +230,75 @@ int main(void)
 	Clock::configure(120 MHz);
 
 	// Create the components of the application.
-	Uart0Transmitter* u0tx = new Uart0Transmitter();
-	Uart0Receiver* u0rx = new Uart0Receiver();
-
+	Toggle* periodToggle = new Toggle();
+	Gpio* periodCheck = new Gpio();
 	Timer* timer = new Timer();
 	Split<Tick, 2>* tickSplit = new Split<Tick, 2>();
-	Toggle* toggle = new Toggle();
-	Split<bool, 2>* split = new Split<bool, 2>();
-	Invert<bool>* invert = new Invert<bool>();
+
+	Cylon<4>* cylon = new Cylon<4>();
 	Gpio* led1 = new Gpio();
 	Gpio* led2 = new Gpio();
+	Gpio* led3 = new Gpio();
+	Gpio* led4 = new Gpio();
 
-	GpioSerDes* controllerLedD3 = new GpioSerDes();
-	Gpio* ledD3 = new Gpio();
-
-	GpioSerDes* controllerLedD4 = new GpioSerDes();
-	Gpio* ledD4 = new Gpio();
-
-	GpioSerDes* controllerUserSwitch1 = new GpioSerDes();
-	Gpio* userSwitch1 = new Gpio();
-
-	GpioSerDes* controllerUserSwitch2 = new GpioSerDes();
-	Gpio* userSwitch2 = new Gpio();
-
-	Split<char, 4>* splitSerDes = new Split<char, 4>();
-	CombineSerDes<4>* combineSerDes = new CombineSerDes<4>();
+	UsbCdc* cdc = new UsbCdc();
+	Combine<char, 2>* combine = new Combine<char, 2>();
+	CookieJar* cookieJar = new CookieJar();
+	CookieMonster* cookieMonster = new CookieMonster();
 
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
 	{
-		Flow::connect((unsigned int)500, timer->inPeriod),
+		Flow::connect(Gpio::Name{Gpio::Port::D, 2}, periodCheck->inName),
+		Flow::connect(Gpio::Direction::OUTPUT, periodCheck->inDirection),
+		Flow::connect(Tick::TICK, periodToggle->tick),
+		Flow::connect(periodToggle->out, periodCheck->inValue),
 
-		Flow::connect(Gpio::Name{Gpio::Port::N, 0}, led1->inName),
+		Flow::connect(cdc->out, combine->in[0], 20),
+		Flow::connect(tickSplit->out[1], cookieJar->in),
+		Flow::connect(cookieJar->out, cookieMonster->in),
+		Flow::connect(cookieMonster->out, combine->in[1], 20),
+		Flow::connect(combine->out, cdc->in, 40),
+
+		Flow::connect((unsigned int)250, timer->inPeriod),
+
+		Flow::connect(Gpio::Name{Gpio::Port::N, 1}, led1->inName),
 		Flow::connect(Gpio::Direction::OUTPUT, led1->inDirection),
 
-		Flow::connect(Gpio::Name{Gpio::Port::N, 1}, led2->inName),
+		Flow::connect(Gpio::Name{Gpio::Port::N, 0}, led2->inName),
 		Flow::connect(Gpio::Direction::OUTPUT, led2->inDirection),
 
+		Flow::connect(Gpio::Name{Gpio::Port::F, 4}, led3->inName),
+		Flow::connect(Gpio::Direction::OUTPUT, led3->inDirection),
+
+		Flow::connect(Gpio::Name{Gpio::Port::F, 0}, led4->inName),
+		Flow::connect(Gpio::Direction::OUTPUT, led4->inDirection),
+
 		Flow::connect(timer->outTick, tickSplit->in),
-		Flow::connect(tickSplit->out[0], toggle->tick),
-		Flow::connect(toggle->out, split->in),
-		Flow::connect(split->out[0], invert->in),
-		Flow::connect(invert->out, led1->inValue),
-		Flow::connect(split->out[1], led2->inValue),
-
-		Flow::connect(u0rx->out, splitSerDes->in, 10),
-		Flow::connect(combineSerDes->out, u0tx->in, 200),
-
-		Flow::connect(splitSerDes->out[0], controllerLedD3->inSerialized, 10),
-		Flow::connect(splitSerDes->out[1], controllerLedD4->inSerialized, 10),
-		Flow::connect(splitSerDes->out[2], controllerUserSwitch1->inSerialized, 10),
-		Flow::connect(splitSerDes->out[3], controllerUserSwitch2->inSerialized, 10),
-		Flow::connect(controllerLedD3->outSerialized, combineSerDes->in[0], 50),
-		Flow::connect(controllerLedD4->outSerialized, combineSerDes->in[1], 50),
-		Flow::connect(controllerUserSwitch1->outSerialized, combineSerDes->in[2], 50),
-		Flow::connect(controllerUserSwitch2->outSerialized, combineSerDes->in[3], 50),
-
-		Flow::connect(Gpio::Name{Gpio::Port::F, 4}, controllerLedD3->inName),
-		Flow::connect(ledD3->outValue, controllerLedD3->inValue),
-		Flow::connect(controllerLedD3->outName, ledD3->inName),
-		Flow::connect(controllerLedD3->outDirection, ledD3->inDirection),
-		Flow::connect(controllerLedD3->outValue, ledD3->inValue),
-
-		Flow::connect(Gpio::Name{Gpio::Port::F, 0}, controllerLedD4->inName),
-		Flow::connect(ledD4->outValue, controllerLedD4->inValue),
-		Flow::connect(controllerLedD4->outName, ledD4->inName),
-		Flow::connect(controllerLedD4->outDirection, ledD4->inDirection),
-		Flow::connect(controllerLedD4->outValue, ledD4->inValue),
-
-		Flow::connect(Gpio::Name{Gpio::Port::J, 0}, controllerUserSwitch1->inName),
-		Flow::connect(userSwitch1->outValue, controllerUserSwitch1->inValue),
-		Flow::connect(controllerUserSwitch1->outName, userSwitch1->inName),
-		Flow::connect(Gpio::Direction::INPUT, userSwitch1->inDirection),
-		Flow::connect(controllerUserSwitch1->outValue, userSwitch1->inValue),
-
-		Flow::connect(Gpio::Name{Gpio::Port::J, 1}, controllerUserSwitch2->inName),
-		Flow::connect(userSwitch2->outValue, controllerUserSwitch2->inValue),
-		Flow::connect(controllerUserSwitch2->outName, userSwitch2->inName),
-		Flow::connect(Gpio::Direction::INPUT, userSwitch2->inDirection),
-		Flow::connect(controllerUserSwitch2->outValue, userSwitch2->inValue)
+		Flow::connect(tickSplit->out[0], cylon->in),
+		Flow::connect(cylon->out[0], led1->inValue),
+		Flow::connect(cylon->out[1], led2->inValue),
+		Flow::connect(cylon->out[2], led3->inValue),
+		Flow::connect(cylon->out[3], led4->inValue)
 	};
 
 	// Define the deployment of the components.
 	Flow::Component* mainComponents[] =
 	{
+		periodToggle,
+		periodCheck,
+
+		cdc,
+		cookieJar,
+		cookieMonster,
+		combine,
+
 		tickSplit,
-		toggle,
-		split,
-		invert,
+		cylon,
 		led1,
 		led2,
-
-		u0rx,
-		splitSerDes,
-		controllerLedD3,
-		ledD3,
-		controllerLedD4,
-		ledD4,
-		controllerUserSwitch1,
-		userSwitch1,
-		controllerUserSwitch2,
-		userSwitch2,
-		combineSerDes,
-		u0tx
+		led3,
+		led4
 	};
 
 	Flow::Component* sysTickComponents[] =

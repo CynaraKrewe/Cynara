@@ -75,6 +75,7 @@ public:
 		sender.disconnect();
 	}
 	virtual bool send(const Type& element) = 0;
+	virtual bool full() = 0;
 private:
 	OutPort<Type>& sender;
 };
@@ -105,6 +106,10 @@ public:
 	bool peek() override
 	{
 		return !this->isEmpty();
+	}
+	bool full() override
+	{
+		return this->isFull();
 	}
 };
 
@@ -179,6 +184,10 @@ public:
 	bool send(const Type& element)
 	{
 		return this->isConnected() ? this->connection->send(element) : false;
+	}
+	bool full()
+	{
+		return this->isConnected() ? this->connection->full() : false;
 	}
 private:
 	WithSender<Type>* connection;

@@ -101,7 +101,7 @@ public:
 		for(unsigned int i = 0; i < inputs; i++)
 		{
 			Type b;
-			if(in[i].receive(b))
+			while(in[i].receive(b))
 			{
 				out.send(b);
 			}
