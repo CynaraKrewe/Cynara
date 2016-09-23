@@ -28,6 +28,8 @@ SOLUTION.
 #include <stdlib.h>
 #include <string.h>
 
+#include "pinmux/pinout.h"
+
 #include "ascii.h"
 
 #include "flow/components.h"
@@ -39,111 +41,111 @@ SOLUTION.
 
 using Utility::Ascii;
 
-class GpioSerDes
-:	public Flow::Component
-{
-public:
-	Flow::InPort<char> inSerialized;
-	Flow::InPort<Gpio::Name> inName;
-	Flow::InPort<bool> inValue;
-	Flow::OutPort<char> outSerialized;
-	Flow::OutPort<Gpio::Name> outName;
-	Flow::OutPort<Gpio::Direction> outDirection;
-	Flow::OutPort<bool> outValue;
-	void run()
-	{
-		bool value;
-		while(inValue.receive(value));
-
-		Gpio::Name name;
-		if(inName.receive(name))
-		{
-			outName.send(name);
-			while(inSerialized.receive(buffer[iBuffer]))
-			{
-				if(buffer[iBuffer] == (char)Ascii::ETX)
-				{
-					uint8_t scannedPort;
-					unsigned int scannedPin;
-					unsigned int scannedValue;
-					if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:O,Value:%d}", &scannedPort, &scannedPin, &scannedValue) == 3)
-					{
-						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
-
-						if(requestedName == name)
-						{
-							outDirection.send(Gpio::Direction::OUTPUT);
-							outValue.send(scannedValue > 0);
-						}
-					}
-					else if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:I}", &scannedPort, &scannedPin) == 2)
-					{
-						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
-
-						if(requestedName == name)
-						{
-							outDirection.send(Gpio::Direction::INPUT);
-						}
-					}
-					iBuffer = 0;
-				}
-				else if(buffer[0] == (uint8_t)Ascii::STX)
-				{
-					++iBuffer %= bufferSize;
-				}
-				else if(buffer[iBuffer] == (uint8_t)Ascii::ENQ)
-				{
-					sprintf(buffer, "%cGpio{Name:P%c%d,Value:%d}%c", Ascii::STX, (uint8_t)name.port, name.pin, value ? 1 : 0, Ascii::ETX);
-					for(unsigned int i = 0; i < bufferSize && buffer[i] != 0; i++)
-					{
-						outSerialized.send(buffer[i]);
-					}
-				}
-			}
-		}
-	}
-private:
-	static const unsigned int bufferSize = 50;
-	unsigned int iBuffer = 0;
-	char buffer[bufferSize] = { 0 };
-};
-
-template<unsigned int inputs>
-class CombineSerDes
-:	public Flow::Component
-{
-public:
-	Flow::InPort<char> in[inputs];
-	Flow::OutPort<char> out;
-	void run()
-	{
-		if(!forwarding)
-		{
-			for(unsigned int i = 0; (i < inputs) && (!forwarding); i++)
-			{
-				++currentChannel;
-				currentChannel %= inputs;
-				if(in[currentChannel].peek())
-				{
-					forwarding = true;
-				}
-			}
-		}
-
-		char character;
-		while(forwarding && in[currentChannel].receive(character))
-		{
-			out.send(character);
-			if(character == (char)Ascii::ETX)
-			{
-				forwarding = false;
-			}
-		}
-	}
-private:
-	unsigned int currentChannel = inputs;
-	bool forwarding = false;
-};
+//class GpioSerDes
+//:	public Flow::Component
+//{
+//public:
+//	Flow::InPort<char> inSerialized;
+//	Flow::InPort<Gpio::Name> inName;
+//	Flow::InPort<bool> inValue;
+//	Flow::OutPort<char> outSerialized;
+//	Flow::OutPort<Gpio::Name> outName;
+//	Flow::OutPort<Gpio::Direction> outDirection;
+//	Flow::OutPort<bool> outValue;
+//	void run()
+//	{
+//		bool value;
+//		while(inValue.receive(value));
+//
+//		Gpio::Name name;
+//		if(inName.receive(name))
+//		{
+//			outName.send(name);
+//			while(inSerialized.receive(buffer[iBuffer]))
+//			{
+//				if(buffer[iBuffer] == (char)Ascii::ETX)
+//				{
+//					uint8_t scannedPort;
+//					unsigned int scannedPin;
+//					unsigned int scannedValue;
+//					if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:O,Value:%d}", &scannedPort, &scannedPin, &scannedValue) == 3)
+//					{
+//						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
+//
+//						if(requestedName == name)
+//						{
+//							outDirection.send(Gpio::Direction::OUTPUT);
+//							outValue.send(scannedValue > 0);
+//						}
+//					}
+//					else if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:I}", &scannedPort, &scannedPin) == 2)
+//					{
+//						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
+//
+//						if(requestedName == name)
+//						{
+//							outDirection.send(Gpio::Direction::INPUT);
+//						}
+//					}
+//					iBuffer = 0;
+//				}
+//				else if(buffer[0] == (uint8_t)Ascii::STX)
+//				{
+//					++iBuffer %= bufferSize;
+//				}
+//				else if(buffer[iBuffer] == (uint8_t)Ascii::ENQ)
+//				{
+//					sprintf(buffer, "%cGpio{Name:P%c%d,Value:%d}%c", Ascii::STX, (uint8_t)name.port, name.pin, value ? 1 : 0, Ascii::ETX);
+//					for(unsigned int i = 0; i < bufferSize && buffer[i] != 0; i++)
+//					{
+//						outSerialized.send(buffer[i]);
+//					}
+//				}
+//			}
+//		}
+//	}
+//private:
+//	static const unsigned int bufferSize = 50;
+//	unsigned int iBuffer = 0;
+//	char buffer[bufferSize] = { 0 };
+//};
+//
+//template<unsigned int inputs>
+//class CombineSerDes
+//:	public Flow::Component
+//{
+//public:
+//	Flow::InPort<char> in[inputs];
+//	Flow::OutPort<char> out;
+//	void run()
+//	{
+//		if(!forwarding)
+//		{
+//			for(unsigned int i = 0; (i < inputs) && (!forwarding); i++)
+//			{
+//				++currentChannel;
+//				currentChannel %= inputs;
+//				if(in[currentChannel].peek())
+//				{
+//					forwarding = true;
+//				}
+//			}
+//		}
+//
+//		char character;
+//		while(forwarding && in[currentChannel].receive(character))
+//		{
+//			out.send(character);
+//			if(character == (char)Ascii::ETX)
+//			{
+//				forwarding = false;
+//			}
+//		}
+//	}
+//private:
+//	unsigned int currentChannel = inputs;
+//	bool forwarding = false;
+//};
 
 enum Cookie
 {
@@ -229,17 +231,23 @@ int main(void)
 	// Set up the clock circuit.
 	Clock::configure(120 MHz);
 
+	// Set up the pin mux configuration.
+	PinoutSet();
+
 	// Create the components of the application.
 	Toggle* periodToggle = new Toggle();
-	Gpio* periodCheck = new Gpio();
+	DigitalOutput* periodCheck = new DigitalOutput(Gpio::Name{Gpio::Port::D, 2});
 	Timer* timer = new Timer();
 	Split<Tick, 2>* tickSplit = new Split<Tick, 2>();
 
 	Cylon<4>* cylon = new Cylon<4>();
-	Gpio* led1 = new Gpio();
-	Gpio* led2 = new Gpio();
-	Gpio* led3 = new Gpio();
-	Gpio* led4 = new Gpio();
+	DigitalOutput* led1 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 1});
+	DigitalOutput* led2 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 0});
+	DigitalOutput* led3 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 4});
+	DigitalOutput* led4 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 0});
+
+//	DigitalInput* switch1 = new DigitalInput(Gpio::Name{Gpio::Port::J, 0});
+//	DigitalInput* switch2 = new DigitalInput(Gpio::Name{Gpio::Port::J, 1});
 
 	UsbCdc* cdc = new UsbCdc();
 	Combine<char, 2>* combine = new Combine<char, 2>();
@@ -249,8 +257,6 @@ int main(void)
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
 	{
-		Flow::connect(Gpio::Name{Gpio::Port::D, 2}, periodCheck->inName),
-		Flow::connect(Gpio::Direction::OUTPUT, periodCheck->inDirection),
 		Flow::connect(Tick::TICK, periodToggle->tick),
 		Flow::connect(periodToggle->out, periodCheck->inValue),
 
@@ -261,18 +267,6 @@ int main(void)
 		Flow::connect(combine->out, cdc->in, 40),
 
 		Flow::connect((unsigned int)250, timer->inPeriod),
-
-		Flow::connect(Gpio::Name{Gpio::Port::N, 1}, led1->inName),
-		Flow::connect(Gpio::Direction::OUTPUT, led1->inDirection),
-
-		Flow::connect(Gpio::Name{Gpio::Port::N, 0}, led2->inName),
-		Flow::connect(Gpio::Direction::OUTPUT, led2->inDirection),
-
-		Flow::connect(Gpio::Name{Gpio::Port::F, 4}, led3->inName),
-		Flow::connect(Gpio::Direction::OUTPUT, led3->inDirection),
-
-		Flow::connect(Gpio::Name{Gpio::Port::F, 0}, led4->inName),
-		Flow::connect(Gpio::Direction::OUTPUT, led4->inDirection),
 
 		Flow::connect(timer->outTick, tickSplit->in),
 		Flow::connect(tickSplit->out[0], cylon->in),

@@ -35,7 +35,19 @@ SOLUTION.
 
 #include "flow/flow.h"
 
-class Uart0Receiver
+//class Uart
+//{
+//public:
+//	enum Name
+//	Uart(Name name)
+//	{
+//
+//	}
+//protected:
+//	Name name;
+//};
+
+class UartReceiver
 :	public Flow::Component
 {
 public:
@@ -53,12 +65,9 @@ public:
 			}
 		}
 	}
-	Uart0Receiver()
+	UartReceiver()
 	{
-	    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 		SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-		GPIOPinConfigure(GPIO_PA0_U0RX);
-		GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0);
 		UARTConfigSetExpClk(UART0_BASE, 120 MHz, 115200,
 		                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
 		                             UART_CONFIG_PAR_NONE));
@@ -67,7 +76,7 @@ public:
 	}
 };
 
-class Uart0Transmitter
+class UartTransmitter
 :	public Flow::Component
 {
 public:
@@ -80,12 +89,9 @@ public:
 			UARTCharPut(UART0_BASE, toTransmit);
 		}
 	}
-	Uart0Transmitter()
+	UartTransmitter()
 	{
-	    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 		SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-		GPIOPinConfigure(GPIO_PA1_U0TX);
-		GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_1);
 		UARTConfigSetExpClk(UART0_BASE, 120 MHz, 115200,
 		                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
 		                             UART_CONFIG_PAR_NONE));
@@ -97,7 +103,6 @@ private:
 };
 
 class Gpio
-:	public Flow::Component
 {
 public:
 	enum class Port : uint8_t
@@ -119,11 +124,6 @@ public:
 		Q = 'Q',
 		COUNT
 	};
-	enum class Direction
-	{
-		INPUT,
-		OUTPUT
-	};
 	class Name
 	{
 	public:
@@ -142,51 +142,10 @@ public:
 			return same;
 		}
 	};
-	Flow::InPort<bool> inValue;
-	Flow::InPort<Direction> inDirection;
-	Flow::InPort<Name> inName;
-	Flow::OutPort<bool> outValue;
-	void run()
-	{
-		Direction direction;
-		if(inName.receive(name) && inDirection.receive(direction))
-		{
-			ASSERT(name.pin < 8);
-			haveName = true;
-			SysCtlPeripheralEnable(portPeripheral[(uint8_t)name.port]);
-			if(direction == Direction::INPUT) {
-				GPIOPinTypeGPIOInput(portBase[(uint8_t)name.port], (1 << name.pin));
-			} else if (direction == Direction::OUTPUT) {
-				GPIOPinTypeGPIOOutput(portBase[(uint8_t)name.port], (1 << name.pin));
-			}
-
-			//###
-
-			if(name.port == Port::J)
-			{
-				GPIOPadConfigSet(GPIO_PORTJ_BASE, GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
-				GPIOPadConfigSet(GPIO_PORTJ_BASE, GPIO_PIN_1, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
-			}
-
-			//###
-		}
-
-		if(haveName)
-		{
-			bool value;
-			if(inValue.receive(value))
-			{
-				GPIOPinWrite(portBase[(uint8_t)name.port], (1 << name.pin), value ? 0xFF : 0x00);
-			}
-
-			{
-				int32_t status = GPIOPinRead(portBase[(uint8_t)name.port], (1 << name.pin));
-				outValue.send(status == (1 << name.pin));
-			}
-		}
-	}
-private:
-	bool haveName = false;
+	Gpio(Name name)
+	:	name(name)
+	{}
+protected:
 	Name name;
 	static const unsigned long portBase[(uint8_t)Port::COUNT];
 	static const unsigned long portPeripheral[(uint8_t)Port::COUNT];
@@ -360,6 +319,41 @@ const unsigned long Gpio::portPeripheral[(uint8_t)Port::COUNT] = {
 	0,
 	SYSCTL_PERIPH_GPIOP,
 	SYSCTL_PERIPH_GPIOQ
+};
+
+class DigitalInput
+:	public Flow::Component,
+	public Gpio
+{
+public:
+	Flow::OutPort<bool> outValue;
+	DigitalInput(Name name)
+	:	Gpio(name)
+	{}
+	void run()
+	{
+		int32_t status = GPIOPinRead(portBase[(uint8_t)name.port], (1 << name.pin));
+		outValue.send(status == (1 << name.pin));
+	}
+};
+
+class DigitalOutput
+:	public Flow::Component,
+	public Gpio
+{
+public:
+	Flow::InPort<bool> inValue;
+	DigitalOutput(Name name)
+	:	Gpio(name)
+	{}
+	void run()
+	{
+		bool value;
+		if(inValue.receive(value))
+		{
+			GPIOPinWrite(portBase[(uint8_t)name.port], (1 << name.pin), value ? 0xFF : 0x00);
+		}
+	}
 };
 
 #endif /* TM4C_COMPONENTS_H_ */
