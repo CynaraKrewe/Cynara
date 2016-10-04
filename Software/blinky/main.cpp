@@ -224,6 +224,62 @@ private:
 	bool increment = false;
 };
 
+class PeriodConfigurator
+:	public Flow::Component
+{
+public:
+	PeriodConfigurator(unsigned int defaultPeriod, unsigned int minimumPeriod, unsigned int maximumPeriod, unsigned int step)
+	:	period(defaultPeriod),
+		minimumPeriod(minimumPeriod),
+		maximumPeriod(maximumPeriod),
+		step(step)
+	{}
+	Flow::InPort<bool> inIncrement;
+	Flow::InPort<bool> inDecrement;
+	Flow::OutPort<unsigned int> outPeriod;
+	void run()
+	{
+		bool increment;
+		if(inIncrement.receive(increment))
+		{
+			// Rising edge only.
+			if(!previousIncrement && increment)
+			{
+				if(period + step <= maximumPeriod)
+				{
+					period += step;
+				}
+			}
+
+			previousIncrement = increment;
+		}
+
+		bool decrement;
+		if(inDecrement.receive(decrement))
+		{
+			// Rising edge only.
+			if(!previousDecrement && decrement)
+			{
+				if(period - step >= minimumPeriod)
+				{
+					period -= step;
+				}
+			}
+
+			previousDecrement = decrement;
+		}
+
+		outPeriod.send(period);
+	}
+private:
+	unsigned int period;
+	unsigned int minimumPeriod;
+	unsigned int maximumPeriod;
+	unsigned int step;
+	bool previousIncrement = false;
+	bool previousDecrement = false;
+};
+
 static Flow::Component** _sysTickComponents = NULL;
 
 int main(void)
@@ -235,19 +291,20 @@ int main(void)
 	PinoutSet();
 
 	// Create the components of the application.
-	Toggle* periodToggle = new Toggle();
-	DigitalOutput* periodCheck = new DigitalOutput(Gpio::Name{Gpio::Port::D, 2});
+	DigitalInput* switch1 = new DigitalInput(Gpio::Name{Gpio::Port::J, 0});
+	DigitalInput* switch2 = new DigitalInput(Gpio::Name{Gpio::Port::J, 1});
+	PeriodConfigurator* periodConfiguator = new PeriodConfigurator(250, 50, 1000, 50);
 	Timer* timer = new Timer();
 	Split<Tick, 2>* tickSplit = new Split<Tick, 2>();
+
+	Toggle* periodToggle = new Toggle();
+	DigitalOutput* periodCheck = new DigitalOutput(Gpio::Name{Gpio::Port::D, 2});
 
 	Cylon<4>* cylon = new Cylon<4>();
 	DigitalOutput* led1 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 1});
 	DigitalOutput* led2 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 0});
 	DigitalOutput* led3 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 4});
 	DigitalOutput* led4 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 0});
-
-//	DigitalInput* switch1 = new DigitalInput(Gpio::Name{Gpio::Port::J, 0});
-//	DigitalInput* switch2 = new DigitalInput(Gpio::Name{Gpio::Port::J, 1});
 
 	UsbCdc* cdc = new UsbCdc();
 	Combine<char, 2>* combine = new Combine<char, 2>();
@@ -257,6 +314,10 @@ int main(void)
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
 	{
+		Flow::connect(switch1->outValue, periodConfiguator->inIncrement),
+		Flow::connect(switch2->outValue, periodConfiguator->inDecrement),
+		Flow::connect(periodConfiguator->outPeriod, timer->inPeriod),
+
 		Flow::connect(Tick::TICK, periodToggle->tick),
 		Flow::connect(periodToggle->out, periodCheck->inValue),
 
@@ -265,8 +326,6 @@ int main(void)
 		Flow::connect(cookieJar->out, cookieMonster->in),
 		Flow::connect(cookieMonster->out, combine->in[1], 20),
 		Flow::connect(combine->out, cdc->in, 40),
-
-		Flow::connect((unsigned int)250, timer->inPeriod),
 
 		Flow::connect(timer->outTick, tickSplit->in),
 		Flow::connect(tickSplit->out[0], cylon->in),
@@ -279,6 +338,10 @@ int main(void)
 	// Define the deployment of the components.
 	Flow::Component* mainComponents[] =
 	{
+		switch1,
+		switch2,
+		periodConfiguator,
+
 		periodToggle,
 		periodCheck,
 
