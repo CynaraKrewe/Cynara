@@ -25,9 +25,13 @@ SOLUTION.
 #ifndef UTILITY_H_
 #define UTILITY_H_
 
-#define Hz * 1
+#include <stdint.h>
+
+#define Hz * (uint32_t)1
 #define kHz * 1000 Hz
 #define MHz * 1000 kHz
+
+typedef uint32_t Frequency;
 
 #ifndef ArraySizeOf
 #define ArraySizeOf(a) (sizeof(a) / sizeof(a[0]))

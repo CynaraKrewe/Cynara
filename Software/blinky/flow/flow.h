@@ -143,7 +143,7 @@ class InPort
 {
 public:
 	InPort<Type>()
-	:	connection(NULL)
+	:	connection(nullptr)
 	{}
 	bool receive(Type& element)
 	{
@@ -154,7 +154,7 @@ public:
 		return this->isConnected() ? this->connection->peek() : false;
 	}
 private:
-	WithReceiver<Type>* connection = NULL;
+	WithReceiver<Type>* connection = nullptr;
 
 	void connect(WithReceiver<Type>* connection)
 	{
@@ -163,12 +163,12 @@ private:
 
 	void disconnect()
 	{
-		this->connection = NULL;
+		this->connection = nullptr;
 	}
 
 	bool isConnected()
 	{
-		return this->connection != NULL;
+		return this->connection != nullptr;
 	}
 
 	friend class WithReceiver<Type>;
@@ -179,7 +179,7 @@ class OutPort
 {
 public:
 	OutPort<Type>()
-	:	connection(NULL)
+	:	connection(nullptr)
 	{}
 	bool send(const Type& element)
 	{
@@ -199,32 +199,27 @@ private:
 
 	void disconnect()
 	{
-		this->connection = NULL;
+		this->connection = nullptr;
 	}
 
 	bool isConnected()
 	{
-		return this->connection != NULL;
+		return this->connection != nullptr;
 	}
 
 	friend class WithSender<Type>;
 };
 
 template<typename Type>
-static Connection* connect(OutPort<Type>& sender, InPort<Type>& receiver, unsigned int size = 1)
+Connection* connect(OutPort<Type>& sender, InPort<Type>& receiver, unsigned int size = 1)
 {
 	return new ConnectionFIFO<Type>(sender, receiver, size);
 }
 
 template<typename Type>
-static Connection* connect(Type constant, InPort<Type>& receiver)
+Connection* connect(Type constant, InPort<Type>& receiver)
 {
 	return new ConnectionConstant<Type>(constant, receiver);
-}
-
-static void disconnect(Connection* connection)
-{
-	delete connection;
 }
 
 class Component

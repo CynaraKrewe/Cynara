@@ -476,7 +476,7 @@ PWMPulseWidthSet(uint32_t ui32Base, uint32_t ui32PWMOut,
     //
     // Make sure the width is not too large.
     //
-    ASSERT(ui32Width < ui32Reg);
+    ASSERT(ui32Width <= ui32Reg);
 
     //
     // Compute the compare value.

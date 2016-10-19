@@ -35,9 +35,11 @@ SOLUTION.
 #include "flow/components.h"
 #include "flow/utility.h"
 
-#include "tm4c/components.h"
-#include "tm4c/component_usbcdc.h"
-#include "tm4c/configuration.h"
+#include "tm4c/usb_cdc.h"
+#include "tm4c/clock.h"
+#include "tm4c/pwm.h"
+#include "tm4c/uart.h"
+#include "tm4c/gpio.h"
 
 using Utility::Ascii;
 
@@ -228,11 +230,10 @@ class PeriodConfigurator
 :	public Flow::Component
 {
 public:
-	PeriodConfigurator(unsigned int defaultPeriod, unsigned int minimumPeriod, unsigned int maximumPeriod, unsigned int step)
+	PeriodConfigurator(unsigned int defaultPeriod, unsigned int minimumPeriod, unsigned int maximumPeriod)
 	:	period(defaultPeriod),
 		minimumPeriod(minimumPeriod),
-		maximumPeriod(maximumPeriod),
-		step(step)
+		maximumPeriod(maximumPeriod)
 	{}
 	Flow::InPort<bool> inIncrement;
 	Flow::InPort<bool> inDecrement;
@@ -245,9 +246,9 @@ public:
 			// Rising edge only.
 			if(!previousIncrement && increment)
 			{
-				if(period + step <= maximumPeriod)
+				if(period * factor <= maximumPeriod)
 				{
-					period += step;
+					period *= factor;
 				}
 			}
 
@@ -260,9 +261,9 @@ public:
 			// Rising edge only.
 			if(!previousDecrement && decrement)
 			{
-				if(period - step >= minimumPeriod)
+				if(period / factor >= minimumPeriod)
 				{
-					period -= step;
+					period /= factor;
 				}
 			}
 
@@ -275,17 +276,18 @@ private:
 	unsigned int period;
 	unsigned int minimumPeriod;
 	unsigned int maximumPeriod;
-	unsigned int step;
+	constexpr static unsigned int factor = 2;
 	bool previousIncrement = false;
 	bool previousDecrement = false;
 };
 
-static Flow::Component** _sysTickComponents = NULL;
+static Flow::Component** _sysTickComponents = nullptr;
+static unsigned int _sysTickComponentsCount = 0;
 
 int main(void)
 {
 	// Set up the clock circuit.
-	Clock::configure(120 MHz);
+	Clock::instance()->configure(120 MHz);
 
 	// Set up the pin mux configuration.
 	PinoutSet();
@@ -293,23 +295,29 @@ int main(void)
 	// Create the components of the application.
 	DigitalInput* switch1 = new DigitalInput(Gpio::Name{Gpio::Port::J, 0});
 	DigitalInput* switch2 = new DigitalInput(Gpio::Name{Gpio::Port::J, 1});
-	PeriodConfigurator* periodConfiguator = new PeriodConfigurator(250, 50, 1000, 50);
+	PeriodConfigurator* periodConfiguator = new PeriodConfigurator(200, 50, 1600);
 	Timer* timer = new Timer();
 	Split<Tick, 2>* tickSplit = new Split<Tick, 2>();
 
 	Toggle* periodToggle = new Toggle();
 	DigitalOutput* periodCheck = new DigitalOutput(Gpio::Name{Gpio::Port::D, 2});
 
-	Cylon<4>* cylon = new Cylon<4>();
+	Cylon<3>* cylon = new Cylon<3>();
 	DigitalOutput* led1 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 1});
 	DigitalOutput* led2 = new DigitalOutput(Gpio::Name{Gpio::Port::N, 0});
 	DigitalOutput* led3 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 4});
-	DigitalOutput* led4 = new DigitalOutput(Gpio::Name{Gpio::Port::F, 0});
 
 	UsbCdc* cdc = new UsbCdc();
 	Combine<char, 2>* combine = new Combine<char, 2>();
 	CookieJar* cookieJar = new CookieJar();
 	CookieMonster* cookieMonster = new CookieMonster();
+
+	//###
+	Timer* timerP = new Timer();
+	Counter<Tick>* counterP = new Counter<Tick>(101);
+	Convert<unsigned int, float>* convertP = new Convert<unsigned int, float>();
+	PWM* pwmP = new PWM(PWM::Divider::_64);
+	//###
 
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
@@ -332,7 +340,12 @@ int main(void)
 		Flow::connect(cylon->out[0], led1->inValue),
 		Flow::connect(cylon->out[1], led2->inValue),
 		Flow::connect(cylon->out[2], led3->inValue),
-		Flow::connect(cylon->out[3], led4->inValue)
+
+		Flow::connect((unsigned int)10/*ms*/, timerP->inPeriod),
+		Flow::connect(timerP->outTick, counterP->in),
+		Flow::connect(counterP->out, convertP->inFrom),
+		Flow::connect(1 kHz, pwmP->inFrequencyGenerator[0]),
+		Flow::connect(convertP->outTo, pwmP->inDutyCycleOutput[0])
 	};
 
 	// Define the deployment of the components.
@@ -355,15 +368,20 @@ int main(void)
 		led1,
 		led2,
 		led3,
-		led4
+
+		convertP,
+		counterP,
+		pwmP
 	};
 
 	Flow::Component* sysTickComponents[] =
 	{
-		timer
+		timer,
+		timerP
 	};
 
 	_sysTickComponents = sysTickComponents;
+	_sysTickComponentsCount = ArraySizeOf(sysTickComponents);
 
 	// Run the application.
 	while(true)
@@ -377,7 +395,7 @@ int main(void)
 	// Disconnect the components of the application.
 	for(unsigned int i = 0; i < ArraySizeOf(connections); i++)
 	{
-		Flow::disconnect(connections[i]);
+		delete connections[i];
 	}
 
 	// Destruct the components of the application.
@@ -386,7 +404,8 @@ int main(void)
 		delete mainComponents[i];
 	}
 
-	_sysTickComponents = NULL;
+	_sysTickComponentsCount = 0;
+	_sysTickComponents = nullptr;
 
 	for(unsigned int i = 0; i < ArraySizeOf(sysTickComponents); i++)
 	{
@@ -397,12 +416,9 @@ int main(void)
 // SysTick related stuff.
 extern "C" void SysTickIntHandler(void)
 {
-	if(_sysTickComponents != NULL)
+	for(unsigned int c = 0; c < _sysTickComponentsCount; c++)
 	{
-		for(unsigned int c = 0; c < ArraySizeOf(_sysTickComponents); c++)
-		{
-			_sysTickComponents[c]->run();
-		}
+		_sysTickComponents[c]->run();
 	}
 }
 
@@ -410,5 +426,26 @@ extern "C" void SysTickIntHandler(void)
 extern "C" void __error__(const char *pcFilename, uint32_t ui32Line)
 {
 	printf("File: %s\r\nLine: %lu\r\n", pcFilename, ui32Line);
+	__asm__ __volatile__("bkpt");
 	while(true);
+}
+
+void *operator new(size_t size)
+{
+    return malloc(size);
+}
+
+void *operator new[](size_t size)
+{
+    return malloc(size);
+}
+
+void operator delete(void *p)
+{
+    free(p);
+}
+
+void operator delete[](void *p)
+{
+    free(p);
 }

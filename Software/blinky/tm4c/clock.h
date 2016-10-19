@@ -22,30 +22,21 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef TM4C_CONFIGURATION_H_
-#define TM4C_CONFIGURATION_H_
+#ifndef TM4C_CLOCK_H_
+#define TM4C_CLOCK_H_
 
-#include "driverlib/debug.h"
-#include "driverlib/fpu.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/systick.h"
+#include "flow/utility.h"
 
 class Clock
 {
 public:
-	static void configure(unsigned int frequency)
-	{
-		FPULazyStackingEnable();
-
-		SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
-				SYSCTL_OSC_MAIN |
-				SYSCTL_USE_PLL |
-				SYSCTL_CFG_VCO_480), frequency);
-
-		SysTickPeriodSet(frequency / 1000); // 1ms
-		SysTickIntEnable();
-		SysTickEnable();
-	}
+	void configure(Frequency frequency);
+	Frequency getFrequency();
+	static Clock* instance();
+private:
+	static Clock* _instance;
+	Frequency frequency;
+	Clock();
 };
 
-#endif /* TM4C_CONFIGURATION_H_ */
+#endif /* TM4C_CLOCK_H_ */

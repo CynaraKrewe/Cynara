@@ -39,14 +39,14 @@
 			},
 			"42": {
 				"nameDecoratorText": "42",
-				"assignedToName": "GPIO_PF0",
+				"assignedToName": "M0PWM0",
 				"errorText": "",
 				"warningText": "",
 				"warningDetailsText": [],
 				"errorDetailsText": [],
-				"requirementName": "LEDs",
-				"requirementId": "MyGPIO2",
-				"interfacePin": "GPIO#"
+				"requirementName": "PWM",
+				"requirementId": "MyPWM1",
+				"interfacePin": "PWM0"
 			},
 			"46": {
 				"nameDecoratorText": "46",
@@ -116,12 +116,229 @@
 					"warningText": "",
 					"errorDetailsText": [],
 					"warningDetailsText": [],
-					"gpioPinsUsed": 0
+					"gpioPinsUsed": 1
 				},
 				"name": "PWM",
 				"id": "PWM",
-				"requirements": [],
-				"requirementsNameIndex": 1
+				"requirements": [
+					{
+						"used": true,
+						"solution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": [],
+							"gpioPinsUsed": 1
+						},
+						"id": "MyPWM1",
+						"name": "PWM",
+						"selectedInstance": "Any",
+						"selectedVoltage": "Any",
+						"selectedUseCase": "PWM",
+						"pinRequirements": [
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM6",
+								"interfacePinName": "PWM6"
+							},
+							{
+								"used": true,
+								"solution": {
+									"nameDecoratorText": "M0PWM0",
+									"assignedToName": "42",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "42",
+								"type": "Single",
+								"name": "PWM0",
+								"interfacePinName": "PWM0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT1",
+								"interfacePinName": "FAULT1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT3",
+								"interfacePinName": "FAULT3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM4",
+								"interfacePinName": "PWM4"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM5",
+								"interfacePinName": "PWM5"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM2",
+								"interfacePinName": "PWM2"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM7",
+								"interfacePinName": "PWM7"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM1",
+								"interfacePinName": "PWM1"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT0",
+								"interfacePinName": "FAULT0"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "PWM3",
+								"interfacePinName": "PWM3"
+							},
+							{
+								"used": false,
+								"solution": {
+									"nameDecoratorText": "",
+									"assignedToName": "",
+									"errorText": "",
+									"warningText": "",
+									"errorDetailsText": [],
+									"warningDetailsText": []
+								},
+								"assignedToName": "Any",
+								"type": "Single",
+								"name": "FAULT2",
+								"interfacePinName": "FAULT2"
+							}
+						],
+						"peripheralSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "PWM0",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"voltageSolution": {
+							"nameDecoratorText": "",
+							"assignedToName": "",
+							"errorText": "",
+							"warningText": "",
+							"errorDetailsText": [],
+							"warningDetailsText": []
+						},
+						"interfaceName": "PWM"
+					}
+				],
+				"requirementsNameIndex": 2
 			},
 			"LCD": {
 				"used": true,
@@ -196,7 +413,7 @@
 					"warningText": "",
 					"errorDetailsText": [],
 					"warningDetailsText": [],
-					"gpioPinsUsed": 6
+					"gpioPinsUsed": 5
 				},
 				"name": "GPIO",
 				"id": "GPIO",
@@ -749,7 +966,7 @@
 									"warningText": "",
 									"errorDetailsText": [],
 									"warningDetailsText": [],
-									"gpioPinsUsed": 1
+									"gpioPinsUsed": 0
 								},
 								"id": "MyGPIO2_intenal_4",
 								"name": "MyGPIO2_intenal_4",
@@ -760,10 +977,10 @@
 								"selectedUseCase": "GPIO",
 								"pinRequirements": [
 									{
-										"used": true,
+										"used": false,
 										"solution": {
-											"nameDecoratorText": "GPIO_PF0",
-											"assignedToName": "42",
+											"nameDecoratorText": "",
+											"assignedToName": "",
 											"errorText": "",
 											"warningText": "",
 											"errorDetailsText": [],
@@ -780,7 +997,7 @@
 								],
 								"peripheralSolution": {
 									"nameDecoratorText": "",
-									"assignedToName": "GPIO_PF0",
+									"assignedToName": "",
 									"errorText": "",
 									"warningText": "",
 									"errorDetailsText": [],
@@ -798,7 +1015,8 @@
 							}
 						],
 						"requirementsNameIndex": 5,
-						"numOfGPIOPins": 4
+						"numOfGPIOPins": 3,
+						"peripheralRequirements": []
 					}
 				],
 				"requirementsNameIndex": 3

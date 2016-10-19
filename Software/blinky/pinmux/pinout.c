@@ -35,7 +35,7 @@
 //
 //*****************************************************************************
 
-// This file was automatically generated on 9/21/2016 at 2:26:06 PM
+// This file was automatically generated on 19-10-2016 at 13:08:09
 // by TI PinMux version 
 //
 //*****************************************************************************
@@ -78,6 +78,13 @@ PinoutSet(void)
 	MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPION);
 
     //
+    // Configure the GPIO Pin Mux for PF0
+	// for M0PWM0
+    //
+	MAP_GPIOPinConfigure(GPIO_PF0_M0PWM0);
+	MAP_GPIOPinTypePWM(GPIO_PORTF_BASE, GPIO_PIN_0);
+
+    //
     // Configure the GPIO Pin Mux for PJ0
 	// for GPIO_PJ0
     //
@@ -108,12 +115,6 @@ PinoutSet(void)
 	// for GPIO_PF4
     //
 	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_4);
-
-    //
-    // Configure the GPIO Pin Mux for PF0
-	// for GPIO_PF0
-    //
-	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_0);
 
     //
     // Configure the GPIO Pin Mux for PA0

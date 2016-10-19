@@ -34,12 +34,29 @@ class Invert
 public:
 	Flow::InPort<Type> in;
 	Flow::OutPort<Type> out;
-	void run() override
+	void run() final override
 	{
 		Type b;
 		if(in.receive(b))
 		{
 			out.send(!b);
+		}
+	}
+};
+
+template<typename From, typename To>
+class Convert
+:	public Flow::Component
+{
+public:
+	Flow::InPort<From> inFrom;
+	Flow::OutPort<To> outTo;
+	void run() final override
+	{
+		From from;
+		if(inFrom.receive(from))
+		{
+			outTo.send(static_cast<To>(from));
 		}
 	}
 };
@@ -51,13 +68,20 @@ class Counter
 public:
 	Flow::InPort<Type> in;
 	Flow::OutPort<unsigned int> out;
-	void run() override
+	Counter(unsigned int range)
+	:	range(range)
+	{}
+	void run() final override
 	{
 		Type b;
 		bool more = false;
 		while(in.receive(b))
 		{
 			counter++;
+			if(counter == range)
+			{
+				counter = 0;
+			}
 			more = true;
 		}
 		if(more)
@@ -67,6 +91,7 @@ public:
 	}
 private:
 	unsigned int counter = 0;
+	const unsigned int range;
 };
 
 template<typename Type, unsigned int outputs>
@@ -76,7 +101,7 @@ class Split
 public:
 	Flow::InPort<Type> in;
 	Flow::OutPort<Type> out[outputs];
-	void run() override
+	void run() final override
 	{
 		Type b;
 		if(in.receive(b))
