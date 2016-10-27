@@ -34,7 +34,9 @@ SOLUTION.
 UartReceiver::UartReceiver()
 {
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-	UARTConfigSetExpClk(UART0_BASE, 120 MHz, 115200,
+
+	Frequency coreFrequency = Clock::instance()->getFrequency();
+	UARTConfigSetExpClk(UART0_BASE, coreFrequency, 115200,
 								(UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
 								 UART_CONFIG_PAR_NONE));
 	UARTFIFOEnable(UART0_BASE);
@@ -58,7 +60,9 @@ void UartReceiver::run()
 UartTransmitter::UartTransmitter()
 {
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-	UARTConfigSetExpClk(UART0_BASE, 120 MHz, 115200,
+
+	Frequency coreFrequency = Clock::instance()->getFrequency();
+	UARTConfigSetExpClk(UART0_BASE, coreFrequency, 115200,
 	                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
 	                             UART_CONFIG_PAR_NONE));
 	UARTFIFOEnable(UART0_BASE);

@@ -28,6 +28,8 @@ SOLUTION.
 #include <stdlib.h>
 #include <string.h>
 
+#include "pinmux/pinout.h"
+
 #include "flow/components.h"
 #include "flow/utility.h"
 
@@ -79,6 +81,9 @@ int main(void)
 {
 	// Set up the clock circuit.
 	Clock::instance()->configure(120 MHz);
+
+	// Set up the pin mux configuration.
+	PinoutSet();
 
 	// Create the components of the application.
 	TestRunner* testRunner = new TestRunner();

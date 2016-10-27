@@ -1,0 +1,3 @@
+Pin#, PORT IO, Function, Directions
+33,PA0,U0RX, , ,
+34,PA1,U0TX, , ,
