@@ -79,7 +79,6 @@ static void IntDefaultHandler(void);
 extern int main(void);
 
 extern void SysTickIntHandler(void);
-extern void USB0DeviceIntHandler(void);
 
 // System stack start determined by the linker script.
 extern unsigned estack __asm("estack");
@@ -147,7 +146,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler, // CAN1
 	IntDefaultHandler, // Ethernet
     IntDefaultHandler, // Hibernate
-	USB0DeviceIntHandler, // USB0
+	IntDefaultHandler, // USB0
     IntDefaultHandler, // PWM Generator 3
     IntDefaultHandler, // uDMA Software Transfer
     IntDefaultHandler, // uDMA Error
