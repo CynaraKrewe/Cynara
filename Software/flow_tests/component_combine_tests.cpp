@@ -34,7 +34,6 @@ using Flow::Connection;
 using Flow::OutPort;
 using Flow::InPort;
 using Flow::connect;
-using Flow::disconnect;
 
 TEST_GROUP(Component_Combine_TestBench)
 {
@@ -62,10 +61,10 @@ TEST_GROUP(Component_Combine_TestBench)
 	{
 		for(unsigned int i = 0; i < COMBINE_COUNT; i++)
 		{
-			disconnect(outStimulusConnection[i]);
+			delete outStimulusConnection[i];
 		}
 
-		disconnect(inResponseConnection);
+		delete inResponseConnection;
 
 		delete unitUnderTest;
 	}

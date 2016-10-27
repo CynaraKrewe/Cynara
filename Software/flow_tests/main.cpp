@@ -31,8 +31,8 @@ SOLUTION.
 #include "flow/components.h"
 #include "flow/utility.h"
 
-#include "tm4c/configuration.h"
-#include "tm4c/components.h"
+#include "tm4c/clock.h"
+#include "tm4c/uart.h"
 
 #include "CppUTest/CommandLineTestRunner.h"
 
@@ -78,11 +78,11 @@ private:
 int main(void)
 {
 	// Set up the clock circuit.
-	Clock::configure(120 MHz);
+	Clock::instance()->configure(120 MHz);
 
 	// Create the components of the application.
 	TestRunner* testRunner = new TestRunner();
-	Uart0Transmitter* u0tx = new Uart0Transmitter();
+	UartTransmitter* u0tx = new UartTransmitter();
 
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
@@ -108,7 +108,7 @@ int main(void)
 	// Disconnect the components of the application.
 	for(unsigned int i = 0; i < ArraySizeOf(connections); i++)
 	{
-		Flow::disconnect(connections[i]);
+		delete connections[i];
 	}
 
 	// Destruct the components of the application.

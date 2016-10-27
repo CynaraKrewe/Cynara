@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>tm4c</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/tm4c</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

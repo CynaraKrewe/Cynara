@@ -34,7 +34,6 @@ using Flow::Connection;
 using Flow::OutPort;
 using Flow::InPort;
 using Flow::connect;
-using Flow::disconnect;
 
 TEST_GROUP(Component_Toggle_TestBench)
 {
@@ -54,8 +53,8 @@ TEST_GROUP(Component_Toggle_TestBench)
 
 	void teardown()
 	{
-		disconnect(outStimulusConnection);
-		disconnect(inResponseConnection);
+		delete outStimulusConnection;
+		delete inResponseConnection;
 
 		delete unitUnderTest;
 	}

@@ -36,7 +36,6 @@ using Flow::Connection;
 using Flow::OutPort;
 using Flow::InPort;
 using Flow::connect;
-using Flow::disconnect;
 
 const static unsigned int CONNECTION_FIFO_SIZE = 10;
 
@@ -53,7 +52,7 @@ TEST_GROUP(Port_TestBench)
 
 	void teardown()
 	{
-		disconnect(connection);
+		delete connection;
 	}
 };
 

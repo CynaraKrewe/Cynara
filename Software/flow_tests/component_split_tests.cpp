@@ -34,7 +34,6 @@ using Flow::Connection;
 using Flow::OutPort;
 using Flow::InPort;
 using Flow::connect;
-using Flow::disconnect;
 
 TEST_GROUP(Component_Split_TestBench)
 {
@@ -60,11 +59,11 @@ TEST_GROUP(Component_Split_TestBench)
 
 	void teardown()
 	{
-		disconnect(outStimulusConnection);
+		delete outStimulusConnection;
 
 		for(unsigned int i = 0; i < SPLIT_COUNT; i++)
 		{
-			disconnect(inResponseConnection[i]);
+			delete inResponseConnection[i];
 		}
 
 		delete unitUnderTest;

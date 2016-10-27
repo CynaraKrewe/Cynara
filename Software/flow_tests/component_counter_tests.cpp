@@ -34,7 +34,6 @@ using Flow::Connection;
 using Flow::OutPort;
 using Flow::InPort;
 using Flow::connect;
-using Flow::disconnect;
 
 TEST_GROUP(Component_Counter_TestBench)
 {
@@ -46,7 +45,7 @@ TEST_GROUP(Component_Counter_TestBench)
 
 	void setup()
 	{
-		unitUnderTest = new Counter<char>();
+		unitUnderTest = new Counter<char>(10);
 
 		outStimulusConnection = connect(outStimulus, unitUnderTest->in, 5);
 		inResponseConnection = connect(unitUnderTest->out, inResponse);
@@ -54,8 +53,8 @@ TEST_GROUP(Component_Counter_TestBench)
 
 	void teardown()
 	{
-		disconnect(outStimulusConnection);
-		disconnect(inResponseConnection);
+		delete outStimulusConnection;
+		delete inResponseConnection;
 
 		delete unitUnderTest;
 	}
