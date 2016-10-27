@@ -35,7 +35,7 @@
 //
 //*****************************************************************************
 
-// This file was automatically generated on 19-10-2016 at 13:08:09
+// This file was automatically generated on 27-10-2016 at 13:19:37
 // by TI PinMux version 
 //
 //*****************************************************************************
@@ -72,63 +72,13 @@ PinoutSet(void)
     //
     // Enable Peripheral Clocks 
     //
-	MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 	MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
-	MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOJ);
-	MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPION);
 
     //
     // Configure the GPIO Pin Mux for PF0
-	// for M0PWM0
+	// for GPIO_PF0
     //
-	MAP_GPIOPinConfigure(GPIO_PF0_M0PWM0);
-	MAP_GPIOPinTypePWM(GPIO_PORTF_BASE, GPIO_PIN_0);
-
-    //
-    // Configure the GPIO Pin Mux for PJ0
-	// for GPIO_PJ0
-    //
-	MAP_GPIOPinTypeGPIOInput(GPIO_PORTJ_BASE, GPIO_PIN_0);
-	MAP_GPIOPadConfigSet(GPIO_PORTJ_BASE, GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
-
-    //
-    // Configure the GPIO Pin Mux for PJ1
-	// for GPIO_PJ1
-    //
-	MAP_GPIOPinTypeGPIOInput(GPIO_PORTJ_BASE, GPIO_PIN_1);
-	MAP_GPIOPadConfigSet(GPIO_PORTJ_BASE, GPIO_PIN_1, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
-
-    //
-    // Configure the GPIO Pin Mux for PN1
-	// for GPIO_PN1
-    //
-	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_1);
-
-    //
-    // Configure the GPIO Pin Mux for PN0
-	// for GPIO_PN0
-    //
-	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_0);
-
-    //
-    // Configure the GPIO Pin Mux for PF4
-	// for GPIO_PF4
-    //
-	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_4);
-
-    //
-    // Configure the GPIO Pin Mux for PA0
-	// for U0RX
-    //
-	MAP_GPIOPinConfigure(GPIO_PA0_U0RX);
-	MAP_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0);
-
-    //
-    // Configure the GPIO Pin Mux for PA1
-	// for U0TX
-    //
-	MAP_GPIOPinConfigure(GPIO_PA1_U0TX);
-	MAP_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_1);
+	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_0);
 
 }
 
