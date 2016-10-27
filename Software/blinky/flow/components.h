@@ -94,6 +94,57 @@ private:
 	const unsigned int range;
 };
 
+template<typename Type>
+class UpDownCounter
+:	public Flow::Component
+{
+public:
+	Flow::InPort<Type> in;
+	Flow::OutPort<unsigned int> out;
+	UpDownCounter(unsigned int downLimit, unsigned int upLimit, unsigned int startValue)
+	:	counter(startValue),
+		upLimit(upLimit),
+		downLimit(downLimit)
+	{}
+	void run() final override
+	{
+		Type b;
+		bool more = false;
+		while(in.receive(b))
+		{
+			if(up)
+			{
+				counter++;
+			}
+			else
+			{
+				counter--;
+			}
+
+			if(counter == upLimit)
+			{
+				up = false;
+			}
+			else if(counter == downLimit)
+			{
+				up = true;
+			}
+
+			more = true;
+		}
+
+		if(more)
+		{
+			out.send(counter);
+		}
+	}
+private:
+	unsigned int counter;
+	const unsigned int upLimit;
+	const unsigned int downLimit;
+	bool up = true;
+};
+
 template<typename Type, unsigned int outputs>
 class Split
 :	public Flow::Component

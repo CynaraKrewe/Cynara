@@ -30,8 +30,6 @@ SOLUTION.
 
 #include "pinmux/pinout.h"
 
-#include "ascii.h"
-
 #include "flow/components.h"
 #include "flow/utility.h"
 
@@ -40,114 +38,6 @@ SOLUTION.
 #include "tm4c/pwm.h"
 #include "tm4c/uart.h"
 #include "tm4c/gpio.h"
-
-using Utility::Ascii;
-
-//class GpioSerDes
-//:	public Flow::Component
-//{
-//public:
-//	Flow::InPort<char> inSerialized;
-//	Flow::InPort<Gpio::Name> inName;
-//	Flow::InPort<bool> inValue;
-//	Flow::OutPort<char> outSerialized;
-//	Flow::OutPort<Gpio::Name> outName;
-//	Flow::OutPort<Gpio::Direction> outDirection;
-//	Flow::OutPort<bool> outValue;
-//	void run()
-//	{
-//		bool value;
-//		while(inValue.receive(value));
-//
-//		Gpio::Name name;
-//		if(inName.receive(name))
-//		{
-//			outName.send(name);
-//			while(inSerialized.receive(buffer[iBuffer]))
-//			{
-//				if(buffer[iBuffer] == (char)Ascii::ETX)
-//				{
-//					uint8_t scannedPort;
-//					unsigned int scannedPin;
-//					unsigned int scannedValue;
-//					if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:O,Value:%d}", &scannedPort, &scannedPin, &scannedValue) == 3)
-//					{
-//						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
-//
-//						if(requestedName == name)
-//						{
-//							outDirection.send(Gpio::Direction::OUTPUT);
-//							outValue.send(scannedValue > 0);
-//						}
-//					}
-//					else if(sscanf(&buffer[1], "Gpio{Name:P%c%d,Direction:I}", &scannedPort, &scannedPin) == 2)
-//					{
-//						Gpio::Name requestedName{(Gpio::Port)scannedPort, scannedPin};
-//
-//						if(requestedName == name)
-//						{
-//							outDirection.send(Gpio::Direction::INPUT);
-//						}
-//					}
-//					iBuffer = 0;
-//				}
-//				else if(buffer[0] == (uint8_t)Ascii::STX)
-//				{
-//					++iBuffer %= bufferSize;
-//				}
-//				else if(buffer[iBuffer] == (uint8_t)Ascii::ENQ)
-//				{
-//					sprintf(buffer, "%cGpio{Name:P%c%d,Value:%d}%c", Ascii::STX, (uint8_t)name.port, name.pin, value ? 1 : 0, Ascii::ETX);
-//					for(unsigned int i = 0; i < bufferSize && buffer[i] != 0; i++)
-//					{
-//						outSerialized.send(buffer[i]);
-//					}
-//				}
-//			}
-//		}
-//	}
-//private:
-//	static const unsigned int bufferSize = 50;
-//	unsigned int iBuffer = 0;
-//	char buffer[bufferSize] = { 0 };
-//};
-//
-//template<unsigned int inputs>
-//class CombineSerDes
-//:	public Flow::Component
-//{
-//public:
-//	Flow::InPort<char> in[inputs];
-//	Flow::OutPort<char> out;
-//	void run()
-//	{
-//		if(!forwarding)
-//		{
-//			for(unsigned int i = 0; (i < inputs) && (!forwarding); i++)
-//			{
-//				++currentChannel;
-//				currentChannel %= inputs;
-//				if(in[currentChannel].peek())
-//				{
-//					forwarding = true;
-//				}
-//			}
-//		}
-//
-//		char character;
-//		while(forwarding && in[currentChannel].receive(character))
-//		{
-//			out.send(character);
-//			if(character == (char)Ascii::ETX)
-//			{
-//				forwarding = false;
-//			}
-//		}
-//	}
-//private:
-//	unsigned int currentChannel = inputs;
-//	bool forwarding = false;
-//};
 
 enum Cookie
 {
@@ -314,7 +204,7 @@ int main(void)
 
 	//###
 	Timer* timerP = new Timer();
-	Counter<Tick>* counterP = new Counter<Tick>(101);
+	UpDownCounter<Tick>* counterP = new UpDownCounter<Tick>(0, 50, 0);
 	Convert<unsigned int, float>* convertP = new Convert<unsigned int, float>();
 	PWM* pwmP = new PWM(PWM::Divider::_64);
 	//###
@@ -341,7 +231,7 @@ int main(void)
 		Flow::connect(cylon->out[1], led2->inValue),
 		Flow::connect(cylon->out[2], led3->inValue),
 
-		Flow::connect((unsigned int)10/*ms*/, timerP->inPeriod),
+		Flow::connect((unsigned int)20/*ms*/, timerP->inPeriod),
 		Flow::connect(timerP->outTick, counterP->in),
 		Flow::connect(counterP->out, convertP->inFrom),
 		Flow::connect(1 kHz, pwmP->inFrequencyGenerator[0]),
