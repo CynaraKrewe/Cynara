@@ -22,62 +22,32 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef TM4C_UART_H_
-#define TM4C_UART_H_
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
 
-#include <stdint.h>
+#include "debug.h"
 
-#include "flow/flow.h"
+Flow::OutPort<char> Debug::outPort;
 
-#include "inc/hw_memmap.h"
-#include "driverlib/sysctl.h"
+static const unsigned int bufferSize = 20;
 
-class Uart
-:	public Flow::Component
+void Debug::printf(const char *format, ...)
 {
-public:
-	enum class Number : uint8_t
+	va_list variableArguments;
+
+	va_start(variableArguments, format);
+
+	char* buffer = new char[bufferSize];
+
+	vsnprintf(buffer, bufferSize, format, variableArguments);
+
+	for(unsigned int i = 0; (i < strlen(buffer)) && (i < bufferSize); i++)
 	{
-		_0 = 0,
-		_1,
-		_2,
-		_3,
-		_4,
-		_5,
-		_6,
-		_7,
-		COUNT
-	};
+		outPort.send(buffer[i]);
+	}
 
-protected:
-	Uart(Number uartNumber);
+	delete buffer;
 
-	const Number uartNumber;
-
-	static const uint32_t sysCtlPeripheral[(uint8_t)Number::COUNT];
-	static const uint32_t uartBase[(uint8_t)Number::COUNT];
-};
-
-class UartReceiver
-:	public Uart
-{
-public:
-	Flow::OutPort<char> out;
-
-	UartReceiver(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-class UartTransmitter
-:	public Uart
-{
-public:
-	Flow::InPort<char> in;
-
-	UartTransmitter(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-#endif // TM4C_UART_H_
+	va_end(variableArguments);
+}

@@ -25,31 +25,59 @@ SOLUTION.
 #include "uart.h"
 #include "clock.h"
 
-#include "inc/hw_memmap.h"
-
 #include "driverlib/debug.h"
-#include "driverlib/sysctl.h"
 #include "driverlib/uart.h"
 
-UartReceiver::UartReceiver()
+Uart::Uart(Uart::Number uartNumber)
+:	uartNumber(uartNumber)
 {
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+	ASSERT(uartNumber < Uart::Number::COUNT);
+
+	SysCtlPeripheralEnable(sysCtlPeripheral[(uint8_t)uartNumber]);
 
 	Frequency coreFrequency = Clock::instance()->getFrequency();
-	UARTConfigSetExpClk(UART0_BASE, coreFrequency, 115200,
+	UARTConfigSetExpClk(uartBase[(uint8_t)uartNumber], coreFrequency, 115200,
 								(UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
 								 UART_CONFIG_PAR_NONE));
-	UARTFIFOEnable(UART0_BASE);
-	UARTEnable(UART0_BASE);
+	UARTFIFOEnable(uartBase[(uint8_t)uartNumber]);
+	UARTEnable(uartBase[(uint8_t)uartNumber]);
 }
+
+const uint32_t Uart::sysCtlPeripheral[] =
+{
+	SYSCTL_PERIPH_UART0,
+	SYSCTL_PERIPH_UART1,
+	SYSCTL_PERIPH_UART2,
+	SYSCTL_PERIPH_UART3,
+	SYSCTL_PERIPH_UART4,
+	SYSCTL_PERIPH_UART5,
+	SYSCTL_PERIPH_UART6,
+	SYSCTL_PERIPH_UART7
+};
+
+const uint32_t Uart::uartBase[] =
+{
+	UART0_BASE,
+	UART1_BASE,
+	UART2_BASE,
+	UART3_BASE,
+	UART4_BASE,
+	UART5_BASE,
+	UART6_BASE,
+	UART7_BASE
+};
+
+UartReceiver::UartReceiver(Uart::Number uartNumber)
+:	Uart(uartNumber)
+{}
 
 void UartReceiver::run()
 {
 	// Loop while there are characters in the receive FIFO.
-	while(UARTCharsAvail(UART0_BASE))
+	while(UARTCharsAvail(uartBase[(uint8_t)uartNumber]))
 	{
 		// Read the next character from the UART and write it back to the UART.
-		char received = UARTCharGetNonBlocking(UART0_BASE);
+		char received = UARTCharGetNonBlocking(uartBase[(uint8_t)uartNumber]);
 		if(received >= 0)
 		{
 			out.send(received);
@@ -57,23 +85,15 @@ void UartReceiver::run()
 	}
 }
 
-UartTransmitter::UartTransmitter()
-{
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-
-	Frequency coreFrequency = Clock::instance()->getFrequency();
-	UARTConfigSetExpClk(UART0_BASE, coreFrequency, 115200,
-	                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
-	                             UART_CONFIG_PAR_NONE));
-	UARTFIFOEnable(UART0_BASE);
-	UARTEnable(UART0_BASE);
-}
+UartTransmitter::UartTransmitter(Uart::Number uartNumber)
+:	Uart(uartNumber)
+{}
 
 void UartTransmitter::run()
 {
 	char toTransmit;
-	while(UARTSpaceAvail(UART0_BASE) && in.receive(toTransmit)) // Transmit FIFO not full?
+	while(UARTSpaceAvail(uartBase[(uint8_t)uartNumber]) && in.receive(toTransmit)) // Transmit FIFO not full?
 	{
-		UARTCharPut(UART0_BASE, toTransmit);
+		UARTCharPut(uartBase[(uint8_t)uartNumber], toTransmit);
 	}
 }

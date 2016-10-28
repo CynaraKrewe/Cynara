@@ -31,6 +31,7 @@ SOLUTION.
 #include "pinmux/pinout.h"
 
 #include "flow/components.h"
+#include "flow/debug.h"
 #include "flow/utility.h"
 
 #include "tm4c/usb_cdc.h"
@@ -202,12 +203,12 @@ int main(void)
 	CookieJar* cookieJar = new CookieJar();
 	CookieMonster* cookieMonster = new CookieMonster();
 
-	//###
 	Timer* timerP = new Timer();
 	UpDownCounter<Tick>* counterP = new UpDownCounter<Tick>(0, 50, 0);
 	Convert<unsigned int, float>* convertP = new Convert<unsigned int, float>();
 	PWM* pwmP = new PWM(PWM::Divider::_64);
-	//###
+
+	UartTransmitter* uat = new UartTransmitter(Uart::Number::_0);
 
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
@@ -235,7 +236,10 @@ int main(void)
 		Flow::connect(timerP->outTick, counterP->in),
 		Flow::connect(counterP->out, convertP->inFrom),
 		Flow::connect(1 kHz, pwmP->inFrequencyGenerator[0]),
-		Flow::connect(convertP->outTo, pwmP->inDutyCycleOutput[0])
+		Flow::connect(convertP->outTo, pwmP->inDutyCycleOutput[0]),
+
+		// Set up debug output.
+		Flow::connect(Debug::outPort, uat->in, 20)
 	};
 
 	// Define the deployment of the components.
@@ -261,7 +265,9 @@ int main(void)
 
 		convertP,
 		counterP,
-		pwmP
+		pwmP,
+
+		uat
 	};
 
 	Flow::Component* sysTickComponents[] =
@@ -272,6 +278,8 @@ int main(void)
 
 	_sysTickComponents = sysTickComponents;
 	_sysTickComponentsCount = ArraySizeOf(sysTickComponents);
+
+	Debug::printf("Moo %f \r\n", 3.14);
 
 	// Run the application.
 	while(true)

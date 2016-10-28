@@ -22,62 +22,35 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef TM4C_UART_H_
-#define TM4C_UART_H_
+#include "components.h"
 
-#include <stdint.h>
-
-#include "flow/flow.h"
-
-#include "inc/hw_memmap.h"
-#include "driverlib/sysctl.h"
-
-class Uart
-:	public Flow::Component
+void Timer::run()
 {
-public:
-	enum class Number : uint8_t
+	sysTicks++;
+
+	inPeriod.receive(nextPeriod);
+
+	if(period > 0)
 	{
-		_0 = 0,
-		_1,
-		_2,
-		_3,
-		_4,
-		_5,
-		_6,
-		_7,
-		COUNT
-	};
+		if(sysTicks >= period)
+		{
+			sysTicks = 0;
+			outTick.send(TICK);
+			period = nextPeriod;
+		}
+	}
+	else
+	{
+		period = nextPeriod;
+	}
+}
 
-protected:
-	Uart(Number uartNumber);
-
-	const Number uartNumber;
-
-	static const uint32_t sysCtlPeripheral[(uint8_t)Number::COUNT];
-	static const uint32_t uartBase[(uint8_t)Number::COUNT];
-};
-
-class UartReceiver
-:	public Uart
+void Toggle::run()
 {
-public:
-	Flow::OutPort<char> out;
-
-	UartReceiver(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-class UartTransmitter
-:	public Uart
-{
-public:
-	Flow::InPort<char> in;
-
-	UartTransmitter(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-#endif // TM4C_UART_H_
+	Tick dummy;
+	if(tick.receive(dummy))
+	{
+		toggle = !toggle;
+		out.send(toggle);
+	}
+}

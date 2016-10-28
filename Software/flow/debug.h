@@ -22,62 +22,18 @@ OUT OF OR IN CONNECTION WITH THE SOLUTION OR THE USE OR OTHER DEALINGS IN THE
 SOLUTION.
  */
 
-#ifndef TM4C_UART_H_
-#define TM4C_UART_H_
+#ifndef FLOW_DEBUG_H_
+#define FLOW_DEBUG_H_
 
-#include <stdint.h>
+#include "flow.h"
 
-#include "flow/flow.h"
-
-#include "inc/hw_memmap.h"
-#include "driverlib/sysctl.h"
-
-class Uart
-:	public Flow::Component
+namespace Debug
 {
-public:
-	enum class Number : uint8_t
-	{
-		_0 = 0,
-		_1,
-		_2,
-		_3,
-		_4,
-		_5,
-		_6,
-		_7,
-		COUNT
-	};
 
-protected:
-	Uart(Number uartNumber);
+extern Flow::OutPort<char> outPort;
 
-	const Number uartNumber;
+void printf(const char *format, ...);
 
-	static const uint32_t sysCtlPeripheral[(uint8_t)Number::COUNT];
-	static const uint32_t uartBase[(uint8_t)Number::COUNT];
-};
+} // namespace Debug
 
-class UartReceiver
-:	public Uart
-{
-public:
-	Flow::OutPort<char> out;
-
-	UartReceiver(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-class UartTransmitter
-:	public Uart
-{
-public:
-	Flow::InPort<char> in;
-
-	UartTransmitter(Uart::Number uartNumber);
-
-	void run() final override;
-};
-
-#endif // TM4C_UART_H_
+#endif // FLOW_DEBUG_H_

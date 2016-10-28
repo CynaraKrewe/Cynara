@@ -87,18 +87,18 @@ int main(void)
 
 	// Create the components of the application.
 	TestRunner* testRunner = new TestRunner();
-	UartTransmitter* u0tx = new UartTransmitter();
+	UartTransmitter* uat = new UartTransmitter(Uart::Number::_0);
 
 	// Connect the components of the application.
 	Flow::Connection* connections[] =
 	{
-		Flow::connect(outTestReport, u0tx->in, 2000)
+		Flow::connect(outTestReport, uat->in, 2000)
 	};
 
 	// Define the deployment of the components.
 	Flow::Component* components[] =
 	{
-		testRunner, u0tx
+		testRunner, uat
 	};
 
 	// Run the application.

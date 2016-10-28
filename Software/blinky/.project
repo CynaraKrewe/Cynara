@@ -3,6 +3,7 @@
 	<name>blinky</name>
 	<comment></comment>
 	<projects>
+		<project>driver</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -3,6 +3,8 @@
 	<name>flow_tests</name>
 	<comment></comment>
 	<projects>
+		<project>cpputest</project>
+		<project>driver</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -25,6 +27,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
+		<link>
+			<name>flow</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/flow</locationURI>
+		</link>
 		<link>
 			<name>tm4c</name>
 			<type>2</type>

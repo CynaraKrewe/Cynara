@@ -196,26 +196,9 @@ class Timer
 public:
 	Flow::InPort<unsigned int> inPeriod;
 	Flow::OutPort<Tick> outTick;
-	void run()
-	{
-		sysTicks++;
 
-		inPeriod.receive(nextPeriod);
+	void run();
 
-		if(period > 0)
-		{
-			if(sysTicks >= period)
-			{
-				sysTicks = 0;
-				outTick.send(TICK);
-				period = nextPeriod;
-			}
-		}
-		else
-		{
-			period = nextPeriod;
-		}
-	}
 private:
 	unsigned int period = 0;
 	unsigned int nextPeriod = 0;
@@ -228,15 +211,9 @@ class Toggle
 public:
 	Flow::InPort<Tick> tick;
 	Flow::OutPort<bool> out;
-	void run()
-	{
-		Tick dummy;
-		if(tick.receive(dummy))
-		{
-			toggle = !toggle;
-			out.send(toggle);
-		}
-	}
+
+	void run();
+
 private:
 	bool toggle = false;
 };
