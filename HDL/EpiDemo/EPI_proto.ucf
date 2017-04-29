@@ -1,0 +1,123 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Mimas (http://www.numato.com)                                               #
+# To use it in your project :                                                                         #
+# * Remove or comment the lines corresponding to unused pins in the project.                          #
+# * Rename the used signals according to the your project.                                            #
+# * For more detail refer to the User Guide available at http://numato.com/products/fpga-boards/      #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#**************************************************************************************************************************************************#
+#                                            UCF for Mimas                                                                                         #
+#**************************************************************************************************************************************************#
+
+#NET "CLK" LOC = P126;
+#TIMESPEC TS_CLK = PERIOD "CLK" 100 MHz HIGH 50%;
+
+###################################################################################################################################################
+#                                                 LEDs                                                                                            #
+################################################################################################################################################### 
+
+NET "LED[0]"			LOC = P119	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[1]"			LOC = P118	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[2]"			LOC = P117	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[3]"			LOC = P116	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[4]"			LOC = P115	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[5]"			LOC = P114	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[6]"			LOC = P112	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+NET "LED[7]"			LOC = P111	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+
+###################################################################################################################################################
+#                                                Push Button Switches                                                                             #
+################################################################################################################################################### 
+
+#NET "SWITCH[0]"			LOC = P124	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+#NET "SWITCH[1]"			LOC = P123	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+#NET "SWITCH[2]"			LOC = P121	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+#NET "SWITCH[3]"			LOC = P120	| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+
+###################################################################################################################################################
+#                                                   HEADER P1 (silkscreen, not schematic)                                                         #
+###################################################################################################################################################
+
+#NET "IO_P1[0]"                   LOC = P131     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3  # IO_L35N_GCLK16_0    		Sch = GPIO-N1
+#NET "IO_P1[1]"                   LOC = P133     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5  # IO_L34N_GCLK18_0   		Sch = GPIO-N2
+#NET "IO_P1[2]"                   LOC = P137     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7  # IO_L4N_0   	   		Sch = GPIO-N3
+#NET "IO_P1[3]"                   LOC = P139     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 9  # IO_L3N_0 	   		Sch = GPIO-N4
+#NET "IO_P1[4]"                   LOC = P141     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 11  # IO_L2N_0           		Sch = GPIO-N5
+#NET "IO_P1[5]"                   LOC = P1	 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 13  # IO_L83N_VREF_3     		Sch = GPIO-N6
+#NET "IO_P1[6]"                   LOC = P5     	 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 15  # IO_L52N_3          		Sch = GPIO-N7
+#NET "IO_P1[7]"                   LOC = P7       | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 17 # IO_L51N_3           		Sch = GPIO-N8
+#NET "IO_P1[8]"                   LOC = P9       | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 19 # IO_L50N_3           		Sch = GPIO-N9
+#NET "IO_P1[9]"                   LOC = P11      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 21  # IO_L49N_3          		Sch = GPIO-N10
+#NET "IO_P1[10]"                  LOC = P14      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 23  # IO_L44N_GCLK20_3   		Sch = GPIO-N11
+#NET "IO_P1[11]"                  LOC = P16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 25  # IO_L43N_GCLK22_IRDY2_3  	Sch = GPIO-N12
+#NET "IO_P1[12]"                  LOC = P21      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 27  # IO_L42N_GCLK24_3   		Sch = GPIO-N13
+#NET "IO_P1[13]"                  LOC = P23      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 29  # IO_L41N_GCLK26_3   		Sch = GPIO-N14
+#NET "IO_P1[14]"                  LOC = P26      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 31  # IO_L37N_3          		Sch = GPIO-N15
+#NET "IO_P1[15]"                  LOC = P29      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 33  # IO_L36N_3          		Sch = GPIO-N16
+#NET "IO_P1[16]"                  LOC = P32      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 35  # IO_L2N_3           		Sch = GPIO-N17
+#NET "IO_P1[17]"                  LOC = P34      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 37  # IO_L1N_VREF_3      		Sch = GPIO-N18  
+#
+#NET "IO_P1[18]"                  LOC = P132     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4   # IO_L35P_GCLK17_0   		Sch = GPIO-P1
+#NET "IO_P1[19]"                  LOC = P134     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6   # IO_L34P_GCLK19_0   		Sch = GPIO-P2
+#NET "IO_P1[20]"                  LOC = P138     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8   # IO_L4P_0	   		Sch = GPIO-P3
+#NET "IO_P1[21]"                  LOC = P140     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 10  # IO_L3P_0	   		Sch = GPIO-P4
+#NET "IO_P1[22]"                  LOC = P142     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 12  # IO_L2P_0	   		Sch = GPIO-P5
+#NET "IO_P1[23]"                  LOC = P2       | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 14  # IO_L83P_3	  		Sch = GPIO-P6
+#NET "IO_P1[24]"                  LOC = P6       | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 16  # IO_L52P_3	   		Sch = GPIO-P7
+#NET "IO_P1[25]"                  LOC = P8       | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 18  # IO_L51P_3	   		Sch = GPIO-P8
+#NET "IO_P1[26]"                  LOC = P10      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 20  # IO_L50P_3 	   		Sch = GPIO-P9
+#NET "IO_P1[27]"                  LOC = P12      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 22  # IO_L49P_3          		Sch = GPIO-P10
+#NET "IO_P1[28]"                  LOC = P15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 24  # IO_L44P_GCLK21_3   		Sch = GPIO-P11
+#NET "IO_P1[29]"                  LOC = P17      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 26  # IO_L43P_GCLK23_3   		Sch = GPIO-P12
+#NET "IO_P1[30]"                  LOC = P22      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 28  # IO_L42P_GCLK25_TRDY2_3  	Sch = GPIO-P13
+#NET "IO_P1[31]"                  LOC = P24      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 30  # IO_L41P_GCLK27_3   		Sch = GPIO-P14
+#NET "IO_P1[32]"                  LOC = P27      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 32  # IO_L37P_3	   		Sch = GPIO-P15
+#NET "IO_P1[33]"                  LOC = P30      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 34  # IO_L36P_3          		Sch = GPIO-P16
+#NET "IO_P1[34]"                  LOC = P33      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 36  # IO_L2P_3	   		Sch = GPIO-P17
+#NET "IO_P1[35]"                  LOC = P35      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 38  # IO_L1P_3           		Sch = GPIO-P18
+
+###################################################################################################################################################
+#                                                   HEADER P2 (silkscreen, not schematic)                                                         #
+###################################################################################################################################################
+
+NET "EPI0S[29]"	LOC = P104		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PP2/103
+NET "EPI0S[27]"	LOC = P101		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PB2/91
+NET "EPI0S[25]"	LOC = P99		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK6/61
+NET "EPI0S[23]"	LOC = P97		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PQ3/27
+
+NET "EPI0S[31]"	LOC = P94		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK5/62
+#TIMESPEC TS_CLK = PERIOD "EPI0S[31]" 1 MHz HIGH 50%;
+
+#NET "RUPT[0]"	LOC = P92		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PP0/118
+NET "EPI0S[19]"	LOC = P87		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PL3/84
+NET "EPI0S[17]"	LOC = P84		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PL1/82
+NET "EPI0S[15]"	LOC = P82		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PM0/78
+NET "EPI0S[13]"	LOC = P80		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PM2/76
+NET "EPI0S[3]"	LOC = P78		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK3/21
+NET "EPI0S[2]"	LOC = P74		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK2/20
+NET "EPI0S[1]"	LOC = P55		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK1/19
+NET "EPI0S[0]"	LOC = P50		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK0/18
+NET "EPI0S[7]"	LOC = P47		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PC4/25
+NET "EPI0S[5]"	LOC = P45		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PC6/23
+#NET ""	LOC = P43				| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # NC
+
+NET "EPI0S[30]"	LOC = P105		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PP3/104
+NET "EPI0S[28]"	LOC = P102		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PB3/92
+NET "EPI0S[26]"	LOC = P100		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PL4/85
+NET "EPI0S[24]"	LOC = P98		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PK7/60
+NET "EPI0S[22]"	LOC = P95		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PQ2/11
+NET "EPI0S[21]"	LOC = P93		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PQ1/6
+NET "EPI0S[20]"	LOC = P88		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PQ0/5
+NET "EPI0S[12]"	LOC = P85		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PL2/83
+NET "EPI0S[16]"	LOC = P83		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PL0/81
+NET "EPI0S[14]"	LOC = P81		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PM1/77
+NET "EPI0S[12]"	LOC = P79		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PM3/75
+NET "EPI0S[11]"	LOC = P75		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PG0/49
+NET "EPI0S[10]"	LOC = P56		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PG1/50
+NET "EPI0S[9]"	LOC = P51		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PA7/41
+NET "EPI0S[8]"	LOC = P48		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PA6/40
+NET "EPI0S[6]"	LOC = P46		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PC5/24 
+NET "EPI0S[4]"	LOC = P44		| IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; # Tiva PC7/22
+
+###################################################################################################################################################
