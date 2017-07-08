@@ -1,0 +1,8 @@
+(module ARJP11A-MA (layer F.Cu) (tedit 59611674)
+  (fp_text reference REF** (at 0 0.5) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value ARJP11A-MA (at 0 -0.5) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)
